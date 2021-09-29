@@ -3,8 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   --iconHeight: 50px;
   background-color: var(--red);
-  padding: 0 20px;
-  height: var(--iconHeight);
+  padding: 0 5px;
 
   @media screen and (min-width: 500px) {
     height: calc(var(--iconHeight) + 25px);
@@ -29,11 +28,11 @@ export const Title = styled.div`
 `;
 
 export const Navbar = styled.div`
-  background-color: black;
+  /* background-color: black; */
 
   ul {
     list-style: none;
-    padding: 0;
+    padding: 5px;
     margin: 0;
     width: 500px;
     display: flex;
@@ -42,7 +41,7 @@ export const Navbar = styled.div`
 `;
 
 export const LogoImg = styled.img`
-position: absolute;
+  position: absolute;
   height: var(--iconHeight);
 
   @media screen and (min-width: 500px) {
