@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
  :root {
+     --iconHeight: 50px;
      --maxWidth: 1280px;
      --white: #ffffff;
      --grey: #43413C;
@@ -21,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
      margin: 0;
      padding: 0;
      background-color: var(--grey);
-
+     color: var(--white);
      h1 {
      }
     /* h1, h3, p global styles */

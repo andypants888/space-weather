@@ -1,7 +1,6 @@
 import styled from "styled-components";
 // vars from GlobalStyle.js
 export const Wrapper = styled.div`
-  --iconHeight: 50px;
   background-color: var(--red);
   padding: 0 5x;
 `;
@@ -39,7 +38,7 @@ export const Navbar = styled.div`
     list-style: none;
     padding: 0;
     margin: 0;
-    height: 7vh;
+    height: 6vh;
     width: 100vw;
     display: flex;
     justify-content: space-around;
@@ -48,11 +47,7 @@ export const Navbar = styled.div`
     background-color: var(--red);
 
     @media (pointer: fine) {
-      /* position: absolute; */
-      /* top: 0; */
       height: calc(var(--iconHeight) - 10px);
-      /* background-color: rgba(0,0,0,0); */
-      /* background-color: black; */
       justify-content: space-around;
     }
   }
@@ -62,9 +57,6 @@ export const Navbar = styled.div`
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
-    /* // border width, style, color
-    border: 1px dashed var(--grey);
-    padding: 0 3vw; */
     @media (pointer: fine) {
       display: flex;
       flex-direction: row;
@@ -77,7 +69,7 @@ export const Navbar = styled.div`
   }
   // Icon Only
   img {
-    width: 9vw;
+    width: 7vw;
     @media (pointer: fine) {
       width: calc(var(--iconHeight) - 10px);
     }
