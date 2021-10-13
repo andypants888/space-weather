@@ -1,6 +1,6 @@
-Title: space-weather-react
+Title: space-weather
 
-Short: App with simplified interface to view & learn about space weather events.
+Short: ReactJS App with simplified interface to view & learn about space weather events.
 
 Long : 
  This is an educational app using Javascript and ReactJS to display simplified weather events provided by NASA and other national space agencies via web API access.
