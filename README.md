@@ -4,7 +4,7 @@
 
 ##### Educational app for high school / college students to view and learn about space weather events in real-time. easily view & access NASA space weather database in real-time.
 
-##### The goal of this project is to create a simple-to-use, dashboard which summarizes real-time 'space-weather' events. It is intended to push the viewer into reading the additional materials (under construction) and videos (also under construction) in order to understand various space weather events.
+##### The goal of this project is to create a simple-to-use, dashboard which summarizes real-time 'space-weather' events. It is intended to push the viewer into reading the additional materials (under construction) and videos (also under construction) in order to understand various space weather events. Project is also intended to assist K-12 teachers in teaching related [NGSS standards](https://www.nextgenscience.org/topic-arrangement/1space-systems-patterns-and-cycles).
 
 ##### There has been a large push in US education in the past 10 years to standardize and promote space education from a national level. New Generation Science Standards (NGSS), along with [Common Core Standards](https://en.wikipedia.org/wiki/Common_Core_State_Standards_Initiative) have been passed into law from 2011 to 2015 at a federal level.
 
