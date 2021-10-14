@@ -1,6 +1,6 @@
 # space-weather (reactJS)
 
-#### [active vanillaJS demo](https://adoring-kirch-638f40.netlify.app/) (react version currently under construction)
+#### [active react demo](https://sad-goldberg-253de6.netlify.app/) (Currently under construction)
 
 ##### Educational app for high school / college students to view and learn about space weather events in real-time. easily view & access NASA space weather database in real-time.
 
