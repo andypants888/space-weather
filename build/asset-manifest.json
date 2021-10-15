@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.js": "/static/js/main.8e0504df.chunk.js",
+    "main.js.map": "/static/js/main.8e0504df.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ff1de266.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ff1de266.js.map",
+    "static/js/2.e62b9ad6.chunk.js": "/static/js/2.e62b9ad6.chunk.js",
+    "static/js/2.e62b9ad6.chunk.js.map": "/static/js/2.e62b9ad6.chunk.js.map",
+    "static/js/3.b70a959b.chunk.js": "/static/js/3.b70a959b.chunk.js",
+    "static/js/3.b70a959b.chunk.js.map": "/static/js/3.b70a959b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.e62b9ad6.chunk.js.LICENSE.txt": "/static/js/2.e62b9ad6.chunk.js.LICENSE.txt",
+    "static/media/clipboard.45de809b.png": "/static/media/clipboard.45de809b.png",
+    "static/media/earth.149bb6a3.png": "/static/media/earth.149bb6a3.png",
+    "static/media/explosion.1a11bf14.png": "/static/media/explosion.1a11bf14.png",
+    "static/media/mars.00612a4d.png": "/static/media/mars.00612a4d.png",
+    "static/media/meteor.0374f023.png": "/static/media/meteor.0374f023.png",
+    "static/media/nuclear-explosion.e6618529.png": "/static/media/nuclear-explosion.e6618529.png",
+    "static/media/solar-system.09894116.png": "/static/media/solar-system.09894116.png",
+    "static/media/sun.b6776e11.png": "/static/media/sun.b6776e11.png",
+    "static/media/television.b2acf914.png": "/static/media/television.b2acf914.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ff1de266.js",
+    "static/js/2.e62b9ad6.chunk.js",
+    "static/js/main.8e0504df.chunk.js"
+  ]
+}
