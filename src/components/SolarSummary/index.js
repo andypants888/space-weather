@@ -56,6 +56,9 @@ const SolarSummary = (props) => {
               trigger={solarPopup}
               setTrigger={setSolarPopup}
               message={messageBody}
+              eventType={messageType}
+              URL={messageURL}
+              eventTime={messageIssueTime}
             />
           </Content>
         </Wrapper>
@@ -74,8 +77,18 @@ const SolarSummary = (props) => {
               </div>
               <div>
                 <a href={`${messageURL}`}>Detailed View</a>
-              </div>
+                </div>
+              <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
+
+            <SolarPopup
+              trigger={solarPopup}
+              setTrigger={setSolarPopup}
+              message={messageBody}
+              eventType={messageType}
+              URL={messageURL}
+              eventTime={messageIssueTime}
+            />
           </Content>
         </Wrapper>
       );
@@ -94,7 +107,16 @@ const SolarSummary = (props) => {
               <div>
                 <a href={`${messageURL}`}>Detailed View</a>
               </div>
+              <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
+            <SolarPopup
+              trigger={solarPopup}
+              setTrigger={setSolarPopup}
+              message={messageBody}
+              eventType={messageType}
+              URL={messageURL}
+              eventTime={messageIssueTime}
+            />
           </Content>
         </Wrapper>
       );
@@ -112,8 +134,18 @@ const SolarSummary = (props) => {
               </div>
               <div>
                 <a href={`${messageURL}`}>Detailed View</a>
-              </div>
+                </div>
+              <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
+
+            <SolarPopup
+              trigger={solarPopup}
+              setTrigger={setSolarPopup}
+              message={messageBody}
+              eventType={messageType}
+              URL={messageURL}
+              eventTime={messageIssueTime}
+            />
           </Content>
         </Wrapper>
       );

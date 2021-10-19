@@ -4,10 +4,15 @@ import React from "react";
 import { Content, Wrapper } from "./SolarPopup.style";
 
 const SolarPopup = (props) => {
+  let regex = /^(## Summary:\n\n).*(\n\n\n)/gms;
+
   return props.trigger ? (
     <Wrapper>
       <Content>
-        {props.message}
+        {/* <div>{`${props.eventTime} + ${props.eventType} + ${props.URL} +`}</div> */}
+        <br />
+        <div>{props.message.match(regex)}</div>
+        <br />
         <button onClick={() => props.setTrigger(false)}>Less Info</button>
       </Content>
     </Wrapper>
