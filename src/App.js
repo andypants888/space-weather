@@ -11,8 +11,6 @@ function App() {
     <div className="App">
       <Header />
       <SolarBody />
-      <h1>h1 GlobalStyle</h1>
-      Space Weather App Here
       <GlobalStyle />
     </div>
   );

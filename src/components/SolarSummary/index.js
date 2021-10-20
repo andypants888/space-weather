@@ -11,9 +11,9 @@ import SolarPopup from "./SolarPopup/index.js";
 import { Content, Wrapper, SolarEvent } from "./SolarSummary.style";
 
 // Event Icons
-import IPSIcon from "../../icons/explosion.png";
+import IPSIcon from "../../icons/IPS-3.svg";
 import ReportIcon from "../../icons/clipboard.png";
-import CMEIcon from "../../icons/nuclear-explosion.png";
+import CMEIcon from "../../icons/CME-2.svg";
 import RBEIcon from "../../icons/earth.png";
 
 // API Event Object
@@ -46,9 +46,6 @@ const SolarSummary = (props) => {
                 {`${daysAgo} days ago on `}
                 {easyTime}
               </div>
-              <div>
-                <a href={`${messageURL}`}>Detailed View</a>
-              </div>
               <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
 
@@ -75,9 +72,6 @@ const SolarSummary = (props) => {
                 {`${daysAgo} days ago on `}
                 {easyTime}
               </div>
-              <div>
-                <a href={`${messageURL}`}>Detailed View</a>
-                </div>
               <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
 
@@ -104,9 +98,6 @@ const SolarSummary = (props) => {
                 {`${daysAgo} days ago on `}
                 {easyTime}
               </div>
-              <div>
-                <a href={`${messageURL}`}>Detailed View</a>
-              </div>
               <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
             <SolarPopup
@@ -132,9 +123,6 @@ const SolarSummary = (props) => {
                 {`${daysAgo} days ago on `}
                 {easyTime}
               </div>
-              <div>
-                <a href={`${messageURL}`}>Detailed View</a>
-                </div>
               <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
 
