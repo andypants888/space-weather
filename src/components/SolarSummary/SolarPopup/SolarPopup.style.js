@@ -2,20 +2,6 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div``;
 
-export const Dimmer = styled.div`
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -10;
-  /* left: 0; */
-
-  @media (pointer: fine) {
-    /* bottom: 0px; */
-  }
-`;
 export const Content = styled.div`
   /* padding: 0 0; */
   /* margin: 0 auto; */
@@ -32,8 +18,23 @@ export const Content = styled.div`
   align-items: flex-start;
   flex-direction: column;
   overflow: auto;
-  /* overflow-x: scroll; */
+  /* overflow-y: scroll; */
   border: 2px solid white;
+`;
+
+export const Dimmer = styled.div`
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* z-index: -10; */
+  /* left: 0; */
+
+  @media (pointer: fine) {
+    /* bottom: 0px; */
+  }
 `;
 
 export const CloseBanner = styled.div`
@@ -42,7 +43,7 @@ export const CloseBanner = styled.div`
   padding: 0px 15px 0px 0px;
   flex-direction: column;
   /* background-color: green; */
-  position: fixed;
+  position: sticky;
   top: -5px;
   left: 5px;
   button {

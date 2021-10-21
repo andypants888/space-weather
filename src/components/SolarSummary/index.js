@@ -22,6 +22,9 @@ import RBEIcon from "../../icons/earth.png";
 const SolarSummary = (props) => {
   console.log("SolarSummaryindex.js props: ", props);
   const { messageType, messageIssueTime, messageURL, messageBody } = props.data;
+  const [solarPopup, setSolarPopup] = useState(false);
+
+
   const today = new Date();
   const eventTime = new Date(messageIssueTime);
   const easyTime = eventTime.toLocaleString("en-US", {
@@ -32,7 +35,6 @@ const SolarSummary = (props) => {
   const daysAgo = Math.round(
     (today.getTime() - eventTime.getTime()) / (1000 * 3600 * 24)
   );
-  const [solarPopup, setSolarPopup] = useState(false);
 
   switch (messageType) {
     case "IPS":

@@ -1,5 +1,8 @@
 import React from "react";
 
+// Child Components
+import RegexReader from "./RegexReader";
+
 // Style
 import {
   Content,
@@ -21,9 +24,62 @@ import CMEIcon from "../../../icons/CME-2.svg";
 import RBEIcon from "../../../icons/earth.png";
 
 const SolarPopup = (props) => {
-  let regex = /^(## Summary:\n\n).*(\n\n\n)/gms;
+  const regex = /^(## Summary:\n\n).*(\n\n\n)/gms;
 
-  switch (props.eventType) {
+  const { trigger, setTrigger, message, eventType, URL, eventTime } = props;
+
+  switch (eventType) {
+    case "CME":
+      return trigger ? (
+        <Wrapper>
+          <Dimmer />
+          <Content>
+            <CloseBanner>
+              <button onClick={() => setTrigger(false)}>X</button>
+            </CloseBanner>
+            <Header>
+              <img src={CMEIcon} alt="Coronal Mass Ejection Icon" />
+              <div>{`Coronal Mass Ejection (${eventType})`}</div>
+            </Header>
+            <OneLiner>
+              <div>Plasma & Gas Eruption from Sun's Atmosphere</div>
+              <div>(Corona)</div>
+            </OneLiner>
+            {/* <div>{`${eventTime} + ${eventType} + ${URL} +`}</div> */}
+            <br />
+            <GifContainer>
+              <iframe
+                src="https://giphy.com/embed/mtRLckxvlwtStCZWd8"
+                frameBorder="0"
+                allowFullScreen
+              ></iframe>
+              <a href="https://giphy.com/gifs/europeanspaceagency-sun-european-space-agency-soho-mtRLckxvlwtStCZWd8"></a>
+              {/* <div>gif from European Space Agency</div> */}
+            </GifContainer>
+            <br />
+            <TextContainer>
+              {/* {message.match(regex)} */}
+              <RegexReader regexMessage={message} eventType={eventType} />
+            </TextContainer>
+            <br />
+            <LearnMore>
+              <div>What is a Coronal Mass Ejection?</div>
+              <button>Help Article</button>
+              <button>Video Explains</button>
+            </LearnMore>
+            <br />
+            <Footer>
+              <a href={`${URL}`}>Event Details</a>
+              <a href={``}>Longer Article</a>
+              <a href={``}>Longer Video</a>
+            </Footer>
+            <br />
+          </Content>
+        </Wrapper>
+      ) : (
+        ""
+      );
+
     case "IPS":
       return props.trigger ? (
         <Wrapper>
@@ -38,54 +94,6 @@ const SolarPopup = (props) => {
             <div>
               <a href={`${props.URL}`}>Detailed View</a>
             </div>
-            <br />
-          </Content>
-        </Wrapper>
-      ) : (
-        ""
-      );
-
-    case "CME":
-      return props.trigger ? (
-        <Wrapper>
-          <Content>
-            <Dimmer />
-            <CloseBanner>
-              <button onClick={() => props.setTrigger(false)}>X</button>
-            </CloseBanner>
-            <Header>
-              <img src={CMEIcon} alt="Coronal Mass Ejection Icon" />
-              <div>{`Coronal Mass Ejection (${props.eventType})`}</div>
-            </Header>
-            <OneLiner>
-              <div>Plasma & Gas Eruption from Sun's Atmosphere</div>
-              <div>(Corona)</div>
-            </OneLiner>
-            {/* <div>{`${props.eventTime} + ${props.eventType} + ${props.URL} +`}</div> */}
-            <br />
-            <GifContainer>
-              <iframe
-                src="https://giphy.com/embed/mtRLckxvlwtStCZWd8"
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
-              <a href="https://giphy.com/gifs/europeanspaceagency-sun-european-space-agency-soho-mtRLckxvlwtStCZWd8"></a>
-              {/* <div>gif from European Space Agency</div> */}
-            </GifContainer>
-            <br />
-            <TextContainer>{props.message.match(regex)}</TextContainer>
-            <br />
-            <LearnMore>
-              <div>What is a Coronal Mass Ejection?</div>
-              <button>Help Article</button>
-              <button>Video Explains</button>
-            </LearnMore>
-            <br />
-            <Footer>
-              <a href={`${props.URL}`}>Event Details</a>
-              <a href={``}>Longer Article</a>
-              <a href={``}>Longer Video</a>
-            </Footer>
             <br />
           </Content>
         </Wrapper>
