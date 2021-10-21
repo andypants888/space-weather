@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div``;
 
-// All 'Header' Elements
 export const Content = styled.div`
   padding: 0 0;
   margin: 0 auto;
@@ -10,9 +9,9 @@ export const Content = styled.div`
 `;
 
 export const SolarEvent = styled.div`
-  border-style: solid;
+  border: 2px solid white;
   a {
-    color: var(--red);
+    color: var(--main);
   }
 
   img {

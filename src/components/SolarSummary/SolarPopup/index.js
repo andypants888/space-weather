@@ -1,7 +1,18 @@
 import React from "react";
 
 // Style
-import { Content, Wrapper } from "./SolarPopup.style";
+import {
+  Content,
+  Wrapper,
+  Dimmer,
+  CloseBanner,
+  Header,
+  GifContainer,
+  TextContainer,
+  LearnMore,
+  Footer,
+  OneLiner,
+} from "./SolarPopup.style";
 
 // Event Icons
 import IPSIcon from "../../../icons/IPS-3.svg";
@@ -38,32 +49,43 @@ const SolarPopup = (props) => {
       return props.trigger ? (
         <Wrapper>
           <Content>
-            <button onClick={() => props.setTrigger(false)}>Less Info</button>
-            <div>
+            <Dimmer />
+            <CloseBanner>
+              <button onClick={() => props.setTrigger(false)}>X</button>
+            </CloseBanner>
+            <Header>
               <img src={CMEIcon} alt="Coronal Mass Ejection Icon" />
-              {`Coronal Mass Ejection (${props.eventType})`}
-            </div>
+              <div>{`Coronal Mass Ejection (${props.eventType})`}</div>
+            </Header>
+            <OneLiner>
+              <div>Plasma & Gas Eruption from Sun's Atmosphere</div>
+              <div>(Corona)</div>
+            </OneLiner>
             {/* <div>{`${props.eventTime} + ${props.eventType} + ${props.URL} +`}</div> */}
             <br />
-            <iframe
-              src="https://giphy.com/embed/mtRLckxvlwtStCZWd8"
-              width="480"
-              height="480"
-              frameBorder="0"
-              class="giphy-embed"
-              allowFullScreen
-            ></iframe>
-            <p>
-              <a href="https://giphy.com/gifs/europeanspaceagency-sun-european-space-agency-soho-mtRLckxvlwtStCZWd8">
-                via GIPHY
-              </a>
-            </p>
+            <GifContainer>
+              <iframe
+                src="https://giphy.com/embed/mtRLckxvlwtStCZWd8"
+                frameBorder="0"
+                allowFullScreen
+              ></iframe>
+              <a href="https://giphy.com/gifs/europeanspaceagency-sun-european-space-agency-soho-mtRLckxvlwtStCZWd8"></a>
+              {/* <div>gif from European Space Agency</div> */}
+            </GifContainer>
             <br />
-            <div>{props.message.match(regex)}</div>
+            <TextContainer>{props.message.match(regex)}</TextContainer>
             <br />
-            <div>
-              <a href={`${props.URL}`}>Detailed View</a>
-            </div>
+            <LearnMore>
+              <div>What is a Coronal Mass Ejection?</div>
+              <button>Help Article</button>
+              <button>Video Explains</button>
+            </LearnMore>
+            <br />
+            <Footer>
+              <a href={`${props.URL}`}>Event Details</a>
+              <a href={``}>Longer Article</a>
+              <a href={``}>Longer Video</a>
+            </Footer>
             <br />
           </Content>
         </Wrapper>

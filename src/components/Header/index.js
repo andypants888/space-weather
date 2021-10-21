@@ -18,7 +18,7 @@ const Header = () => (
     <Content>
       <TitleWrapper>
         <img src={Logo} alt="site-logo" />
-        Space Weather
+        Experimental Space Weather
       </TitleWrapper>
       <Navbar>
           <ul>
