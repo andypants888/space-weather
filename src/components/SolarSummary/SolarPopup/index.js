@@ -67,7 +67,7 @@ const SolarPopup = (props) => {
             <br />
             <TextContainer>
               {/* {message.match(regex)} */}
-              <RegexReader message={message} eventType={eventType} />
+              <RegexReader message={message} eventType={eventType} eventTime={eventTime}/>
             </TextContainer>
             <br />
             <LearnMore>

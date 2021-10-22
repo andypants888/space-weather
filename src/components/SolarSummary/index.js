@@ -28,7 +28,7 @@ const SolarSummary = (props) => {
   // Date of Event
   const today = new Date();
   const eventTime = new Date(messageIssueTime);
-  const easyTime = eventTime.toLocaleString("en-US", {
+  const summaryTime = eventTime.toLocaleString("en-US", {
     weekday: "long",
     month: "numeric",
     day: "numeric",
@@ -42,10 +42,37 @@ const SolarSummary = (props) => {
     /(Message Type: Space Weather Notification - Interplanetary Shock)/g;
   const reportRegex = /(Message Type: Weekly Space Weather Summary Report)/g;
   const cmeUpdateRegex = /(CME update)/g;
-  const cmeStandardRegex = /(Message Type: Space Weather Notification - CME \()/g;
-  const rbeStandardRegex = /(Message Type: Space Weather Notification - Radiation Belt Enhancement)/g;
+  const cmeStandardRegex =
+    /(Message Type: Space Weather Notification - CME \()/g;
+  const rbeStandardRegex =
+    /(Message Type: Space Weather Notification - Radiation Belt Enhancement)/g;
 
   switch (true) {
+    case cmeStandardRegex.test(messageBody):
+      return (
+        <Wrapper>
+          <Content>
+            <SolarEvent>
+              <img src={CMEIcon} alt="Coronal Mass Ejection Icon" />
+              New Coronal Mass Ejection ({messageType})
+              <div>
+                {`${daysAgo} days ago on `}
+                {summaryTime}
+              </div>
+              <button onClick={() => setSolarPopup(true)}>More Info</button>
+            </SolarEvent>
+            <SolarPopup
+              trigger={solarPopup}
+              setTrigger={setSolarPopup}
+              message={messageBody}
+              eventType={messageType}
+              URL={messageURL}
+              eventTime={eventTime}
+            />
+          </Content>
+        </Wrapper>
+      );
+      break;
     case ipsRegex.test(messageBody):
       return (
         <Wrapper>
@@ -55,7 +82,7 @@ const SolarSummary = (props) => {
               Interplanetary Shock ({messageType})
               <div>
                 {`${daysAgo} days ago on `}
-                {easyTime}
+                {summaryTime}
               </div>
               <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
@@ -66,7 +93,7 @@ const SolarSummary = (props) => {
               message={messageBody}
               eventType={messageType}
               URL={messageURL}
-              eventTime={messageIssueTime}
+              eventTime={eventTime}
             />
           </Content>
         </Wrapper>
@@ -81,7 +108,7 @@ const SolarSummary = (props) => {
               NASA {messageType}
               <div>
                 {`${daysAgo} days ago on `}
-                {easyTime}
+                {summaryTime}
               </div>
               <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
@@ -92,22 +119,23 @@ const SolarSummary = (props) => {
               message={messageBody}
               eventType={messageType}
               URL={messageURL}
-              eventTime={messageIssueTime}
+              eventTime={eventTime}
             />
           </Content>
         </Wrapper>
       );
       break;
-    case cmeStandardRegex.test(messageBody):
+
+    case cmeUpdateRegex.test(messageBody):
       return (
         <Wrapper>
           <Content>
             <SolarEvent>
               <img src={CMEIcon} alt="Coronal Mass Ejection Icon" />
-              New Coronal Mass Ejection ({messageType})
+              CME Update
               <div>
                 {`${daysAgo} days ago on `}
-                {easyTime}
+                {summaryTime}
               </div>
               <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
@@ -117,37 +145,12 @@ const SolarSummary = (props) => {
               message={messageBody}
               eventType={messageType}
               URL={messageURL}
-              eventTime={messageIssueTime}
+              eventTime={eventTime}
             />
           </Content>
         </Wrapper>
       );
       break;
-      case cmeUpdateRegex.test(messageBody):
-        return (
-          <Wrapper>
-            <Content>
-              <SolarEvent>
-                <img src={CMEIcon} alt="Coronal Mass Ejection Icon" />
-                CME Update
-                <div>
-                  {`${daysAgo} days ago on `}
-                  {easyTime}
-                </div>
-                <button onClick={() => setSolarPopup(true)}>More Info</button>
-              </SolarEvent>
-              <SolarPopup
-                trigger={solarPopup}
-                setTrigger={setSolarPopup}
-                message={messageBody}
-                eventType={messageType}
-                URL={messageURL}
-                eventTime={messageIssueTime}
-              />
-            </Content>
-          </Wrapper>
-        );
-        break;
 
     case rbeStandardRegex.test(messageBody):
       return (
@@ -158,7 +161,7 @@ const SolarSummary = (props) => {
               Radiation Belt Enhancement ({messageType})
               <div>
                 {`${daysAgo} days ago on `}
-                {easyTime}
+                {summaryTime}
               </div>
               <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
@@ -169,7 +172,7 @@ const SolarSummary = (props) => {
               message={messageBody}
               eventType={messageType}
               URL={messageURL}
-              eventTime={messageIssueTime}
+              eventTime={eventTime}
             />
           </Content>
         </Wrapper>
