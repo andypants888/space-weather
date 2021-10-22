@@ -8,13 +8,22 @@ import { useState } from "react";
 import SolarPopup from "./SolarPopup/index.js";
 
 // Styles
-import { Content, Wrapper, SolarEvent } from "./SolarSummary.style";
+import {
+  Content,
+  Wrapper,
+  SolarEvent,
+  Icon,
+  Title,
+  OriginalTime,
+  MoreInfo,
+} from "./SolarSummary.style";
 
 // Event Icons
 import IPSIcon from "../../icons/IPS-3.svg";
 import ReportIcon from "../../icons/clipboard.png";
 import CMEIcon from "../../icons/CME-2.svg";
 import RBEIcon from "../../icons/earth.png";
+import UpdateIcon from "../../icons/news-anchor.png";
 
 // API Event Object
 // messageBody, messageID, messageIssueTime, messageType,messageURL
@@ -48,17 +57,22 @@ const SolarSummary = (props) => {
     /(Message Type: Space Weather Notification - Radiation Belt Enhancement)/g;
 
   switch (true) {
+    // Coronal Mass Ejection
     case cmeStandardRegex.test(messageBody):
       return (
         <Wrapper>
           <Content>
             <SolarEvent>
-              <img src={CMEIcon} alt="Coronal Mass Ejection Icon" />
-              New Coronal Mass Ejection ({messageType})
-              <div>
-                {`${daysAgo} days ago on `}
-                {summaryTime}
-              </div>
+              <Icon>
+                <img src={CMEIcon} alt="Coronal Mass Ejection Icon" />
+              </Icon>
+              <h3>New Coronal Mass Ejection ({messageType})</h3>
+              <h3>
+                <div>
+                  {`${daysAgo} days ago on `}
+                  {summaryTime}
+                </div>
+              </h3>
               <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
             <SolarPopup
@@ -73,70 +87,82 @@ const SolarSummary = (props) => {
         </Wrapper>
       );
       break;
-    case ipsRegex.test(messageBody):
-      return (
-        <Wrapper>
-          <Content>
-            <SolarEvent>
-              <img src={IPSIcon} alt="Interplanetary Shock Icon" />
-              Interplanetary Shock ({messageType})
-              <div>
-                {`${daysAgo} days ago on `}
-                {summaryTime}
-              </div>
-              <button onClick={() => setSolarPopup(true)}>More Info</button>
-            </SolarEvent>
-
-            <SolarPopup
-              trigger={solarPopup}
-              setTrigger={setSolarPopup}
-              message={messageBody}
-              eventType={messageType}
-              URL={messageURL}
-              eventTime={eventTime}
-            />
-          </Content>
-        </Wrapper>
-      );
-      break;
-    case reportRegex.test(messageBody):
-      return (
-        <Wrapper>
-          <Content>
-            <SolarEvent>
-              <img src={ReportIcon} alt="Report Icon" />
-              NASA {messageType}
-              <div>
-                {`${daysAgo} days ago on `}
-                {summaryTime}
-              </div>
-              <button onClick={() => setSolarPopup(true)}>More Info</button>
-            </SolarEvent>
-
-            <SolarPopup
-              trigger={solarPopup}
-              setTrigger={setSolarPopup}
-              message={messageBody}
-              eventType={messageType}
-              URL={messageURL}
-              eventTime={eventTime}
-            />
-          </Content>
-        </Wrapper>
-      );
-      break;
-
+    // CME Update
     case cmeUpdateRegex.test(messageBody):
       return (
         <Wrapper>
           <Content>
             <SolarEvent>
-              <img src={CMEIcon} alt="Coronal Mass Ejection Icon" />
-              CME Update
-              <div>
-                {`${daysAgo} days ago on `}
-                {summaryTime}
-              </div>
+              <Icon>
+                <img src={UpdateIcon} alt="Coronal Mass Ejection Icon" />
+              </Icon>
+              <h3>CME Update</h3>
+              <h3>
+                <div>
+                  {`${daysAgo} days ago on `}
+                  {summaryTime}
+                </div>
+              </h3>
+              <button onClick={() => setSolarPopup(true)}>More Info</button>
+            </SolarEvent>
+            <SolarPopup
+              trigger={solarPopup}
+              setTrigger={setSolarPopup}
+              message={messageBody}
+              eventType={messageType}
+              URL={messageURL}
+              eventTime={eventTime}
+            />
+          </Content>
+        </Wrapper>
+      );
+      break;
+    // Interplanetary Shock
+    case ipsRegex.test(messageBody):
+      return (
+        <Wrapper>
+          <Content>
+            <SolarEvent>
+              <Icon>
+                <img src={IPSIcon} alt="Interplanetary Shock Icon" />
+              </Icon>
+              <h3>Interplanetary Shock ({messageType})</h3>
+              <h3>
+                <div>
+                  {`${daysAgo} days ago on `}
+                  {summaryTime}
+                </div>
+              </h3>
+              <button onClick={() => setSolarPopup(true)}>More Info</button>
+            </SolarEvent>
+            <SolarPopup
+              trigger={solarPopup}
+              setTrigger={setSolarPopup}
+              message={messageBody}
+              eventType={messageType}
+              URL={messageURL}
+              eventTime={eventTime}
+            />
+          </Content>
+        </Wrapper>
+      );
+      break;
+    // Report
+    case reportRegex.test(messageBody):
+      return (
+        <Wrapper>
+          <Content>
+            <SolarEvent>
+              <Icon>
+                <img src={ReportIcon} alt="Report" />
+              </Icon>
+              <h3>NASA Weekly {messageType}</h3>
+              <h3>
+                <div>
+                  {`${daysAgo} days ago on `}
+                  {summaryTime}
+                </div>
+              </h3>
               <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
             <SolarPopup
@@ -152,20 +178,24 @@ const SolarSummary = (props) => {
       );
       break;
 
+    // Radiation Belt Enhancement
     case rbeStandardRegex.test(messageBody):
       return (
         <Wrapper>
           <Content>
             <SolarEvent>
-              <img src={RBEIcon} alt="Radiation Belt Enhancement Icon" />
-              Radiation Belt Enhancement ({messageType})
-              <div>
-                {`${daysAgo} days ago on `}
-                {summaryTime}
-              </div>
+              <Icon>
+                <img src={RBEIcon} alt="Radiation Belt Enhancement Icon" />
+              </Icon>
+              <h3>Radiation Belt Enhancement ({messageType})</h3>
+              <h3>
+                <div>
+                  {`${daysAgo} days ago on `}
+                  {summaryTime}
+                </div>
+              </h3>
               <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
-
             <SolarPopup
               trigger={solarPopup}
               setTrigger={setSolarPopup}

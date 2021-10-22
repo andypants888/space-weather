@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+  z-index: 20;
+`;
 
 export const Content = styled.div`
   /* padding: 0 0; */
@@ -42,7 +44,7 @@ export const CloseBanner = styled.div`
   display: flex;
   padding: 0px 15px 0px 0px;
   flex-direction: column;
-  /* background-color: green; */
+  /* background-color: red; */
   position: sticky;
   top: -5px;
   left: 5px;
@@ -116,6 +118,7 @@ export const GifContainer = styled.div`
 export const TextContainer = styled.div`
   padding: 5px;
   margin-bottom: 5px;
+  width: 100%;
 `;
 
 export const LearnMore = styled.div`

@@ -33,10 +33,13 @@ const SolarPopup = (props) => {
     /(Message Type: Space Weather Notification - Interplanetary Shock)/g;
   const reportRegex = /(Message Type: Weekly Space Weather Summary Report)/g;
   const cmeUpdateRegex = /(CME update)/g;
-  const cmeStandardRegex = /(Message Type: Space Weather Notification - CME \()/g;
-  const rbeStandardRegex = /(Message Type: Space Weather Notification - Radiation Belt Enhancement)/g;
+  const cmeStandardRegex =
+    /(Message Type: Space Weather Notification - CME \()/g;
+  const rbeStandardRegex =
+    /(Message Type: Space Weather Notification - Radiation Belt Enhancement)/g;
 
   switch (true) {
+    // Coronal Mass Ejection
     case cmeStandardRegex.test(message):
       return trigger ? (
         <Wrapper>
@@ -53,7 +56,6 @@ const SolarPopup = (props) => {
               <div>Plasma & Gas Eruption from Sun's Atmosphere</div>
               <div>(Corona)</div>
             </OneLiner>
-            {/* <div>{`${eventTime} + ${eventType} + ${URL} +`}</div> */}
             <br />
             <GifContainer>
               <iframe
@@ -62,12 +64,16 @@ const SolarPopup = (props) => {
                 allowFullScreen
               ></iframe>
               <a href="https://giphy.com/gifs/europeanspaceagency-sun-european-space-agency-soho-mtRLckxvlwtStCZWd8"></a>
-              {/* <div>gif from European Space Agency</div> */}
+              {/* <div>2012 CME Event</div> */}
             </GifContainer>
             <br />
             <TextContainer>
               {/* {message.match(regex)} */}
-              <RegexReader message={message} eventType={eventType} eventTime={eventTime}/>
+              <RegexReader
+                message={message}
+                eventType={eventType}
+                eventTime={eventTime}
+              />
             </TextContainer>
             <br />
             <LearnMore>
@@ -87,22 +93,49 @@ const SolarPopup = (props) => {
       ) : (
         ""
       );
-
+    // Interplanetary Shock
     case ipsRegex.test(message):
-      return props.trigger ? (
+      return trigger ? (
         <Wrapper>
+          <Dimmer />
           <Content>
-            <button onClick={() => props.setTrigger(false)}>Less Info</button>
-            <h2>{`Interplanetary Shock (${props.eventType})`}</h2>
-            <img src={IPSIcon} alt="Interplanetary Shock Icon" />
-            {/* <div>{`${props.eventTime} + ${props.eventType} + ${props.URL} +`}</div> */}
+            <CloseBanner>
+              <button onClick={() => setTrigger(false)}>X</button>
+            </CloseBanner>
+            <Header>
+              <img src={IPSIcon} alt="Interplanetary Shock" />
+              <div>{`Interplanetary Shock (${eventType})`}</div>
+            </Header>
+            <OneLiner>
+              <div>Under Construction</div>
+            </OneLiner>
             <br />
-            {/* <div>{props.message.match(regex)}</div> */}
-            Insert Regex Here
+            <GifContainer>
+              {/* <iframe
+                src="https://giphy.com/embed/mtRLckxvlwtStCZWd8"
+                frameBorder="0"
+                allowFullScreen
+              ></iframe> */}
+              <a href="https://giphy.com/gifs/europeanspaceagency-sun-european-space-agency-soho-mtRLckxvlwtStCZWd8"></a>
+              {/* <div>2012 CME Event</div> */}
+            </GifContainer>
             <br />
-            <div>
-              <a href={`${props.URL}`}>Detailed View</a>
-            </div>
+            <TextContainer>
+              {/* {message.match(regex)} */}
+              {/* <RegexReader message={message} eventType={eventType} eventTime={eventTime}/> */}
+            </TextContainer>
+            <br />
+            <LearnMore>
+              {/* <div>What is a Coronal Mass Ejection?</div> */}
+              <button>Help Article</button>
+              <button>Video Explains</button>
+            </LearnMore>
+            <br />
+            <Footer>
+              <a href={`${URL}`}>Event Details</a>
+              <a href={``}>Longer Article</a>
+              <a href={``}>Longer Video</a>
+            </Footer>
             <br />
           </Content>
         </Wrapper>

@@ -50,6 +50,7 @@ export const Navbar = styled.div`
     @media (pointer: fine) {
       height: calc(var(--iconHeight) - 10px);
       justify-content: space-around;
+      z-index: 10;
     }
   }
   // Each Icon + Title

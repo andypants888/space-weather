@@ -1,17 +1,17 @@
 import React from "react";
 
 // Styles
-import { Wrapper, Content } from "./RegexReader.style.js";
+import { Wrapper, Content, Title, Main, Warning } from "./RegexReader.style.js";
 
 const RegexReader = (props) => {
   const { message, eventType, eventTime } = props;
   const detailedTime = eventTime.toLocaleString("en-US", {
-    weekday: "long",
-    month: "long",
-    day: "numeric",
     hour: "2-digit",
     minute: "2-digit",
-    timeZoneName: "short",
+    timeZoneName: "long",
+    weekday: "long",
+    month: "short",
+    day: "numeric",
   });
   // Switch Regex Cases
   const ipsRegex =
@@ -28,13 +28,13 @@ const RegexReader = (props) => {
   const cmeType = /(.-type CME.*)/g;
   const cmeSpeed = /Estimated speed: ~\d\d\d \w\w.\w/g;
   const cmeChart = /.?.-type:.*/g;
-  const nearEarth = /(NASA missions near Earth at ).*(s\).)/g;
+  const nearEarth = /(NASA missions near Earth at ).*(Z)/g;
   const nearEarthTimeRegex = /(\d\d\d\d-\d\d-\d\d[A-Z]\d\d:\d\dZ)/g;
   const nearEarthUTC = message.match(nearEarth)[0].match(nearEarthTimeRegex);
   const nearEarthJSDate = new Date(nearEarthUTC);
   const nearEarthLocal = nearEarthJSDate.toLocaleString("en-US", {
-    weekday: "long",
-    month: "long",
+    // weekday: "long",
+    month: "short",
     day: "numeric",
     hour: "2-digit",
     minute: "2-digit",
@@ -46,24 +46,30 @@ const RegexReader = (props) => {
       return (
         <Wrapper>
           <Content>
-          {/* {nearEarthLocal} */}
-            <div>{eventType}</div>
-            <div>Local Event Time: {detailedTime}</div>
-            <div>{message.match(cmeSpeed)}</div>
-            <div>{message.match(cmeType)}</div>
+            <Title>{message.match(cmeType)}</Title>
+            <Main>
+              <div>Original Event Time: {detailedTime}</div>
+              <div>{message.match(cmeSpeed)}</div>
+              <div>{`Impact Direction: ${
+                message.match(potentialImpact)[0]
+              }`}</div>
+              <div>
+                {`Estimated arrival to near Earth missions: ${nearEarthLocal}  `}
+                <br />
+                <br />
+                <Warning>
+                  (Warning: Estimates based on early simulations. Estimated
+                  arrival time is plus/minus 7 hours)
+                </Warning>
+              </div>
+            </Main>
 
-            {/* {console.log(message.match(cmeChart))} */}
-
-            <div>{`Event may impact: ${
-              message.match(potentialImpact)[0]
-            }`}</div>
-
-            <div>Expected Impact: {message.match(nearEarth)[0].replace(/(\d\d\d\d-\d\d-\d\d[A-Z]\d\d:\d\dZ)/g, '')} {nearEarthLocal} (disclaimer: based on early simulations)</div>
-            {message.match(cmeChart).map((type) => (
-              <div>{type}</div>
-            ))}
-            {/* {console.log(message.match(potentialImpact))} */}
-            {/* {message} */}
+            <Title>{`CME-types Chart`}</Title>
+            <div>
+              {message.match(cmeChart).map((type) => (
+                <div>{type}</div>
+              ))}
+            </div>
           </Content>
         </Wrapper>
       );
