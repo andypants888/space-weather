@@ -31,5 +31,13 @@
  - API Calls using Fetch, Async Await
  - Displaying events (JSON Objects) as react components
 
+### Git Workflow
+ - Main (Production)
+   - Hotfix
+ - Develop
+   - Features
+   - Bugs
+ - Staging
+
 ### License:
 ### Copyright Andrew Zhou 2021

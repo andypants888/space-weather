@@ -28,7 +28,7 @@ const SolarBody = () => {
   }
   return (
     <>
-      Solar Events
+      <h2>Solar Events</h2>
       {solarData.map(event => (
         <SolarSummary key={event.messageID} data={event} />
       ))}

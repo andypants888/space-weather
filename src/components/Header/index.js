@@ -1,10 +1,10 @@
 import React from "react";
 
-import Logo from "../../images/solar-system.png";
-import SunIcon from "../../images/sun.png";
-import MarsIcon from "../../images/mars.png";
-import MeteorIcon from "../../images/meteor.png";
-import TVIcon from "../../images/television.png";
+import Logo from "../../icons/solar-system.png";
+import SunIcon from "../../icons/sun.png";
+import MarsIcon from "../../icons/mars.png";
+import MeteorIcon from "../../icons/meteor.png";
+import TVIcon from "../../icons/television.png";
 
 import {
   Content,
@@ -18,7 +18,7 @@ const Header = () => (
     <Content>
       <TitleWrapper>
         <img src={Logo} alt="site-logo" />
-        Space Weather
+        Experimental Space Weather
       </TitleWrapper>
       <Navbar>
           <ul>
