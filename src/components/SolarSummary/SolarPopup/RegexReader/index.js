@@ -5,12 +5,18 @@ import React from "react";
 import { Wrapper, Content } from "./RegexReader.style.js"
 
 const RegexReader = (props) => {
-    const {regexMessage, eventType} = props;
+    const {message, eventType} = props;
     
-    switch (eventType) {
-        case "CME":
+// Switch Regex Cases
+const ipsRegex =
+/(Message Type: Space Weather Notification - Interplanetary Shock)/g;
+const reportRegex = /(Message Type: Weekly Space Weather Summary Report)/g;
+const cmeUpdateRegex = /(CME update)/g;
+const cmeStandardRegex = /(Message Type: Space Weather Notification - CME \()/g;
+const rbeStandardRegex = /(Message Type: Space Weather Notification - Radiation Belt Enhancement)/g;
 
-            
+    switch (true) {
+        case cmeStandardRegex.test(message):
             return (
                 <Wrapper>
                     <Content>
@@ -20,7 +26,7 @@ const RegexReader = (props) => {
                         break
                         <br />
                         <br />
-                        {regexMessage}
+                        {message}
                     </Content>
                 </Wrapper>
             )

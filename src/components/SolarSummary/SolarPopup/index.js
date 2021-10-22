@@ -28,8 +28,16 @@ const SolarPopup = (props) => {
 
   const { trigger, setTrigger, message, eventType, URL, eventTime } = props;
 
-  switch (eventType) {
-    case "CME":
+  // Switch Regex Cases
+  const ipsRegex =
+    /(Message Type: Space Weather Notification - Interplanetary Shock)/g;
+  const reportRegex = /(Message Type: Weekly Space Weather Summary Report)/g;
+  const cmeUpdateRegex = /(CME update)/g;
+  const cmeStandardRegex = /(Message Type: Space Weather Notification - CME \()/g;
+  const rbeStandardRegex = /(Message Type: Space Weather Notification - Radiation Belt Enhancement)/g;
+
+  switch (true) {
+    case cmeStandardRegex.test(message):
       return trigger ? (
         <Wrapper>
           <Dimmer />
@@ -59,7 +67,7 @@ const SolarPopup = (props) => {
             <br />
             <TextContainer>
               {/* {message.match(regex)} */}
-              <RegexReader regexMessage={message} eventType={eventType} />
+              <RegexReader message={message} eventType={eventType} />
             </TextContainer>
             <br />
             <LearnMore>
@@ -80,7 +88,7 @@ const SolarPopup = (props) => {
         ""
       );
 
-    case "IPS":
+    case ipsRegex.test(message):
       return props.trigger ? (
         <Wrapper>
           <Content>
@@ -89,7 +97,8 @@ const SolarPopup = (props) => {
             <img src={IPSIcon} alt="Interplanetary Shock Icon" />
             {/* <div>{`${props.eventTime} + ${props.eventType} + ${props.URL} +`}</div> */}
             <br />
-            <div>{props.message.match(regex)}</div>
+            {/* <div>{props.message.match(regex)}</div> */}
+            Insert Regex Here
             <br />
             <div>
               <a href={`${props.URL}`}>Detailed View</a>
@@ -101,7 +110,7 @@ const SolarPopup = (props) => {
         ""
       );
 
-    case "Report":
+    case reportRegex.test(message):
       return props.trigger ? (
         <Wrapper>
           <Content>
@@ -110,7 +119,7 @@ const SolarPopup = (props) => {
             <img src={ReportIcon} alt="Report Icon" />
             {/* <div>{`${props.eventTime} + ${props.eventType} + ${props.URL} +`}</div> */}
             <br />
-            <div>{props.message.match(regex)}</div>
+            {/* <div>{props.message.match(regex)}</div> */}
             <br />
             <div>
               <a href={`${props.URL}`}>Detailed View</a>
@@ -122,7 +131,7 @@ const SolarPopup = (props) => {
         ""
       );
 
-    case "RBE":
+    case rbeStandardRegex.test(message):
       return props.trigger ? (
         <Wrapper>
           <Content>
@@ -131,7 +140,7 @@ const SolarPopup = (props) => {
             <img src={RBEIcon} alt="Radiation Belt Enhancement Icon" />
             {/* <div>{`${props.eventTime} + ${props.eventType} + ${props.URL} +`}</div> */}
             <br />
-            <div>{props.message.match(regex)}</div>
+            {/* <div>{props.message.match(regex)}</div> */}
             <br />
             <div>
               <a href={`${props.URL}`}>Detailed View</a>
