@@ -24,8 +24,6 @@ import CMEIcon from "../../../icons/CME-2.svg";
 import RBEIcon from "../../../icons/earth.png";
 
 const SolarPopup = (props) => {
-  // Unused Code
-  // const regex = /^(## Summary:\n\n).*(\n\n\n)/gms;
 
   // Props & Destructure
   const { open, setOpen, message, eventType, URL, eventTime, messageID } = props;
