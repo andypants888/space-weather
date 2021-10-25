@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // Child Components
 import RegexReader from "./RegexReader";
@@ -24,9 +24,17 @@ import CMEIcon from "../../../icons/CME-2.svg";
 import RBEIcon from "../../../icons/earth.png";
 
 const SolarPopup = (props) => {
-  const regex = /^(## Summary:\n\n).*(\n\n\n)/gms;
+  // Unused Code
+  // const regex = /^(## Summary:\n\n).*(\n\n\n)/gms;
 
-  const { trigger, setTrigger, message, eventType, URL, eventTime } = props;
+  // Props & Destructure
+  const { open, setOpen, message, eventType, URL, eventTime, messageID } = props;
+
+  // Hooks
+  useEffect(() => {
+    open && (document.body.style.overflow = 'hidden');
+    !open && (document.body.style.overflow = '');
+  });
 
   // Switch Regex Cases
   const ipsRegex =
@@ -41,12 +49,12 @@ const SolarPopup = (props) => {
   switch (true) {
     // Coronal Mass Ejection
     case cmeStandardRegex.test(message):
-      return trigger ? (
+      return open ? (
         <Wrapper>
           <Dimmer />
           <Content>
             <CloseBanner>
-              <button onClick={() => setTrigger(false)}>X</button>
+              <button onClick={() => setOpen(false)}>X</button>
             </CloseBanner>
             <Header>
               <img src={CMEIcon} alt="Coronal Mass Ejection Icon" />
@@ -73,6 +81,7 @@ const SolarPopup = (props) => {
                 message={message}
                 eventType={eventType}
                 eventTime={eventTime}
+                key={messageID}
               />
             </TextContainer>
             <br />
@@ -95,12 +104,12 @@ const SolarPopup = (props) => {
       );
     // Interplanetary Shock
     case ipsRegex.test(message):
-      return trigger ? (
+      return open ? (
         <Wrapper>
           <Dimmer />
           <Content>
             <CloseBanner>
-              <button onClick={() => setTrigger(false)}>X</button>
+              <button onClick={() => setOpen(false)}>X</button>
             </CloseBanner>
             <Header>
               <img src={IPSIcon} alt="Interplanetary Shock" />
@@ -144,10 +153,10 @@ const SolarPopup = (props) => {
       );
 
     case reportRegex.test(message):
-      return props.trigger ? (
+      return props.open ? (
         <Wrapper>
           <Content>
-            <button onClick={() => props.setTrigger(false)}>Less Info</button>
+            <button onClick={() => props.setOpen(false)}>Less Info</button>
             <h2>{`NASA Weekly ${props.eventType}`}</h2>
             <img src={ReportIcon} alt="Report Icon" />
             {/* <div>{`${props.eventTime} + ${props.eventType} + ${props.URL} +`}</div> */}
@@ -165,10 +174,10 @@ const SolarPopup = (props) => {
       );
 
     case rbeStandardRegex.test(message):
-      return props.trigger ? (
+      return props.open ? (
         <Wrapper>
           <Content>
-            <button onClick={() => props.setTrigger(false)}>Less Info</button>
+            <button onClick={() => props.setOpen(false)}>Less Info</button>
             <h2>{`Radiation Belt Enhancement (${props.eventType})`}</h2>
             <img src={RBEIcon} alt="Radiation Belt Enhancement Icon" />
             {/* <div>{`${props.eventTime} + ${props.eventType} + ${props.URL} +`}</div> */}

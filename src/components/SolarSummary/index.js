@@ -31,9 +31,8 @@ import UpdateIcon from "../../icons/news-anchor.png";
 const SolarSummary = (props) => {
   console.log("SolarSummaryindex.js props: ", props);
   // Props, States, Hooks
-  const { messageType, messageIssueTime, messageURL, messageBody } = props.data;
+  const { messageType, messageIssueTime, messageURL, messageBody, messageID } = props.data;
   const [solarPopup, setSolarPopup] = useState(false);
-
   // Date of Event
   const today = new Date();
   const eventTime = new Date(messageIssueTime);
@@ -76,12 +75,13 @@ const SolarSummary = (props) => {
               <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
             <SolarPopup
-              trigger={solarPopup}
-              setTrigger={setSolarPopup}
+              open={solarPopup}
+              setOpen={setSolarPopup}
               message={messageBody}
               eventType={messageType}
               URL={messageURL}
               eventTime={eventTime}
+              key={messageID}
             />
           </Content>
         </Wrapper>
@@ -106,8 +106,8 @@ const SolarSummary = (props) => {
               <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
             <SolarPopup
-              trigger={solarPopup}
-              setTrigger={setSolarPopup}
+              open={solarPopup}
+              setOpen={setSolarPopup}
               message={messageBody}
               eventType={messageType}
               URL={messageURL}
@@ -136,8 +136,8 @@ const SolarSummary = (props) => {
               <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
             <SolarPopup
-              trigger={solarPopup}
-              setTrigger={setSolarPopup}
+              open={solarPopup}
+              setOpen={setSolarPopup}
               message={messageBody}
               eventType={messageType}
               URL={messageURL}
@@ -166,8 +166,8 @@ const SolarSummary = (props) => {
               <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
             <SolarPopup
-              trigger={solarPopup}
-              setTrigger={setSolarPopup}
+              open={solarPopup}
+              setOpen={setSolarPopup}
               message={messageBody}
               eventType={messageType}
               URL={messageURL}
@@ -197,8 +197,8 @@ const SolarSummary = (props) => {
               <button onClick={() => setSolarPopup(true)}>More Info</button>
             </SolarEvent>
             <SolarPopup
-              trigger={solarPopup}
-              setTrigger={setSolarPopup}
+              open={solarPopup}
+              setOpen={setSolarPopup}
               message={messageBody}
               eventType={messageType}
               URL={messageURL}
