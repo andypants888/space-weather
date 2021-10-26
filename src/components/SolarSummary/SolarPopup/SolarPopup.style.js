@@ -107,11 +107,16 @@ export const GifContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  font-family: monospace;
   iframe {
     width: 100%;
-    height: 400px;
+    height: auto;
     pointer-events: none;
-    margin-bottom: 5px;
+    margin: 5px 0px;
+  }
+
+  @media (pointer:fine) {
+    margin: 20px 0px;
   }
 `;
 

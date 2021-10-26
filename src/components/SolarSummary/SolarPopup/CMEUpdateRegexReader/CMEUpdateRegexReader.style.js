@@ -14,9 +14,10 @@ export const Content = styled.div`
 
 export const Title = styled.div`
   font-family: monospace;
-  font-size: 25px;
+  font-size: 35px;
   margin-bottom: 5px;
   font-weight: 600;
+  padding: 10px 0px;
 `;
 
 export const Main = styled.div`
@@ -24,10 +25,9 @@ export const Main = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
-  height: 50vh;
-
+  height: 100vh;
   @media (pointer: fine) {
-    height: 25vh;
+    height: 70vh;
   }
 `;
 
@@ -35,4 +35,5 @@ export const Warning = styled.div`
   font-family: monospace;
   font-weight: 400;
   color: lightblue;
+  padding: 5px;
 `;

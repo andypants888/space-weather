@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 
 // Child Components
-import RegexReader from "./RegexReader";
+import CMERegexReader from "./CMERegexReader";
+import CMEUpdateRegexReader from "./CMEUpdateRegexReader";
 
 // Style
 import {
@@ -22,16 +23,17 @@ import IPSIcon from "../../../icons/IPS-3.svg";
 import ReportIcon from "../../../icons/clipboard.png";
 import CMEIcon from "../../../icons/CME-2.svg";
 import RBEIcon from "../../../icons/earth.png";
+import UpdateIcon from "../../../icons/news-anchor.png";
 
 const SolarPopup = (props) => {
-
   // Props & Destructure
-  const { open, setOpen, message, eventType, URL, eventTime, messageID } = props;
+  const { open, setOpen, message, eventType, URL, eventTime, messageID } =
+    props;
 
   // Hooks
   useEffect(() => {
-    open && (document.body.style.overflow = 'hidden');
-    !open && (document.body.style.overflow = '');
+    open && (document.body.style.overflow = "hidden");
+    !open && (document.body.style.overflow = "");
   });
 
   // Switch Regex Cases
@@ -70,12 +72,12 @@ const SolarPopup = (props) => {
                 allowFullScreen
               ></iframe>
               <a href="https://giphy.com/gifs/europeanspaceagency-sun-european-space-agency-soho-mtRLckxvlwtStCZWd8"></a>
-              {/* <div>2012 CME Event</div> */}
+              (Gif is an example, not same event)
             </GifContainer>
             <br />
             <TextContainer>
               {/* {message.match(regex)} */}
-              <RegexReader
+              <CMERegexReader
                 message={message}
                 eventType={eventType}
                 eventTime={eventTime}
@@ -87,6 +89,63 @@ const SolarPopup = (props) => {
               <div>What is a Coronal Mass Ejection?</div>
               <button>Help Article</button>
               <button>Video Explains</button>
+            </LearnMore>
+            <br />
+            <Footer>
+              <a href={`${URL}`}>Event Details</a>
+              <a href={``}>Longer Article</a>
+              <a href={``}>Longer Video</a>
+            </Footer>
+            <br />
+          </Content>
+        </Wrapper>
+      ) : (
+        ""
+      );
+    // CME Update
+    case cmeUpdateRegex.test(message):
+      return open ? (
+        <Wrapper>
+          <Dimmer />
+          <Content>
+            <CloseBanner>
+              <button onClick={() => setOpen(false)}>X</button>
+            </CloseBanner>
+            <Header>
+              <img src={UpdateIcon} alt="News Icon" />
+              <div>{`${eventType} Update`}</div>
+            </Header>
+            <OneLiner>
+              <div>Updated Analysis of Previous CME Event</div>
+            </OneLiner>
+            <br />
+            <br />
+            <GifContainer>
+              <iframe
+                src="https://giphy.com/embed/gbRLaGDygGpkgdaLjA"
+                frameBorder="0"
+                allowFullScreen
+              ></iframe>
+              <p>
+                <a href="https://giphy.com/gifs/europeanspaceagency-esa-european-space-agency-esagif-gbRLaGDygGpkgdaLjA"> </a>
+                (Gif is an example, not same event)
+              </p>
+              {/* <div>2012 CME Event</div> */}
+            </GifContainer>
+            <br />
+            <TextContainer>
+              {/* {message.match(regex)} */}
+              <CMEUpdateRegexReader
+                message={message}
+                eventType={eventType}
+                eventTime={eventTime}
+                key={messageID}
+              />
+            </TextContainer>
+            <br />
+            <LearnMore>
+              <div>What is a CME Analysis?</div>
+              <button>Help Article</button>
             </LearnMore>
             <br />
             <Footer>
