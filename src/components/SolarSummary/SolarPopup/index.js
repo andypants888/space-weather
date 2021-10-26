@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 // Child Components
 import CMERegexReader from "./CMERegexReader";
 import CMEUpdateRegexReader from "./CMEUpdateRegexReader";
+import IPSRegexReader from "./IPSRegexReader";
 
 // Style
 import {
@@ -72,7 +73,7 @@ const SolarPopup = (props) => {
                 allowFullScreen
               ></iframe>
               <a href="https://giphy.com/gifs/europeanspaceagency-sun-european-space-agency-soho-mtRLckxvlwtStCZWd8"></a>
-              (Gif is an example, not same event)
+              (Image is an example, not same event)
             </GifContainer>
             <br />
             <TextContainer>
@@ -127,8 +128,10 @@ const SolarPopup = (props) => {
                 allowFullScreen
               ></iframe>
               <p>
-                <a href="https://giphy.com/gifs/europeanspaceagency-esa-european-space-agency-esagif-gbRLaGDygGpkgdaLjA"> </a>
-                (Gif is an example, not same event)
+                <a href="https://giphy.com/gifs/europeanspaceagency-esa-european-space-agency-esagif-gbRLaGDygGpkgdaLjA">
+                  {" "}
+                </a>
+                (Image is an example, not same event)
               </p>
               {/* <div>2012 CME Event</div> */}
             </GifContainer>
@@ -173,22 +176,25 @@ const SolarPopup = (props) => {
               <div>{`Interplanetary Shock (${eventType})`}</div>
             </Header>
             <OneLiner>
-              <div>Under Construction</div>
+              <div>Electromagnetic Shockwaves from the Sun hit the Earth's Magnetic Field!</div>
             </OneLiner>
             <br />
             <GifContainer>
-              {/* <iframe
-                src="https://giphy.com/embed/mtRLckxvlwtStCZWd8"
+              <iframe
+                src="https://giphy.com/embed/nFrkObrecjIGapisw5"
                 frameBorder="0"
                 allowFullScreen
-              ></iframe> */}
-              <a href="https://giphy.com/gifs/europeanspaceagency-sun-european-space-agency-soho-mtRLckxvlwtStCZWd8"></a>
-              {/* <div>2012 CME Event</div> */}
+              ></iframe>
+              (Image is an example, not same event)
             </GifContainer>
             <br />
             <TextContainer>
-              {/* {message.match(regex)} */}
-              {/* <RegexReader message={message} eventType={eventType} eventTime={eventTime}/> */}
+              <IPSRegexReader
+                message={message}
+                eventType={eventType}
+                eventTime={eventTime}
+                key={messageID}
+              />
             </TextContainer>
             <br />
             <LearnMore>

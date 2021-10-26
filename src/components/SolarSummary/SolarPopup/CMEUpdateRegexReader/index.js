@@ -37,8 +37,8 @@ const CMEUpdateRegexReader = (props) => {
     const JSDateArr = UTCDates.map((utc) => new Date(utc));
     const LocalDateArr = JSDateArr.map((date) =>
       date.toLocaleString("en-US", {
-        // weekday: "long",
-        month: "numeric",
+        weekday: "short",
+        // month: "numeric",
         day: "numeric",
         hour: "2-digit",
         minute: "2-digit",
@@ -65,8 +65,8 @@ const CMEUpdateRegexReader = (props) => {
     const JSDateArr = UTCDates.map((utc) => new Date(utc));
     const LocalDateArr = JSDateArr.map((date) =>
       date.toLocaleString("en-US", {
-        // weekday: "long",
-        month: "numeric",
+        weekday: "short",
+        // month: "numeric",
         day: "numeric",
         hour: "2-digit",
         minute: "2-digit",
