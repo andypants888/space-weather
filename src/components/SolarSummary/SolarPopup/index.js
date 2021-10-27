@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import CMERegexReader from "./CMERegexReader";
 import CMEUpdateRegexReader from "./CMEUpdateRegexReader";
 import IPSRegexReader from "./IPSRegexReader";
+import ReportRegexReader from "./ReportRegexReader";
 
 // Style
 import {
@@ -62,8 +63,7 @@ const SolarPopup = (props) => {
               <div>{`Coronal Mass Ejection (${eventType})`}</div>
             </Header>
             <OneLiner>
-              <div>Plasma & Gas Eruption from Sun's Atmosphere</div>
-              <div>(Corona)</div>
+              <div>Plasma & Gas Eruption from Sun's Corona (Atmosphere)</div>
             </OneLiner>
             <br />
             <GifContainer>
@@ -176,7 +176,10 @@ const SolarPopup = (props) => {
               <div>{`Interplanetary Shock (${eventType})`}</div>
             </Header>
             <OneLiner>
-              <div>Electromagnetic Shockwaves from the Sun hit the Earth's Magnetic Field!</div>
+              <div>
+                Electromagnetic Shockwaves from the Sun hit the Earth's Magnetic
+                Field!
+              </div>
             </OneLiner>
             <br />
             <GifContainer>
@@ -214,21 +217,57 @@ const SolarPopup = (props) => {
       ) : (
         ""
       );
-
+    // Weekly Report
     case reportRegex.test(message):
       return props.open ? (
         <Wrapper>
+          <Dimmer />
           <Content>
-            <button onClick={() => props.setOpen(false)}>Less Info</button>
-            <h2>{`NASA Weekly ${props.eventType}`}</h2>
-            <img src={ReportIcon} alt="Report Icon" />
-            {/* <div>{`${props.eventTime} + ${props.eventType} + ${props.URL} +`}</div> */}
+            <CloseBanner>
+              <button onClick={() => setOpen(false)}>X</button>
+            </CloseBanner>
+            <Header>
+              <img src={ReportIcon} alt="Weekly Report" />
+              <div>{`Weekly Report`}</div>
+            </Header>
+            <OneLiner>
+              <div>
+                Space Weather Summary and Next Week's Forecast!
+              </div>
+            </OneLiner>
             <br />
-            {/* <div>{props.message.match(regex)}</div> */}
+            <GifContainer>
+              <iframe
+                src="https://giphy.com/embed/vS573qTiGzVWDppUMJ"
+                // width="480"
+                // height="270"
+                frameBorder="0"
+                // class="giphy-embed"
+                allowFullScreen
+              ></iframe>
+              (Astronaut on ISS)
+            </GifContainer>
             <br />
-            <div>
-              <a href={`${props.URL}`}>Detailed View</a>
-            </div>
+            <TextContainer>
+              <ReportRegexReader
+                message={message}
+                eventType={eventType}
+                eventTime={eventTime}
+                key={messageID}
+              />
+            </TextContainer>
+            <br />
+            <LearnMore>
+              {/* <div>What is a Coronal Mass Ejection?</div> */}
+              <button>Help Article</button>
+              <button>Video Explains</button>
+            </LearnMore>
+            <br />
+            <Footer>
+              <a href={`${URL}`}>Event Details</a>
+              <a href={``}>Longer Article</a>
+              <a href={``}>Longer Video</a>
+            </Footer>
             <br />
           </Content>
         </Wrapper>

@@ -99,7 +99,7 @@ export const OneLiner = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 5px;
+  margin-top: 20px;
 `;
 
 export const GifContainer = styled.div`
@@ -110,13 +110,20 @@ export const GifContainer = styled.div`
   font-family: monospace;
   iframe {
     width: 100%;
-    height: auto;
+    height: 150px;
     pointer-events: none;
-    margin: 5px 0px;
+    margin-top: -10px;
+    margin-bottom: 15px;
   }
 
-  @media (pointer:fine) {
+  @media (pointer: fine) {
     margin: 20px 0px;
+    iframe {
+      width: 100%;
+      height: 270px;
+      pointer-events: none;
+      margin: 5px 0px;
+    }
   }
 `;
 
