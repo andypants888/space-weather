@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Components
 import Header from "./components/Header/";
 import SolarBody from "./components/SolarBody";
-import Learn from "./components/Education";
+import Learn from "./components/Learn";
 import NotFound from "./components/NotFound";
 
 // Styles
@@ -19,9 +19,9 @@ function App() {
       {/* <Route /> */}
       <Header />
       <Routes>
-        <Route exact path="/weather" element={<SolarBody />} />
-        <Route exact path="/learn" element={<Learn />} />
-        <Route exact path="/notfound" element={<NotFound />} />
+        <Route path="/weather" element={<SolarBody />} />
+        <Route path="/learn" element={<Learn />} />
+        <Route path="/notfound" element={<NotFound />} />
       </Routes>
       <GlobalStyle />
       <NavBlock />
