@@ -46,7 +46,7 @@ const IPSRegexReader = (props) => {
 
     for (let j = 0; j < JSDateArr.length; j++) {
       let replaced = discoverList[i].replace(UTCDates[j], LocalDateArr[j]);
-      console.log(replaced);
+    //   console.log(replaced);
       discoverList[i] = replaced;
       if (!UTCDatesRegex.test(discoverList[i])) {
         discoverText.push(discoverList[i]);

@@ -44,7 +44,7 @@ const SolarPopup = (props) => {
   const reportRegex = /(Message Type: Weekly Space Weather Summary Report)/g;
   const cmeUpdateRegex = /(CME update)/g;
   const cmeStandardRegex =
-    /(Message Type: Space Weather Notification - CME \()/g;
+    /Message Type: Space Weather Notification - CME/g;
   const rbeStandardRegex =
     /(Message Type: Space Weather Notification - Radiation Belt Enhancement)/g;
 

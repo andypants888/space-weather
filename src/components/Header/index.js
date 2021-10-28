@@ -2,9 +2,9 @@ import React from "react";
 
 import Logo from "../../icons/solar-system.png";
 import SunIcon from "../../icons/sun.png";
-import MarsIcon from "../../icons/mars.png";
-import MeteorIcon from "../../icons/meteor.png";
-import TVIcon from "../../icons/television.png";
+import EducationIcon from "../../icons/education.png";
+import QuizIcon from "../../icons/quiz.png";
+import HackerIcon from "../../icons/hacker.png";
 
 import {
   Content,
@@ -22,10 +22,10 @@ const Header = () => (
       </TitleWrapper>
       <Navbar>
           <ul>
-            <li><img src={SunIcon} alt="sun-icon" />Solar</li>
-            <li><img src={MarsIcon} alt="mars-icon" />Mars</li>
-            <li><img src={MeteorIcon} alt="meteor-icon" />Asteroids</li>
-            <li><img src={TVIcon} alt="tv-icon" />TV</li>
+            <li><img src={SunIcon} alt="sun-icon" />Events</li>
+            <li><img src={EducationIcon} alt="education-icon" />Learn More</li>
+            <li><img src={QuizIcon} alt="quiz-icon" />Quizzes</li>
+            <li><img src={HackerIcon} alt="programmer-icon" />Credits</li>
           </ul>
         </Navbar>
     </Content>

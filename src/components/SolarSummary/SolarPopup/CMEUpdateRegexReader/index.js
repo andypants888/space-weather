@@ -51,7 +51,7 @@ const CMEUpdateRegexReader = (props) => {
 
     for (let j = 0; j < JSDateArr.length; j++) {
       let replaced = sateliteList[i].replace(UTCDates[j], LocalDateArr[j]);
-      console.log(replaced);
+      // console.log(replaced);
       sateliteList[i] = replaced;
       if (!UTCDatesRegex.test(sateliteList[i])) {
         sateliteImpactText.push(sateliteList[i]);
@@ -79,7 +79,7 @@ const CMEUpdateRegexReader = (props) => {
 
     for (let j = 0; j < JSDateArr.length; j++) {
       let replaced = earthImpactList[i].replace(UTCDates[j], LocalDateArr[j]);
-      console.log(replaced);
+      // console.log(replaced);
       earthImpactList[i] = replaced;
       if (!UTCDatesRegex.test(earthImpactList[i])) {
         earthImpactText.push(earthImpactList[i]);

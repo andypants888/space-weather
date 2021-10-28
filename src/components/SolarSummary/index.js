@@ -23,15 +23,22 @@ import IPSIcon from "../../icons/IPS-3.svg";
 import ReportIcon from "../../icons/clipboard.png";
 import CMEIcon from "../../icons/CME-2.svg";
 import RBEIcon from "../../icons/earth.png";
-import UpdateIcon from "../../icons/news-anchor.png";
+import UpdateIcon from "../../icons/monitoring.png";
+import SEPIcon from "../../icons/lightning-bolt.png";
+import GSTIcon from "../../icons/northern-lights.png";
+import MPCIcon from "../../icons/gap.png";
+import FLRIcon from "../../icons/flare.png";
+import HSSIcon from "../../icons/speedometer.png";
 
 // API Event Object
 // messageBody, messageID, messageIssueTime, messageType,messageURL
 
 const SolarSummary = (props) => {
-  console.log("SolarSummaryindex.js props: ", props);
+  // Show each array object
+  // console.log("SolarSummaryindex.js props: ", props);
   // Props, States, Hooks
-  const { messageType, messageIssueTime, messageURL, messageBody, messageID } = props.data;
+  const { messageType, messageIssueTime, messageURL, messageBody, messageID } =
+    props.data;
   const [solarPopup, setSolarPopup] = useState(false);
   // Date of Event
   const today = new Date();
@@ -49,11 +56,13 @@ const SolarSummary = (props) => {
   const ipsRegex =
     /(Message Type: Space Weather Notification - Interplanetary Shock)/g;
   const reportRegex = /(Message Type: Weekly Space Weather Summary Report)/g;
-  const cmeUpdateRegex = /(CME update)/g;
+  const cmeUpdateRegex = /CME update \(ensemble\)/g;
   const cmeStandardRegex =
-    /(Message Type: Space Weather Notification - CME \()/g;
+    /(Message Type: Space Weather Notification - CMEs?) \(/g;
   const rbeStandardRegex =
     /(Message Type: Space Weather Notification - Radiation Belt Enhancement)/g;
+  const sepRegex = /Notification - SEP/g;
+  const gstRegex = /Notification - Geomagnetic Storm/g;
 
   switch (true) {
     // Coronal Mass Ejection
@@ -179,7 +188,7 @@ const SolarSummary = (props) => {
       break;
 
     // Radiation Belt Enhancement
-    case rbeStandardRegex.test(messageBody):
+    case messageType === "RBE":
       return (
         <Wrapper>
           <Content>
@@ -208,6 +217,131 @@ const SolarSummary = (props) => {
         </Wrapper>
       );
       break;
+    // SEP Solar Energetic Particles
+    case sepRegex.test(messageBody):
+      return (
+        <Wrapper>
+          <Content>
+            <SolarEvent>
+              <Icon>
+                <img src={SEPIcon} alt="Solar Energetic Particles Icon" />
+              </Icon>
+              <h3>Solar Energetic Particles ({messageType})</h3>
+              <h3>
+                <div>
+                  {`${daysAgo} days ago on `}
+                  {summaryTime}
+                </div>
+              </h3>
+              <button onClick={() => setSolarPopup(true)}>More Info</button>
+            </SolarEvent>
+            <SolarPopup
+              open={solarPopup}
+              setOpen={setSolarPopup}
+              message={messageBody}
+              eventType={messageType}
+              URL={messageURL}
+              eventTime={eventTime}
+              key={messageID}
+            />
+          </Content>
+        </Wrapper>
+      );
+      break;
+    // GST Geomagnetic Storm
+    case gstRegex.test(messageBody):
+      return (
+        <Wrapper>
+          <Content>
+            <SolarEvent>
+              <Icon>
+                <img src={GSTIcon} alt="Geomagnetic Storm Icon" />
+              </Icon>
+              <h3>Geomagnetic Storm ({messageType})</h3>
+              <h3>
+                <div>
+                  {`${daysAgo} days ago on `}
+                  {summaryTime}
+                </div>
+              </h3>
+              <button onClick={() => setSolarPopup(true)}>More Info</button>
+            </SolarEvent>
+            <SolarPopup
+              open={solarPopup}
+              setOpen={setSolarPopup}
+              message={messageBody}
+              eventType={messageType}
+              URL={messageURL}
+              eventTime={eventTime}
+              key={messageID}
+            />
+          </Content>
+        </Wrapper>
+      );
+      break;
+    // MPC Magnetopause Crossing
+    case messageType === "MPC":
+      return (
+        <Wrapper>
+          <Content>
+            <SolarEvent>
+              <Icon>
+                <img src={MPCIcon} alt="Magnetopause Crossing Icon" />
+              </Icon>
+              <h3>Magnetopause Crossing ({messageType})</h3>
+              <h3>
+                <div>
+                  {`${daysAgo} days ago on `}
+                  {summaryTime}
+                </div>
+              </h3>
+              <button onClick={() => setSolarPopup(true)}>More Info</button>
+            </SolarEvent>
+            <SolarPopup
+              open={solarPopup}
+              setOpen={setSolarPopup}
+              message={messageBody}
+              eventType={messageType}
+              URL={messageURL}
+              eventTime={eventTime}
+              key={messageID}
+            />
+          </Content>
+        </Wrapper>
+      );
+      break;
+    // FLR Solar Flare
+    case messageType === "FLR":
+      return (
+        <Wrapper>
+          <Content>
+            <SolarEvent>
+              <Icon>
+                <img src={FLRIcon} alt="Solar Flare Icon" />
+              </Icon>
+              <h3>New Solar Flare ({messageType})</h3>
+              <h3>
+                <div>
+                  {`${daysAgo} days ago on `}
+                  {summaryTime}
+                </div>
+              </h3>
+              <button onClick={() => setSolarPopup(true)}>More Info</button>
+            </SolarEvent>
+            <SolarPopup
+              open={solarPopup}
+              setOpen={setSolarPopup}
+              message={messageBody}
+              eventType={messageType}
+              URL={messageURL}
+              eventTime={eventTime}
+              key={messageID}
+            />
+          </Content>
+        </Wrapper>
+      );
+      break;
+      // HSS High Speed Stream
     default:
       return null;
   }

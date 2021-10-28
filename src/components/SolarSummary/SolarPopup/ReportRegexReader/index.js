@@ -34,7 +34,7 @@ const ReportRegexReader = (props) => {
   const discoverGeomagneticList = message.match(geomagneticOutlookRegex);
   const discoverDatesOutlookList = message.match(outlookDatesRegex);
 
-  console.log(discoverGeomagneticList);
+  // console.log(discoverGeomagneticList);
 
   // GeoMagnetic UTC --> Local
 
@@ -58,7 +58,7 @@ const ReportRegexReader = (props) => {
         UTCDates[j],
         LocalDateArr[j]
       );
-      console.log(replaced);
+      // console.log(replaced);
       discoverGeomagneticList[i] = replaced;
       if (!UTCDatesRegex.test(discoverGeomagneticList[i])) {
         geomagneticOutlookLocal.push(`${discoverGeomagneticList[i]}`);
@@ -87,7 +87,7 @@ const ReportRegexReader = (props) => {
         UTCDates[j],
         LocalDateArr[j]
       );
-      console.log(replaced);
+      // console.log(replaced);
       discoverDatesOutlookList[i] = replaced;
       if (!UTCDatesRegex.test(discoverDatesOutlookList[i])) {
         datesOutlookLocal.push(discoverDatesOutlookList[i]);
