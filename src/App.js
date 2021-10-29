@@ -8,6 +8,7 @@ import Header from "./components/Header/";
 import SolarBody from "./components/SolarBody";
 import Learn from "./components/Learn";
 import NotFound from "./components/NotFound";
+import Landing from "./components/Landing";
 
 // Styles
 import { GlobalStyle } from "./GlobalStyle";
@@ -19,6 +20,7 @@ function App() {
       {/* <Route /> */}
       <Header />
       <Routes>
+        <Route path="/landing" element={<Landing />} />
         <Route path="/weather" element={<SolarBody />} />
         <Route path="/learn" element={<Learn />} />
         <Route path="/notfound" element={<NotFound />} />
