@@ -20,10 +20,12 @@ function App() {
       {/* <Route /> */}
       <Header />
       <Routes>
-        <Route path="/landing" element={<Landing />} />
-        <Route path="/weather" element={<SolarBody />} />
-        <Route path="/learn" element={<Learn />} />
-        <Route path="/notfound" element={<NotFound />} />
+        <Route path="/">
+          {/* <Route path="landing" element={<Landing />} /> */}
+          <Route path="/" element={<SolarBody />} />
+          <Route path="learn" element={<Learn />} />
+          <Route path="notfound" element={<NotFound />} />
+        </Route>
       </Routes>
       <GlobalStyle />
       <NavBlock />
