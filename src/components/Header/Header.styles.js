@@ -87,7 +87,7 @@ export const Navbar = styled.div`
       align-items: center;
       flex-grow: 0;
       justify-content: space-between;
-      width: 9vw;
+      width: 7.5vw;
       height: calc(var(--iconHeight) - 10px);
     }
   }

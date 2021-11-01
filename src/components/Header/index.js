@@ -19,7 +19,7 @@ const Header = () => (
       </TitleWrapper>
       <Navbar>
         <ul>
-          <NavLink to="/" exact={true}>
+          <NavLink to="/weather" exact={true}>
             <li>
               <img src={SunIcon} alt="sun-icon" /> Weather
             </li>

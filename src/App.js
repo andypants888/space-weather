@@ -20,7 +20,7 @@ function App() {
       {/* <Route /> */}
       <Header />
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/" element={<Landing />} exact/>
         <Route path="/">
           <Route path="weather" element={<SolarBody />} />
           <Route path="learn" element={<Learn />} />
