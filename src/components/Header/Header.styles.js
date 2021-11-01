@@ -34,9 +34,15 @@ export const TitleWrapper = styled.div`
 `;
 
 export const Navbar = styled.div`
+  a,
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
   // Overall Navbar
   ul {
-    list-style: none;
+    /* list-style: none; */
     padding: 0;
     margin: 0;
     height: calc(var(--iconHeight));
@@ -59,13 +65,14 @@ export const Navbar = styled.div`
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
+    list-style: none;
     @media (pointer: fine) {
       display: flex;
       flex-direction: row;
       align-items: center;
       flex-grow: 0;
       justify-content: space-between;
-      width: 7vw;
+      width: 9vw;
       height: calc(var(--iconHeight) - 10px);
     }
   }
