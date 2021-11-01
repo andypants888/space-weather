@@ -40,9 +40,24 @@ export const Navbar = styled.div`
     text-decoration: none;
   }
 
+  a:active,
+  a:hover {
+    li {
+      font-style: italic;
+      background-color: black;
+      /* padding: 0px 30px; */
+      width: 130px;
+      height: var(--iconHeight);
+
+      @media (pointer: fine) {
+        padding: 15px;
+        height: calc(var(--iconHeight) - 10px);
+      }
+    }
+  }
+
   // Overall Navbar
   ul {
-    /* list-style: none; */
     padding: 0;
     margin: 0;
     height: calc(var(--iconHeight));
@@ -79,6 +94,8 @@ export const Navbar = styled.div`
   // Icon Only
   img {
     width: 7vw;
+    padding-right: 2px;
+    margin-right: 5px;
     @media (pointer: fine) {
       width: calc(var(--iconHeight) - 10px);
     }

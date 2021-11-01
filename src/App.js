@@ -20,9 +20,9 @@ function App() {
       {/* <Route /> */}
       <Header />
       <Routes>
+        <Route path="/" element={<Landing />} />
         <Route path="/">
-          {/* <Route path="landing" element={<Landing />} /> */}
-          <Route path="/" element={<SolarBody />} />
+          <Route path="weather" element={<SolarBody />} />
           <Route path="learn" element={<Learn />} />
           <Route path="notfound" element={<NotFound />} />
         </Route>
