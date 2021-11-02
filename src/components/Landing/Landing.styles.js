@@ -7,7 +7,7 @@ export const Content = styled.div`
     position: fixed;
     left: 0px;
     bottom: 0px;
-    overflow-y: clip;
+    overflow-y: hidden;
     z-index: -100;
 
     @media (any-pointer: coarse) {
