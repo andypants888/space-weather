@@ -15,7 +15,6 @@ export const GlobalStyle = createGlobalStyle`
 
  * {
      box-sizing:border-box;
-     /* font-family:  */
  }
 
  body {
@@ -23,8 +22,5 @@ export const GlobalStyle = createGlobalStyle`
      padding: 0;
      background-color: var(--bgColor1);
      color: white;
-     h1 {
-     }
-    /* h1, h3, p global styles */
  }
 `;

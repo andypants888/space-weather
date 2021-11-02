@@ -26,6 +26,7 @@ import ReportIcon from "../../../icons/clipboard.png";
 import CMEIcon from "../../../icons/CME-2.svg";
 import RBEIcon from "../../../icons/earth.png";
 import UpdateIcon from "../../../icons/news-anchor.png";
+import SEPIcon from "../../../icons/lightning-bolt.png";
 
 const SolarPopup = (props) => {
   // Props & Destructure
@@ -43,8 +44,7 @@ const SolarPopup = (props) => {
     /(Message Type: Space Weather Notification - Interplanetary Shock)/g;
   const reportRegex = /(Message Type: Weekly Space Weather Summary Report)/g;
   const cmeUpdateRegex = /(CME update)/g;
-  const cmeStandardRegex =
-    /Message Type: Space Weather Notification - CME/g;
+  const cmeStandardRegex = /Message Type: Space Weather Notification - CME/g;
   const rbeStandardRegex =
     /(Message Type: Space Weather Notification - Radiation Belt Enhancement)/g;
 
@@ -231,9 +231,7 @@ const SolarPopup = (props) => {
               <div>{`Weekly Report`}</div>
             </Header>
             <OneLiner>
-              <div>
-                Space Weather Summary and Next Week's Forecast!
-              </div>
+              <div>Space Weather Summary and Next Week's Forecast!</div>
             </OneLiner>
             <br />
             <GifContainer>
@@ -289,6 +287,62 @@ const SolarPopup = (props) => {
             <div>
               <a href={`${props.URL}`}>Detailed View</a>
             </div>
+            <br />
+          </Content>
+        </Wrapper>
+      ) : (
+        ""
+      );
+
+    // Solar Energetic Particles
+    case eventType === "SEP":
+      return props.open ? (
+        <Wrapper>
+          <Dimmer />
+          <Content>
+            <CloseBanner>
+              <button onClick={() => setOpen(false)}>X</button>
+            </CloseBanner>
+            <Header>
+              <img src={SEPIcon} alt="Solar Energetic Particles" />
+              <div>{`Solar Energetic Particles (SEP)`}</div>
+            </Header>
+            <OneLiner>
+              <div>High-Powered Particle Storm from the Sun!</div>
+            </OneLiner>
+            <br />
+            <GifContainer>
+              <iframe
+                src="https://giphy.com/embed/1oMi442QfTrBU0VyOK"
+                // width="480"
+                // height="270"
+                frameBorder="0"
+                // class="giphy-embed"
+                allowFullScreen
+              ></iframe>
+              (Simulation of Solar Energetic Particles (SEP) & Coronal Mass Ejection (CME))
+            </GifContainer>
+            <br />
+            <TextContainer>
+              {/* <ReportRegexReader
+                message={message}
+                eventType={eventType}
+                eventTime={eventTime}
+                key={messageID}
+              /> */}
+            </TextContainer>
+            <br />
+            <LearnMore>
+              {/* <div>What is a Coronal Mass Ejection?</div> */}
+              <button>Help Article</button>
+              <button>Video Explains</button>
+            </LearnMore>
+            <br />
+            <Footer>
+              <a href={`${URL}`}>Event Details</a>
+              <a href={``}>Longer Article</a>
+              <a href={``}>Longer Video</a>
+            </Footer>
             <br />
           </Content>
         </Wrapper>

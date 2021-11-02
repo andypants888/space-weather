@@ -26,7 +26,7 @@ const Header = () => (
           </NavLink>
           <NavLink to="/learn" exact={true}>
             <li>
-              <img src={EducationIcon} alt="education-icon" /> Learn More
+              <img src={EducationIcon} alt="education-icon" /> Tutorial
             </li>
           </NavLink>
           <NavLink to="/notfound" exact={true}>

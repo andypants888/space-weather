@@ -13,7 +13,7 @@ export const Content = styled.div`
 `;
 // Logo + Site Name
 export const TitleWrapper = styled.div`
-  font-size: var(--fontSuperBig);
+  font-size: 25px;
   display: flex;
   flex-direction: row;
   align-items: center;
