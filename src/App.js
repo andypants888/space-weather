@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Components
 import Header from "./components/Header/";
 import SolarBody from "./components/SolarBody";
-import Learn from "./components/Learn";
+import Tutorial from "./components/Tutorial/";
 import NotFound from "./components/NotFound";
 import Landing from "./components/Landing";
 
@@ -23,7 +23,7 @@ function App() {
         <Route path="/" element={<Landing />} exact/>
         <Route path="/">
           <Route path="weather" element={<SolarBody />} />
-          <Route path="learn" element={<Learn />} />
+          <Route path="tutorial" element={<Tutorial />} />
           <Route path="notfound" element={<NotFound />} />
         </Route>
       </Routes>

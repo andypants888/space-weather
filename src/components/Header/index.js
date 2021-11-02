@@ -24,7 +24,7 @@ const Header = () => (
               <img src={SunIcon} alt="sun-icon" /> Weather
             </li>
           </NavLink>
-          <NavLink to="/learn" exact={true}>
+          <NavLink to="/tutorial" exact={true}>
             <li>
               <img src={EducationIcon} alt="education-icon" /> Tutorial
             </li>

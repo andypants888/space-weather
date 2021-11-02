@@ -16,7 +16,7 @@ import {
   Title,
   OriginalTime,
   MoreInfo,
-} from "./SolarSummary.style";
+} from "./SolarSummary.styles";
 
 // Event Icons
 import IPSIcon from "../../icons/IPS-3.svg";
