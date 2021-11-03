@@ -28,6 +28,7 @@ import RBEIcon from "../../../icons/earth.png";
 import UpdateIcon from "../../../icons/news-anchor.png";
 import SEPIcon from "../../../icons/lightning-bolt.png";
 import FLRIcon from "../../../icons/flare.png";
+import GSTIcon from "../../../icons/northern-lights.png"
 
 const SolarPopup = (props) => {
   // Props & Destructure
@@ -371,14 +372,70 @@ const SolarPopup = (props) => {
             <br />
             <GifContainer>
               <iframe
-                src="https://giphy.com/embed/BK5jP59AWUUqLauDlF"
+                src="https://giphy.com/embed/3o7TKGMEexYBEhuoGk"
                 // width="480"
-                // height="400"
+                // height="253"
                 frameBorder="0"
                 // class="giphy-embed"
                 allowFullScreen
               ></iframe>
-              (Medium-Class Flare from November 2020)
+              (Flare is from previous event)
+            </GifContainer>
+            <br />
+            <TextContainer>
+              {/* <ReportRegexReader
+                message={message}
+                eventType={eventType}
+                eventTime={eventTime}
+                key={messageID}
+              /> */}
+            </TextContainer>
+            <br />
+            <LearnMore>
+              {/* <div>What is a Coronal Mass Ejection?</div> */}
+              <button>Help Article</button>
+              <button>Video Explains</button>
+            </LearnMore>
+            <br />
+            <Footer>
+              <a href={`${URL}`}>Event Details</a>
+              <a href={``}>Longer Article</a>
+              <a href={``}>Longer Video</a>
+            </Footer>
+            <br />
+          </Content>
+        </Wrapper>
+      ) : (
+        ""
+      );
+
+    // Geomagnetic Storm GST
+    case eventType === "GST":
+      return props.open ? (
+        <Wrapper>
+          <Dimmer />
+          <Content>
+            <CloseBanner>
+              <button onClick={() => setOpen(false)}>X</button>
+            </CloseBanner>
+            <Header>
+              <img src={GSTIcon} alt="Geomagnetic Storm" />
+              <div>{`Geomagnetic Storm (GST)`}</div>
+            </Header>
+            <OneLiner>
+              <div>Several types of Radiation reach Earth!</div>
+            </OneLiner>
+            <br />
+            <GifContainer>
+              <iframe
+                src="https://giphy.com/embed/35NGT2lm6mfHlNAkMu"
+                // width="480"
+                // height="270"
+                frameBorder="0"
+                // class="giphy-embed"
+                allowFullScreen
+              ></iframe>
+              (Geomagnetic storms may damage orbiting satellites & make pretty lights)
             </GifContainer>
             <br />
             <TextContainer>

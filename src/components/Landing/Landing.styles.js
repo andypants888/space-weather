@@ -9,6 +9,7 @@ export const Content = styled.div`
     bottom: 0px;
     overflow-y: hidden;
     z-index: -100;
+    object-fit: cover;
 
     @media (pointer: coarse) {
       height: 85vh;
@@ -38,9 +39,9 @@ export const Title = styled.div`
   h1 {
     /* background-color: green; */
     font-size: 100px;
-      /* background-color: red; */
-      font-weight: 800;
-      margin: 0px;
+    /* background-color: red; */
+    font-weight: 800;
+    margin: 0px;
   }
 
   // "Phones"
