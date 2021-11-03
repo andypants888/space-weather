@@ -27,6 +27,7 @@ import CMEIcon from "../../../icons/CME-2.svg";
 import RBEIcon from "../../../icons/earth.png";
 import UpdateIcon from "../../../icons/news-anchor.png";
 import SEPIcon from "../../../icons/lightning-bolt.png";
+import FLRIcon from "../../../icons/flare.png";
 
 const SolarPopup = (props) => {
   // Props & Destructure
@@ -320,7 +321,8 @@ const SolarPopup = (props) => {
                 // class="giphy-embed"
                 allowFullScreen
               ></iframe>
-              (Simulation of Solar Energetic Particles (SEP) & Coronal Mass Ejection (CME))
+              (Simulation of Solar Energetic Particles (SEP) & Coronal Mass
+              Ejection (CME))
             </GifContainer>
             <br />
             <TextContainer>
@@ -350,6 +352,61 @@ const SolarPopup = (props) => {
         ""
       );
 
+    // Solar Flare FLR
+    case eventType === "FLR":
+      return props.open ? (
+        <Wrapper>
+          <Dimmer />
+          <Content>
+            <CloseBanner>
+              <button onClick={() => setOpen(false)}>X</button>
+            </CloseBanner>
+            <Header>
+              <img src={FLRIcon} alt="Solar Flare" />
+              <div>{`Solar Flare (FLR)`}</div>
+            </Header>
+            <OneLiner>
+              <div>Bright Flash of X-Rays & Gamma-Rays (High-Energy Light)</div>
+            </OneLiner>
+            <br />
+            <GifContainer>
+              <iframe
+                src="https://giphy.com/embed/BK5jP59AWUUqLauDlF"
+                // width="480"
+                // height="400"
+                frameBorder="0"
+                // class="giphy-embed"
+                allowFullScreen
+              ></iframe>
+              (Medium-Class Flare from November 2020)
+            </GifContainer>
+            <br />
+            <TextContainer>
+              {/* <ReportRegexReader
+                message={message}
+                eventType={eventType}
+                eventTime={eventTime}
+                key={messageID}
+              /> */}
+            </TextContainer>
+            <br />
+            <LearnMore>
+              {/* <div>What is a Coronal Mass Ejection?</div> */}
+              <button>Help Article</button>
+              <button>Video Explains</button>
+            </LearnMore>
+            <br />
+            <Footer>
+              <a href={`${URL}`}>Event Details</a>
+              <a href={``}>Longer Article</a>
+              <a href={``}>Longer Video</a>
+            </Footer>
+            <br />
+          </Content>
+        </Wrapper>
+      ) : (
+        ""
+      );
     default:
       return null;
   }
