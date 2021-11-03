@@ -10,10 +10,10 @@ export const Content = styled.div`
     overflow-y: hidden;
     z-index: -100;
 
-    @media (any-pointer: coarse) {
+    @media (pointer: coarse) {
       height: 85vh;
     }
-    @media (any-pointer: fine) {
+    @media (pointer: fine) {
       width: 100vw;
       min-height: 95vh;
     }
@@ -24,7 +24,7 @@ export const Title = styled.div`
   position: fixed;
 
   // "Desktops"
-  @media (min-width: 481px) and (max-width: 2800px) and (pointer: fine) {
+  @media (pointer: fine) {
     left: 20vw;
     top: 55vh;
     max-width: 100vw;
@@ -44,7 +44,7 @@ export const Title = styled.div`
   }
 
   // "Phones"
-  @media (min-width: 1px) and (max-width: 480px) and (pointer: coarse) {
+  @media (pointer: coarse) {
     left: 10px;
     top: 40vh;
     max-width: 70vw;
