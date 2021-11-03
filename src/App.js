@@ -10,6 +10,9 @@ import Tutorial from "./components/Tutorial/";
 import NotFound from "./components/NotFound";
 import Landing from "./components/Landing";
 
+// Tutorial Pages
+import Lesson01 from "./components/Tutorial/Lesson01";
+
 // Styles
 import { GlobalStyle } from "./GlobalStyle";
 import { NavBlock } from "./App.style";
@@ -20,10 +23,13 @@ function App() {
       {/* <Route /> */}
       <Header />
       <Routes>
-        <Route path="/" element={<Landing />} exact/>
+        <Route path="/" element={<Landing />} exact />
         <Route path="/">
           <Route path="weather" element={<SolarBody />} />
-          <Route path="tutorial" element={<Tutorial />} />
+          <Route path="tutorial/" element={<Tutorial />} />
+          <Route path="tutorial/">
+            <Route path="lesson01" element={<Lesson01 />}/>
+          </Route>
           <Route path="notfound" element={<NotFound />} />
         </Route>
       </Routes>

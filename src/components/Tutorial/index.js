@@ -3,6 +3,9 @@ import React from "react";
 // Styles
 import { Wrapper, Content, Title, Card } from "./Tutorial.styles";
 
+// Routing
+import { NavLink } from "react-router-dom";
+
 // Card Images
 import Image1 from "../../images/00-flare-web.gif";
 import Image2 from "../../images/02-nasa-northern-lights.jpg";
@@ -18,10 +21,12 @@ const Tutorial = () => {
     <Wrapper>
       <Title>Tutorial</Title>
       <Content>
-        <Card>
-          1. What is Space Weather?
-          <img src={Image1} />
-        </Card>
+        <NavLink to="lesson01">
+          <Card>
+            1. What is Space Weather?
+            <img src={Image1} />
+          </Card>
+        </NavLink>
         <Card>
           2. How does the earth's aurora's happen?
           <img src={Image2} />
