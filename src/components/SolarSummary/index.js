@@ -28,7 +28,6 @@ import SEPIcon from "../../icons/lightning-bolt.png";
 import GSTIcon from "../../icons/northern-lights.png";
 import MPCIcon from "../../icons/gap.png";
 import FLRIcon from "../../icons/flare.png";
-import HSSIcon from "../../icons/speedometer.png";
 
 // API Event Object
 // messageBody, messageID, messageIssueTime, messageType,messageURL
