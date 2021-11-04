@@ -12,7 +12,7 @@ export const Content = styled.div`
     object-fit: cover;
 
     @media (pointer: coarse) {
-      height: 85vh;
+      height: 100vh;
     }
     @media (pointer: fine) {
       width: 100vw;

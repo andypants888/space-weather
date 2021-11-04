@@ -1,9 +1,21 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-background-color: grey;
+  background-color: black;
+  padding: 0px;
+  margin: 0px;
+  iframe {
+      display: block;
+      /* width: 300px; */
+  }
 `;
 
 export const Content = styled.div`
-  /* display: grid; */
-  `
+  /* background-color: green; */
+`;
+
+export const SurveyContainer = styled.div`
+  width: 500px;
+  /* color: black;
+  border-style: none; */
+`
