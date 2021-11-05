@@ -289,7 +289,7 @@ const SolarPopup = (props) => {
               <div>{`Radiation Belt Enhancement (RBE)`}</div>
             </Header>
             <OneLiner>
-              <div>Radioactive solar particles cross Earth's Shield!</div>
+              <div>Increased Radiation around Earth!</div>
             </OneLiner>
             <br />
             <GifContainer>
@@ -301,8 +301,7 @@ const SolarPopup = (props) => {
                 // class="giphy-embed"
                 allowFullScreen
               ></iframe>
-              (Earth's magnetosphere & magnetopause normally block solar wind,
-              but NOT always!)
+              (Extra radiation trapped in "Van Allen Belts" around earth.)
             </GifContainer>
             <br />
             <TextContainer>
