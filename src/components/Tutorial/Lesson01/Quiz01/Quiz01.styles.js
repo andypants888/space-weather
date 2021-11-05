@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Content = styled.div`
-  /* display: grid; */
+  /* z-index: -100; */
   `
 
 export const NavBlock = styled.div`

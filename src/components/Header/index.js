@@ -31,7 +31,7 @@ const Header = () => (
           </NavLink>
           <NavLink to="/notfound" exact={true}>
             <li>
-              <img src={QuizIcon} alt="quiz-icon" /> Quizzes
+              <img src={QuizIcon} alt="quiz-icon" /> Educators
             </li>
           </NavLink>
           <NavLink to="/notfound" exact={true}>

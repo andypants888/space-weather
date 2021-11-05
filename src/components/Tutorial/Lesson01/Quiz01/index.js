@@ -8,96 +8,101 @@ import * as Survey from "survey-react";
 import "survey-react/survey.css";
 
 const Quiz01 = () => {
-  var defaultThemeColors = Survey.StylesManager.ThemeColors["default"];
-  defaultThemeColors["$main-color"] = "#000000";
-  defaultThemeColors["$main-hover-color"] = "#6fe06f";
-  defaultThemeColors["$text-color"] = "#4a4a4a";
-  defaultThemeColors["$header-color"] = "#7ff07f";
+  var defaultThemeColors = Survey.StylesManager.applyTheme("default");
 
-  defaultThemeColors["$header-background-color"] = "#000000";
-  defaultThemeColors["$body-container-background-color"] = "#f8f8f8";
-
-  Survey.StylesManager.applyTheme();
-
-//   var surveyJSON = {
-//     title: "American History",
-//     showProgressBar: "bottom",
-//     showTimerPanel: "top",
-//     maxTimeToFinishPage: 10,
-//     maxTimeToFinish: 25,
-//     firstPageIsStarted: true,
-//     startSurveyText: "Start Quiz",
-//   };
   var surveyJSON = {
-    title: "CME's & Space Weather",
+    title: "CME's & Space Weather Quiz",
     showProgressBar: "bottom",
-    showTimerPanel: "top",
-    maxTimeToFinishPage: 30,
-    maxTimeToFinish: 300,
+    // showTimerPanel: "top",
+    // maxTimeToFinishPage: 30,
+    // maxTimeToFinish: 300,
     firstPageIsStarted: true,
     startSurveyText: "Start Quiz",
-
     pages: [
       {
-        name: "page1",
-        elements: [
+        questions: [
+          {
+            type: "html",
+            html: "- This quiz will test your knowledge of the video above <br/>- Please feel free to use your personal notes<br/>- You can use google to help, but <b> watching the video is much easier :) </b>",
+          },
+        ],
+      },
+      {
+        questions: [
           {
             type: "radiogroup",
-            name: "question2",
+            name: "warmup",
             title: "Space weather is caused by events from _____",
-            correctAnswer: "item4",
-            isRequired: true,
+            choicesOrder: "random",
+            // isRequired: true,
             choices: [
-              { value: "item1", text: "the Galaxy" },
-              { value: "item2", text: "the Moon" },
-              { value: "item3", text: "the Vacuum of space" },
-              { value: "item4", text: "the Sun" },
+              "the Galaxy",
+              "the Moon",
+              "the Vacuum of space",
+              "the Sun",
+              "none of the choices",
             ],
+            correctAnswer: "the Sun",
           },
+        ],
+      },
+      {
+        questions: [
           {
             type: "radiogroup",
-            name: "question1",
-            title: "What does CME in space weather stand for?",
-            correctAnswer: "item3",
-            isRequired: true,
+            name: "cme",
+            title: "What does CME stand for in space weather?",
+            choicesOrder: "random",
             choices: [
-              { value: "item1", text: "Coronary Meta Electrolysis" },
-              { value: "item2", text: "CME Group (Chicago Merchantile)" },
-              { value: "item3", text: "Coronal Mass Ejection" },
-              { value: "item4", text: "Continuing Medical Education" },
+              "Coronary Meta Electrolysis",
+              "CME Group (Chicago Merchantile)",
+              "Coronal Mass Ejection",
+              "Continuing Medical Education",
             ],
+            correctAnswer: "Coronal Mass Ejection",
           },
+        ],
+      },
+      {
+        questions: [
           {
             type: "ranking",
-            name: "question3",
+            name: "eventorder",
             title: "Rank the following events from start (top) to end (bottom)",
-            correctAnswer: ["item2", "item1", "item3"],
-            isRequired: true,
+            choicesOrder: "random",
             choices: [
-              { value: "item1", text: "Interplanetary Shocks" },
-              { value: "item2", text: "CME (Coronal Mass Ejections)" },
-              { value: "item3", text: "Geomagnetic Storms" },
+              "Interplanetary Shocks",
+              "CME (Coronal Mass Ejections)",
+              "Geomagnetic Storms",
             ],
+            correctAnswer: ["CME (Coronal Mass Ejections)", "Interplanetary Shocks", "Geomagnetic Storms"],
           },
+        ],
+      },
+      {
+        // maxTimeToFinish: 150,
+        questions: [
           {
             type: "comment",
-            name: "question5",
-            title:
-              "Explain why people on Earth should be concerned about CME's in 3 - 4 sentences",
-            isRequired: true,
+            name: "earthImpact",
+            title: "Explain why people on Earth should be concerned about CME's in 3 - 4 sentences",
+            // choicesOrder: "random",
             maxLength: 500,
           },
         ],
       },
     ],
+    completedHtml:
+      "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>",
+    // End of SurveyJSON
   };
 
-  window.survey = new Survey.Model(surveyJSON);
+  // window.survey = new Survey.Model(surveyJSON);
 
   return (
     <Wrapper>
       <Content>
-        <Survey.Survey json={surveyJSON} />
+        <Survey.Survey json={surveyJSON} model={window.survey} onComplete={data=>console.log(data)}/>
         <NavBlock />
       </Content>
     </Wrapper>

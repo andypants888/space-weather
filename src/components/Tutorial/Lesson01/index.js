@@ -6,18 +6,21 @@ import { Wrapper, Content, SurveyContainer } from "./Lesson01.style";
 
 // SurveyJS
 
-import Quiz01 from "./Quiz01"
+import Quiz01 from "./Quiz01";
 
 const Lesson01 = () => {
-
   return (
     <Wrapper>
       <Content>
-        <div>Tutorial</div>
-        <div>Lesson 01</div>
+        <div>
+          <h1>Tutorial</h1>
+        </div>
+        <div>
+          <h3>Lesson 01: CMEs & Space Weather</h3>
+        </div>
         <iframe
-          width="560"
-          height="315"
+          // width="560"
+          // height="315"
           src="https://www.youtube.com/embed/oHHSSJDJ4oo"
           title="YouTube video player"
           frameborder="0"
@@ -25,15 +28,15 @@ const Lesson01 = () => {
           allowfullscreen
         ></iframe>
         <div>
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Ac purus in massa
-          egestas mollis varius; dignissim elementum. Mollis tincidunt mattis
-          hendrerit
+          <p>
+            Watch the video! <br /> 
+            Take notes! <br />
+            Be ready for quiz! 😱
+          </p>
         </div>
-        <div>
-          dolor eros enim, nisi ligula ornare. Hendrerit parturient habitant
-          pharetra rutrum gravida porttitor eros feugiat. Mollis elit sodales
-          taciti duis praesent id. Consequat urna vitae morbi nunc congue.
-        </div>
+        <textarea rows="7" cols="43">
+          - CME stands for ... - Type here!!!
+        </textarea>
         <SurveyContainer>
           <Quiz01 />
         </SurveyContainer>
