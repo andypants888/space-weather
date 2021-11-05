@@ -9,7 +9,8 @@ import SolarBody from "./components/SolarBody";
 import Tutorial from "./components/Tutorial/";
 import NotFound from "./components/NotFound";
 import Landing from "./components/Landing";
-import Educators from "./components/Educators"
+import Educators from "./components/Educators";
+import Contact from "./components/Contact";
 
 // Tutorial Pages
 import Lesson01 from "./components/Tutorial/Lesson01";
@@ -29,9 +30,10 @@ function App() {
           <Route path="weather" element={<SolarBody />} />
           <Route path="tutorial/" element={<Tutorial />} />
           <Route path="tutorial/">
-            <Route path="lesson01" element={<Lesson01 />}/>
+            <Route path="lesson01" element={<Lesson01 />} />
           </Route>
-          <Route path="educators" element={<Educators />}/>
+          <Route path="educators" element={<Educators />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="notfound" element={<NotFound />} />
         </Route>
       </Routes>
