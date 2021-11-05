@@ -9,7 +9,7 @@ export const Content = styled.div`
   grid-template-rows: 20% 20% 20%;
   justify-content: center; */
   display: flex;
-  flex-direction: column; */
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
