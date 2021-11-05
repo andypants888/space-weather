@@ -43,13 +43,8 @@ const SolarPopup = (props) => {
   });
 
   // Switch Regex Cases
-  const ipsRegex =
-    /(Message Type: Space Weather Notification - Interplanetary Shock)/g;
-  const reportRegex = /(Message Type: Weekly Space Weather Summary Report)/g;
-  const cmeUpdateRegex = /(CME update)/g;
-  const cmeStandardRegex = /Message Type: Space Weather Notification - CME/g;
-  const rbeStandardRegex =
-    /(Message Type: Space Weather Notification - Radiation Belt Enhancement)/g;
+  const cmeUpdateRegex = /(## Summary:\n\nBETA PRODUCT\.)|(## Summary:\n\nUpdate)/g;
+  const cmeStandardRegex = /(## Summary:\n\n\w-type CME\s)|(## Summary:\n\nMultiple\s)/g;
 
   switch (true) {
     // Coronal Mass Ejection
@@ -81,12 +76,12 @@ const SolarPopup = (props) => {
             <br />
             <TextContainer>
               {/* {message.match(regex)} */}
-              <CMERegexReader
+              {/* <CMERegexReader
                 message={message}
                 eventType={eventType}
                 eventTime={eventTime}
                 key={messageID}
-              />
+              /> */}
             </TextContainer>
             <br />
             <LearnMore>
@@ -141,12 +136,12 @@ const SolarPopup = (props) => {
             <br />
             <TextContainer>
               {/* {message.match(regex)} */}
-              <CMEUpdateRegexReader
+              {/* <CMEUpdateRegexReader
                 message={message}
                 eventType={eventType}
                 eventTime={eventTime}
                 key={messageID}
-              />
+              /> */}
             </TextContainer>
             <br />
             <LearnMore>
@@ -166,7 +161,7 @@ const SolarPopup = (props) => {
         ""
       );
     // Interplanetary Shock
-    case ipsRegex.test(message):
+    case eventType === "IPS":
       return open ? (
         <Wrapper>
           <Dimmer />
@@ -221,7 +216,7 @@ const SolarPopup = (props) => {
         ""
       );
     // Weekly Report
-    case reportRegex.test(message):
+    case eventType === "Report":
       return props.open ? (
         <Wrapper>
           <Dimmer />

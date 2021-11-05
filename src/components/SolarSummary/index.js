@@ -52,16 +52,9 @@ const SolarSummary = (props) => {
   );
 
   // Switch Regex Cases:
-  const ipsRegex =
-    /(Message Type: Space Weather Notification - Interplanetary Shock)/g;
-  const reportRegex = /(Message Type: Weekly Space Weather Summary Report)/g;
-  const cmeUpdateRegex = /CME update \(ensemble\)/g;
+  const cmeUpdateRegex = /(## Summary:\n\nBETA PRODUCT\.)|(## Summary:\n\nUpdate)/g;
   const cmeStandardRegex =
-    /(Message Type: Space Weather Notification - CMEs?) \(/g;
-  const rbeStandardRegex =
-    /(Message Type: Space Weather Notification - Radiation Belt Enhancement)/g;
-  const sepRegex = /Notification - SEP/g;
-  const gstRegex = /Notification - Geomagnetic Storm/g;
+    /(## Summary:\n\n\w-type CME\s)|(## Summary:\n\nMultiple\s)/g;
 
   switch (true) {
     // Coronal Mass Ejection
@@ -126,7 +119,7 @@ const SolarSummary = (props) => {
       );
       break;
     // Interplanetary Shock
-    case ipsRegex.test(messageBody):
+    case messageType === "IPS":
       return (
         <Wrapper>
           <Content>
@@ -156,7 +149,7 @@ const SolarSummary = (props) => {
       );
       break;
     // Report
-    case reportRegex.test(messageBody):
+    case messageType === "Report":
       return (
         <Wrapper>
           <Content>
@@ -216,7 +209,7 @@ const SolarSummary = (props) => {
       );
       break;
     // SEP Solar Energetic Particles
-    case sepRegex.test(messageBody):
+    case messageType === "SEP":
       return (
         <Wrapper>
           <Content>
@@ -247,7 +240,7 @@ const SolarSummary = (props) => {
       );
       break;
     // GST Geomagnetic Storm
-    case gstRegex.test(messageBody):
+    case messageType === "GST":
       return (
         <Wrapper>
           <Content>
