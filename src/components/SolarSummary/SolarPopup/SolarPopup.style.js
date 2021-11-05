@@ -198,6 +198,7 @@ export const Footer = styled.div`
   justify-content: space-evenly;
   width: 100%;
   /* background-color: brown; */
+  padding-bottom: 10px;
   a {
     color: var(--main);
   }

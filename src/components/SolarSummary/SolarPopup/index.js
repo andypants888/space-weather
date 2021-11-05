@@ -5,6 +5,8 @@ import CMERegexReader from "./CMERegexReader";
 import CMEUpdateRegexReader from "./CMEUpdateRegexReader";
 import IPSRegexReader from "./IPSRegexReader";
 import ReportRegexReader from "./ReportRegexReader";
+import GSTRegexReader from "./GSTRegexReader";
+import RBERegexReader from "./RBERegexReader";
 
 // Style
 import {
@@ -300,12 +302,12 @@ const SolarPopup = (props) => {
             </GifContainer>
             <br />
             <TextContainer>
-              {/* <ReportRegexReader
+              <RBERegexReader
                 message={message}
                 eventType={eventType}
                 eventTime={eventTime}
                 key={messageID}
-              /> */}
+              />
             </TextContainer>
             <br />
             <LearnMore>
@@ -453,7 +455,7 @@ const SolarPopup = (props) => {
               <div>{`Geomagnetic Storm (GST)`}</div>
             </Header>
             <OneLiner>
-              <div>Several types of Radiation reach Earth!</div>
+              <div>Radioactive Solar Wind reaches Earth!</div>
             </OneLiner>
             <br />
             <GifContainer>
@@ -465,17 +467,17 @@ const SolarPopup = (props) => {
                 // class="giphy-embed"
                 allowFullScreen
               ></iframe>
-              (Geomagnetic storms may damage orbiting satellites & make pretty
+              (Geomagnetic storms may damage orbiting electronics & make pretty
               lights)
             </GifContainer>
             <br />
             <TextContainer>
-              {/* <ReportRegexReader
+            <GSTRegexReader
                 message={message}
                 eventType={eventType}
                 eventTime={eventTime}
                 key={messageID}
-              /> */}
+              />
             </TextContainer>
             <br />
             <LearnMore>

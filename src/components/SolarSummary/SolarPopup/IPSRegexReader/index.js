@@ -6,7 +6,6 @@ import {
   Content,
   Title,
   Main,
-  Warning,
 } from "./IPSRegexReader.style.js";
 
 const IPSRegexReader = (props) => {
@@ -21,8 +20,11 @@ const IPSRegexReader = (props) => {
   });
 
   // Regex Markers
-  const discoverRegex = /Significant .*/;
+  const activityID = /Activity ID: \d\d\d\d-\d\d-\d\d.*/g;
   const causeRegex = /The shock .*/g;
+  
+  // Date Conversion Regex
+  const discoverRegex = /Significant .*/;
   let discoverText = [];
   const discoverList = message.match(discoverRegex)
   // UTC --> Local "Discovered At" Only
@@ -61,6 +63,7 @@ const IPSRegexReader = (props) => {
         <Main>
           <div>{discoverText}</div>
           <div>{message.match(causeRegex)}</div>
+          <div>{message.match(activityID)}</div>
         </Main>
       </Content>
     </Wrapper>
