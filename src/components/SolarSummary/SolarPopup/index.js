@@ -7,6 +7,9 @@ import IPSRegexReader from "./IPSRegexReader";
 import ReportRegexReader from "./ReportRegexReader";
 import GSTRegexReader from "./GSTRegexReader";
 import RBERegexReader from "./RBERegexReader";
+import MPCRegexReader from "./MPCRegexReader";
+import SEPRegexReader from "./SEPRegexReader";
+import FLRRegexReader from "./FLRRegexReader";
 
 // Style
 import {
@@ -359,12 +362,12 @@ const SolarPopup = (props) => {
             </GifContainer>
             <br />
             <TextContainer>
-              {/* <ReportRegexReader
+              <SEPRegexReader
                 message={message}
                 eventType={eventType}
                 eventTime={eventTime}
                 key={messageID}
-              /> */}
+              />
             </TextContainer>
             <br />
             <LearnMore>
@@ -411,16 +414,16 @@ const SolarPopup = (props) => {
                 // class="giphy-embed"
                 allowFullScreen
               ></iframe>
-              (Flare is from previous event)
+              (Flares are a form of light, not traditional particles)
             </GifContainer>
             <br />
             <TextContainer>
-              {/* <ReportRegexReader
+              <FLRRegexReader
                 message={message}
                 eventType={eventType}
                 eventTime={eventTime}
                 key={messageID}
-              /> */}
+              />
             </TextContainer>
             <br />
             <LearnMore>
@@ -529,12 +532,12 @@ const SolarPopup = (props) => {
             </GifContainer>
             <br />
             <TextContainer>
-              {/* <ReportRegexReader
+              <MPCRegexReader
                 message={message}
                 eventType={eventType}
                 eventTime={eventTime}
                 key={messageID}
-              /> */}
+              />
             </TextContainer>
             <br />
             <LearnMore>
