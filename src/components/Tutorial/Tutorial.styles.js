@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-background-color: black;
+  background-color: black;
 `;
 
 export const Content = styled.div`
   display: grid;
+  a,
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
 
   @media (pointer: coarse) {
     /* background-color: red; */
@@ -28,9 +33,9 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.div`
-font-size: 50px;
-margin-left: 10px;
-font-family: monospace;
+  font-size: 50px;
+  margin-left: 10px;
+  font-family: monospace;
 `;
 
 export const Card = styled.div`

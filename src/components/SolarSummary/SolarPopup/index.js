@@ -28,7 +28,8 @@ import RBEIcon from "../../../icons/earth.png";
 import UpdateIcon from "../../../icons/news-anchor.png";
 import SEPIcon from "../../../icons/lightning-bolt.png";
 import FLRIcon from "../../../icons/flare.png";
-import GSTIcon from "../../../icons/northern-lights.png"
+import GSTIcon from "../../../icons/northern-lights.png";
+import MPCIcon from "../../../icons/gap.png";
 
 const SolarPopup = (props) => {
   // Props & Destructure
@@ -274,21 +275,56 @@ const SolarPopup = (props) => {
       ) : (
         ""
       );
-
-    case rbeStandardRegex.test(message):
+    // Radiation Belt Enhancement RBE
+    case eventType === "RBE":
       return props.open ? (
         <Wrapper>
+          <Dimmer />
           <Content>
-            <button onClick={() => props.setOpen(false)}>Less Info</button>
-            <h2>{`Radiation Belt Enhancement (${props.eventType})`}</h2>
-            <img src={RBEIcon} alt="Radiation Belt Enhancement Icon" />
-            {/* <div>{`${props.eventTime} + ${props.eventType} + ${props.URL} +`}</div> */}
+            <CloseBanner>
+              <button onClick={() => setOpen(false)}>X</button>
+            </CloseBanner>
+            <Header>
+              <img src={RBEIcon} alt="Radiation Belt Enhancement" />
+              <div>{`Radiation Belt Enhancement (RBE)`}</div>
+            </Header>
+            <OneLiner>
+              <div>Radioactive solar particles cross Earth's Shield!</div>
+            </OneLiner>
             <br />
-            {/* <div>{props.message.match(regex)}</div> */}
+            <GifContainer>
+              <iframe
+                src="https://giphy.com/embed/UbUUWf4pzLDmeZOn9E"
+                // width="480"
+                // height="270"
+                frameBorder="0"
+                // class="giphy-embed"
+                allowFullScreen
+              ></iframe>
+              (Earth's magnetosphere & magnetopause normally block solar wind,
+              but NOT always!)
+            </GifContainer>
             <br />
-            <div>
-              <a href={`${props.URL}`}>Detailed View</a>
-            </div>
+            <TextContainer>
+              {/* <ReportRegexReader
+                message={message}
+                eventType={eventType}
+                eventTime={eventTime}
+                key={messageID}
+              /> */}
+            </TextContainer>
+            <br />
+            <LearnMore>
+              {/* <div>What is a Coronal Mass Ejection?</div> */}
+              <button>Help Article</button>
+              <button>Video Explains</button>
+            </LearnMore>
+            <br />
+            <Footer>
+              <a href={`${URL}`}>Event Details</a>
+              <a href={``}>Longer Article</a>
+              <a href={``}>Longer Video</a>
+            </Footer>
             <br />
           </Content>
         </Wrapper>
@@ -435,7 +471,65 @@ const SolarPopup = (props) => {
                 // class="giphy-embed"
                 allowFullScreen
               ></iframe>
-              (Geomagnetic storms may damage orbiting satellites & make pretty lights)
+              (Geomagnetic storms may damage orbiting satellites & make pretty
+              lights)
+            </GifContainer>
+            <br />
+            <TextContainer>
+              {/* <ReportRegexReader
+                message={message}
+                eventType={eventType}
+                eventTime={eventTime}
+                key={messageID}
+              /> */}
+            </TextContainer>
+            <br />
+            <LearnMore>
+              {/* <div>What is a Coronal Mass Ejection?</div> */}
+              <button>Help Article</button>
+              <button>Video Explains</button>
+            </LearnMore>
+            <br />
+            <Footer>
+              <a href={`${URL}`}>Event Details</a>
+              <a href={``}>Longer Article</a>
+              <a href={``}>Longer Video</a>
+            </Footer>
+            <br />
+          </Content>
+        </Wrapper>
+      ) : (
+        ""
+      );
+
+    // Magnetopause Crossing MPC
+    case eventType === "MPC":
+      return props.open ? (
+        <Wrapper>
+          <Dimmer />
+          <Content>
+            <CloseBanner>
+              <button onClick={() => setOpen(false)}>X</button>
+            </CloseBanner>
+            <Header>
+              <img src={MPCIcon} alt="Magnetopause Crossing" />
+              <div>{`Magnetopause Crossing (MPC)`}</div>
+            </Header>
+            <OneLiner>
+              <div>Radioactive solar particles cross Earth's Shield!</div>
+            </OneLiner>
+            <br />
+            <GifContainer>
+              <iframe
+                src="https://giphy.com/embed/6YuuiPRwxjFsiV5ZxW"
+                // width="480"
+                // height="270"
+                frameBorder="0"
+                // class="giphy-embed"
+                allowFullScreen
+              ></iframe>
+              (Earth's magnetosphere & magnetopause normally block solar wind,
+              but NOT always!)
             </GifContainer>
             <br />
             <TextContainer>

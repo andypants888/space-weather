@@ -185,7 +185,6 @@ const SolarSummary = (props) => {
         </Wrapper>
       );
       break;
-
     // Radiation Belt Enhancement
     case messageType === "RBE":
       return (
