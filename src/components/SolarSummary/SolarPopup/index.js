@@ -80,13 +80,12 @@ const SolarPopup = (props) => {
             </GifContainer>
             <br />
             <TextContainer>
-              {/* {message.match(regex)} */}
-              {/* <CMERegexReader
+              <CMERegexReader
                 message={message}
                 eventType={eventType}
                 eventTime={eventTime}
                 key={messageID}
-              /> */}
+              />
             </TextContainer>
             <br />
             <LearnMore>

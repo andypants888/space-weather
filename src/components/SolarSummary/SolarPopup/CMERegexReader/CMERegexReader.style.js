@@ -25,10 +25,11 @@ export const Main = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
-  height: 50vh;
+  /* height: 50vh; */
+  padding: 0px 15px;
 
-  @media (pointer: fine) {
-    height: 25vh;
+  div {
+    margin: 10px 0px;
   }
 `;
 
