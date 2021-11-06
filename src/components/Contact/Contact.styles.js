@@ -8,4 +8,10 @@ export const Content = styled.div`
   /* display: flex;
   flex-direction: column; */
   padding: 0 10%;
+
+  a,
+  a:visited {
+    text-decoration: none;
+    color: red;
+  }
 `;

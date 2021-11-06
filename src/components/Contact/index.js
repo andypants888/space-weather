@@ -8,9 +8,9 @@ const Contact = () => {
       <Content>
         <h1>Contact</h1>
         <p>
-          Github: <br />
-          linkedIn: <br />
-          Email: ___ @ realaddress.com<br />
+          Github: <a href="https://github.com/andypants888">andypants888</a> <br />
+          linkedIn <a href="https://www.linkedin.com/in/andrew-zhou-394228104/">Profile</a><br />
+          Email: <a href="mailto:andy@expspaceweather.com">andy@expspaceweather.com</a><br />
           </p>
         <p></p>
         <h1>About Me</h1>
