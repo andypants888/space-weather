@@ -139,13 +139,12 @@ const SolarPopup = (props) => {
             </GifContainer>
             <br />
             <TextContainer>
-              {/* {message.match(regex)} */}
-              {/* <CMEUpdateRegexReader
+              <CMEUpdateRegexReader
                 message={message}
                 eventType={eventType}
                 eventTime={eventTime}
                 key={messageID}
-              /> */}
+              />
             </TextContainer>
             <br />
             <LearnMore>

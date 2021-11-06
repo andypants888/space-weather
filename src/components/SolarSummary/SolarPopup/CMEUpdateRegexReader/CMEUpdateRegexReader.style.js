@@ -25,9 +25,19 @@ export const Main = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
-  height: 100vh;
+  padding: 15px;
+  div {
+    margin: 10px;
+    word-break: break-all;
+    min-width: 40%;
+    /* background-color: grey; */
+  }
+  @media (pointer: coarse) {
+    /* background-color: blue; */
+    width: 100vw;
+  }
   @media (pointer: fine) {
-    height: 70vh;
+    /* background-color: red; */
   }
 `;
 
