@@ -2,6 +2,9 @@ import React from "react";
 import SolarSummary from "./SolarSummary";
 import { useState, useEffect } from "react";
 
+// Styles
+import { Wrapper, Content } from "./SolarBody.styles";
+
 const SolarBody = () => {
   // Store Solar Notifications
   const [solarData, setSolarData] = useState();
@@ -35,12 +38,14 @@ const SolarBody = () => {
     return "solarData not loaded yet";
   }
   return (
-    <>
-      <h2>Solar Events</h2>
-      {solarData.map((event) => (
-        <SolarSummary key={event.messageID} data={event} />
-      ))}
-    </>
+    <Wrapper>
+      <Content>
+        <h2>Solar Weather Events</h2>
+        {solarData.map((event) => (
+          <SolarSummary key={event.messageID} data={event} />
+        ))}
+      </Content>
+    </Wrapper>
   );
 };
 

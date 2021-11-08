@@ -13,8 +13,8 @@ export const Content = styled.div`
   border: 1px solid white;
 
   @media (pointer:fine) {
-    position: relative;
-    margin-left: 15px;
+    /* position: relative; */
+    /* margin-left: 150px; */
     /* z-index: -10; */
   }
 `;
