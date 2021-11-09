@@ -31,7 +31,7 @@ const Contact = () => {
               originally from San Diego, California.
             </div>
             <div>
-              Before coding, I was full-time High School Science Teacher in both
+              Before coding, I was a High School Science Teacher in both
               California and the country of Colombia.
             </div>
             <div>

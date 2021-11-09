@@ -25,11 +25,7 @@ export const Main = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
-  height: 20vh;
-
-  @media (pointer: fine) {
-    height: 25vh;
-  }
+  height: auto;
 `;
 
 export const Warning = styled.div`

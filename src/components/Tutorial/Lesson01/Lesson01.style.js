@@ -34,8 +34,8 @@ export const Content = styled.div`
     /* max-width: 720px; */
     iframe {
       display: block;
-      width: 560px;
-      height: 315px;
+      width: 800px;
+      height: 450px;
     }
   }
 `;

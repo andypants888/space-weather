@@ -130,7 +130,10 @@ export const GifContainer = styled.div`
 export const TextContainer = styled.div`
   padding: 5px;
   margin-bottom: 5px;
+  height: auto;
   width: 100%;
+  /* background-color: green; */
+  position: relative;
 `;
 
 export const LearnMore = styled.div`
@@ -140,7 +143,6 @@ export const LearnMore = styled.div`
   padding: 10px;
   flex-direction: column;
   justify-content: space-around;
-
 
   div {
     margin-bottom: 10px;

@@ -25,7 +25,7 @@ export const Main = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
-  /* height: 50vh; */
+  height: auto;
   padding: 0px 15px;
 
   div {

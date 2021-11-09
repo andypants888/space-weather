@@ -498,9 +498,9 @@ const SolarPopup = (props) => {
             <br />
             <GifContainer>
               <iframe
-                src="https://giphy.com/embed/3o7TKGMEexYBEhuoGk"
+                src="https://giphy.com/embed/BK5jP59AWUUqLauDlF"
                 // width="480"
-                // height="253"
+                // height="400"
                 frameBorder="0"
                 // class="giphy-embed"
                 allowFullScreen
