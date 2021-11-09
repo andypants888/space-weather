@@ -14,4 +14,27 @@ export const Content = styled.div`
     text-decoration: none;
     color: red;
   }
+
+  img {
+    @media (pointer: coarse) {
+      width: 100%;
+    }
+
+    @media (pointer: fine) {
+      width: 30%;
+    }
+  }
+`;
+
+export const BioBox = styled.div`
+@media (pointer: coarse) {
+    }
+
+    @media (pointer: fine) {
+      display: flex;
+      width: 80%;
+      p {
+        padding: 15px;
+      }
+    }
 `;
