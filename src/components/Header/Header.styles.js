@@ -58,6 +58,7 @@ export const Navbar = styled.div`
 
   // Overall Navbar
   ul {
+    z-index: 10;
     padding: 0;
     margin: 0;
     height: calc(var(--iconHeight));
@@ -71,7 +72,6 @@ export const Navbar = styled.div`
     @media (pointer: fine) {
       height: calc(var(--iconHeight) - 10px);
       justify-content: space-around;
-      z-index: 10;
     }
   }
   // Each Icon + Title

@@ -24,12 +24,16 @@ const Lesson01 = () => {
           src="https://www.youtube.com/embed/oHHSSJDJ4oo"
           title="YouTube video player"
           frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
           allowfullscreen
         ></iframe>
         <div>
           <p>
-            Watch the video! <br /> 
+            Watch the video! <br />
             Take notes! <br />
             Be ready for quiz! 😱
           </p>
