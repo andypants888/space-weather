@@ -26,10 +26,6 @@ export const Main = styled.div`
   align-items: flex-start;
   justify-content: space-evenly;
   height: auto;
-
-  @media (pointer: fine) {
-    height: 120vh;
-  }
 `;
 
 export const Warning = styled.div`

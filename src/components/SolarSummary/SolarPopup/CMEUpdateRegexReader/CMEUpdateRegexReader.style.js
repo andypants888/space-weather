@@ -21,23 +21,22 @@ export const Title = styled.div`
 `;
 
 export const Main = styled.div`
+  /* background-color: red; */
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: space-evenly;
-  padding: 15px;
+  height: auto;
+  width: 100%;
+  /* padding: 0px 15px; */
+
   div {
-    margin: 10px;
-    word-break: break-all;
-    min-width: 40%;
-    /* background-color: grey; */
+    margin: 10px 0px;
   }
   @media (pointer: coarse) {
-    /* background-color: blue; */
-    width: 100vw;
+    align-items: flex-start;
   }
   @media (pointer: fine) {
-    /* background-color: red; */
+    align-items: center;
   }
 `;
 
