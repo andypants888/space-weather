@@ -337,18 +337,32 @@ const SolarPopup = (props) => {
             </TextContainer>
             <br />
             <LearnMore>
-              <button onClick={() => window.open("https://www.anything.com")}>
-                What is a CME analsis? (video)
+              <button
+                onClick={() =>
+                  window.open("https://www.youtube.com/watch?v=lfnst1W33OI")
+                }
+              >
+                Why is NASA studying the sun? (video)
               </button>
-              <button onClick={() => window.open("https://www.anything.com")}>
+              <button
+                onClick={() =>
+                  window.open("https://science.nasa.gov/heliophysics")
+                }
+              >
                 Help Article
               </button>
             </LearnMore>
             <br />
             <Footer>
               <a href={`${URL}`}>Event Details</a>
-              <a href={``}>Advanced Article</a>
-              <a href={``}>Advanced Video</a>
+              <a
+                href={`https://www.nasa.gov/mission_pages/sunearth/missions/index.html`}
+              >
+                Advanced Article
+              </a>
+              <a href={`https://www.youtube.com/watch?v=6L0ITrRZi74`}>
+                Advanced Video
+              </a>
             </Footer>
             <br />
           </Content>
@@ -395,18 +409,34 @@ const SolarPopup = (props) => {
             </TextContainer>
             <br />
             <LearnMore>
-              <button onClick={() => window.open("https://www.anything.com")}>
-                What is a CME analsis? (video)
+              <button
+                onClick={() =>
+                  window.open("https://www.youtube.com/watch?v=XKCMaJBXmzY")
+                }
+              >
+                Where are the radiation-trapping Van Allen Belts? (video)
               </button>
-              <button onClick={() => window.open("https://www.anything.com")}>
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://spacecenter.org/what-are-the-van-allen-radiation-belts/"
+                  )
+                }
+              >
                 Help Article
               </button>
             </LearnMore>
             <br />
             <Footer>
               <a href={`${URL}`}>Event Details</a>
-              <a href={``}>Advanced Article</a>
-              <a href={``}>Advanced Video</a>
+              <a
+                href={`https://science.thewire.in/the-sciences/apollo-11-van-allen-radiation-belts-translunar-injection/`}
+              >
+                Advanced Article
+              </a>
+              <a href={`https://www.youtube.com/watch?v=h9YN50xXFJY`}>
+                Advanced Video
+              </a>
             </Footer>
             <br />
           </Content>
@@ -480,7 +510,7 @@ const SolarPopup = (props) => {
                 Advanced Article
               </a>
               <a
-                href={`https://youtu.be/DLyYd89uj9Q?t=95`}
+                href={`https://www.youtube.com/watch?v=__rkQr_UhuA&t=187s`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -697,20 +727,38 @@ const SolarPopup = (props) => {
             </TextContainer>
             <br />
             <LearnMore>
-              <button onClick={() => window.open("https://www.anything.com")}>
-                What is a CME analsis? (video)
+              <button
+                onClick={() =>
+                  window.open("https://www.youtube.com/watch?v=URN-XyZD2vQ")
+                }
+              >
+                How does the magnetosphere normally protect Earth? (video)
               </button>
-              <button onClick={() => window.open("https://www.anything.com")}>
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://climate.nasa.gov/news/3105/earths-magnetosphere-protecting-our-planet-from-harmful-space-energy/"
+                  )
+                }
+              >
                 Help Article
               </button>
             </LearnMore>
             <br />
             <Footer>
               <a href={`${URL}`}>Event Details</a>
-              <a href={``} target="_blank" rel="noopener noreferrer">
+              <a
+                href={`http://eng.sepc.ac.cn/Introduction.php`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Advanced Article
               </a>
-              <a href={``} target="_blank" rel="noopener noreferrer">
+              <a
+                href={`https://www.youtube.com/watch?v=cLLq6plMjU0`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Advanced Video
               </a>
             </Footer>
