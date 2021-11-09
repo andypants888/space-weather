@@ -2,7 +2,7 @@ import React from "react";
 
 import { Wrapper, Content, BioBox } from "./Contact.styles";
 
-import bioGif from "../../gifs/teacher-2018.gif"
+import bioGif from "../../gifs/teacher-2018.gif";
 
 const Contact = () => {
   return (
@@ -26,12 +26,23 @@ const Contact = () => {
         <BioBox>
           <img src={bioGif} />
           <p>
-            Hi, I'm Andrew, a full-stack software-engineer /
-            web-developer originally from San Diego, California. <br />
-            In the past, I was full-time High School Science Teacher in both
-            California and later, the country of Colombia. <br />
-            In my spare time I am an avid traveler, history-lover, and
-            language-learner. (English, Chinese, Spanish, Javascript)
+            <div>
+              Hi, I'm Andrew, a full-stack software-engineer / web-developer
+              originally from San Diego, California.
+            </div>
+            <div>
+              Before coding, I was full-time High School Science Teacher in both
+              California and the country of Colombia.
+            </div>
+            <div>
+              I completed my undergraduate education at the University of
+              California, Davis in Biology, and received my teaching certificate
+              from San Diego State University.
+            </div>
+            <div>
+              In my spare time I am an avid traveler, history-lover, and
+              language-learner. (English, Chinese, Spanish, Javascript)
+            </div>
           </p>
         </BioBox>
 
@@ -132,8 +143,8 @@ const Contact = () => {
         </p>
         <h3>Other</h3>
         <p>
-          Countless tutorials, articles, stackoverflow/forum responses, videos, and advice
-          floating on the web 😁
+          Countless tutorials, articles, stackoverflow/forum responses, videos,
+          and advice floating on the web 😁
         </p>
       </Content>
     </Wrapper>

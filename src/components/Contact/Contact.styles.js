@@ -32,9 +32,13 @@ export const BioBox = styled.div`
 
     @media (pointer: fine) {
       display: flex;
-      width: 80%;
+      /* background-color: green; */
+      width: 90%;
+      div {
+        padding: 10px;
+      }
       p {
-        padding: 15px;
+       padding: 10px;
       }
     }
 `;

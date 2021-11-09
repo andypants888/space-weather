@@ -48,8 +48,10 @@ const SolarPopup = (props) => {
   });
 
   // Switch Regex Cases
-  const cmeUpdateRegex = /(## Summary:\n\nBETA PRODUCT\.)|(## Summary:\n\nUpdate)/g;
-  const cmeStandardRegex = /(## Summary:\n\n\w-type CME\s)|(## Summary:\n\nMultiple\s)/g;
+  const cmeUpdateRegex =
+    /(## Summary:\n\nBETA PRODUCT\.)|(## Summary:\n\nUpdate)/g;
+  const cmeStandardRegex =
+    /(## Summary:\n\n\w-type CME\s)|(## Summary:\n\nMultiple\s)/g;
 
   switch (true) {
     // Coronal Mass Ejection
@@ -89,15 +91,40 @@ const SolarPopup = (props) => {
             </TextContainer>
             <br />
             <LearnMore>
-              <div>What is a Coronal Mass Ejection?</div>
-              <button>Help Article</button>
-              <button>Video Explains</button>
+              <button
+                onClick={() =>
+                  window.open("https://www.youtube.com/watch?v=HWhu6oUL9O8")
+                }
+              >
+                What is a Coronal Mass Ejection? (Video)
+              </button>
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://scied.ucar.edu/learning-zone/sun-space-weather/coronal-mass-ejection"
+                  )
+                }
+              >
+                Help Article
+              </button>
             </LearnMore>
             <br />
             <Footer>
               <a href={`${URL}`}>Event Details</a>
-              <a href={``}>Longer Article</a>
-              <a href={``}>Longer Video</a>
+              <a
+                href={`https://www.swpc.noaa.gov/phenomena/coronal-mass-ejections`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Advanced Article
+              </a>
+              <a
+                href={`https://www.youtube.com/watch?v=oxkFk7_EDVg`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Advanced Video
+              </a>
             </Footer>
             <br />
           </Content>
@@ -148,14 +175,40 @@ const SolarPopup = (props) => {
             </TextContainer>
             <br />
             <LearnMore>
-              <div>What is a CME Analysis?</div>
-              <button>Help Article</button>
+              <button
+                onClick={() =>
+                  window.open("https://www.youtube.com/watch?v=P-FJizyePYQ")
+                }
+              >
+                What is a CME analysis? (video)
+              </button>
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://northernlightsnow.com/2015/01/24/how-to-read-the-wsa-enlil-model-output/"
+                  )
+                }
+              >
+                Help Article
+              </button>
             </LearnMore>
             <br />
             <Footer>
               <a href={`${URL}`}>Event Details</a>
-              <a href={``}>Longer Article</a>
-              <a href={``}>Longer Video</a>
+              <a
+                href={`https://www.spaceweatherlive.com/en/solar-activity/wsa-enlil.html`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Advanced Article
+              </a>
+              <a
+                href={`https://www.youtube.com/watch?v=QAs73yvZ7eY`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Advanced Video
+              </a>
             </Footer>
             <br />
           </Content>
@@ -202,15 +255,42 @@ const SolarPopup = (props) => {
             </TextContainer>
             <br />
             <LearnMore>
-              {/* <div>What is a Coronal Mass Ejection?</div> */}
-              <button>Help Article</button>
-              <button>Video Explains</button>
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://www.youtube.com/watch?v=GmtPZga7DZM&t=77s"
+                  )
+                }
+              >
+                Strong IPS detected by NASA (video)
+              </button>
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://www.nasa.gov/feature/goddard/2019/nasa-s-mms-finds-first-interplanetary-shock"
+                  )
+                }
+              >
+                Help Article
+              </button>
             </LearnMore>
             <br />
             <Footer>
               <a href={`${URL}`}>Event Details</a>
-              <a href={``}>Longer Article</a>
-              <a href={``}>Longer Video</a>
+              <a
+                href={`https://www.frontiersin.org/articles/10.3389/fphy.2020.626768/full`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Advanced Article
+              </a>
+              <a
+                href={`https://www.youtube.com/watch?v=rVjaAKFGHqw&t=30s`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Advanced Video
+              </a>
             </Footer>
             <br />
           </Content>
@@ -257,15 +337,18 @@ const SolarPopup = (props) => {
             </TextContainer>
             <br />
             <LearnMore>
-              {/* <div>What is a Coronal Mass Ejection?</div> */}
-              <button>Help Article</button>
-              <button>Video Explains</button>
+              <button onClick={() => window.open("https://www.anything.com")}>
+                What is a CME analsis? (video)
+              </button>
+              <button onClick={() => window.open("https://www.anything.com")}>
+                Help Article
+              </button>
             </LearnMore>
             <br />
             <Footer>
               <a href={`${URL}`}>Event Details</a>
-              <a href={``}>Longer Article</a>
-              <a href={``}>Longer Video</a>
+              <a href={``}>Advanced Article</a>
+              <a href={``}>Advanced Video</a>
             </Footer>
             <br />
           </Content>
@@ -312,15 +395,18 @@ const SolarPopup = (props) => {
             </TextContainer>
             <br />
             <LearnMore>
-              {/* <div>What is a Coronal Mass Ejection?</div> */}
-              <button>Help Article</button>
-              <button>Video Explains</button>
+              <button onClick={() => window.open("https://www.anything.com")}>
+                What is a CME analsis? (video)
+              </button>
+              <button onClick={() => window.open("https://www.anything.com")}>
+                Help Article
+              </button>
             </LearnMore>
             <br />
             <Footer>
               <a href={`${URL}`}>Event Details</a>
-              <a href={``}>Longer Article</a>
-              <a href={``}>Longer Video</a>
+              <a href={``}>Advanced Article</a>
+              <a href={``}>Advanced Video</a>
             </Footer>
             <br />
           </Content>
@@ -369,15 +455,22 @@ const SolarPopup = (props) => {
             </TextContainer>
             <br />
             <LearnMore>
-              {/* <div>What is a Coronal Mass Ejection?</div> */}
-              <button>Help Article</button>
-              <button>Video Explains</button>
+              <button onClick={() => window.open("https://www.anything.com")}>
+                What is a CME analsis? (video)
+              </button>
+              <button onClick={() => window.open("https://www.anything.com")}>
+                Help Article
+              </button>
             </LearnMore>
             <br />
             <Footer>
               <a href={`${URL}`}>Event Details</a>
-              <a href={``}>Longer Article</a>
-              <a href={``}>Longer Video</a>
+              <a href={``} target="_blank" rel="noopener noreferrer">
+                Advanced Article
+              </a>
+              <a href={``} target="_blank" rel="noopener noreferrer">
+                Advanced Video
+              </a>
             </Footer>
             <br />
           </Content>
@@ -425,15 +518,22 @@ const SolarPopup = (props) => {
             </TextContainer>
             <br />
             <LearnMore>
-              {/* <div>What is a Coronal Mass Ejection?</div> */}
-              <button>Help Article</button>
-              <button>Video Explains</button>
+              <button onClick={() => window.open("https://www.anything.com")}>
+                What is a CME analsis? (video)
+              </button>
+              <button onClick={() => window.open("https://www.anything.com")}>
+                Help Article
+              </button>
             </LearnMore>
             <br />
             <Footer>
               <a href={`${URL}`}>Event Details</a>
-              <a href={``}>Longer Article</a>
-              <a href={``}>Longer Video</a>
+              <a href={``} target="_blank" rel="noopener noreferrer">
+                Advanced Article
+              </a>
+              <a href={``} target="_blank" rel="noopener noreferrer">
+                Advanced Video
+              </a>
             </Footer>
             <br />
           </Content>
@@ -473,7 +573,7 @@ const SolarPopup = (props) => {
             </GifContainer>
             <br />
             <TextContainer>
-            <GSTRegexReader
+              <GSTRegexReader
                 message={message}
                 eventType={eventType}
                 eventTime={eventTime}
@@ -482,15 +582,22 @@ const SolarPopup = (props) => {
             </TextContainer>
             <br />
             <LearnMore>
-              {/* <div>What is a Coronal Mass Ejection?</div> */}
-              <button>Help Article</button>
-              <button>Video Explains</button>
+              <button onClick={() => window.open("https://www.anything.com")}>
+                What is a CME analsis? (video)
+              </button>
+              <button onClick={() => window.open("https://www.anything.com")}>
+                Help Article
+              </button>
             </LearnMore>
             <br />
             <Footer>
               <a href={`${URL}`}>Event Details</a>
-              <a href={``}>Longer Article</a>
-              <a href={``}>Longer Video</a>
+              <a href={``} target="_blank" rel="noopener noreferrer">
+                Advanced Article
+              </a>
+              <a href={``} target="_blank" rel="noopener noreferrer">
+                Advanced Video
+              </a>
             </Footer>
             <br />
           </Content>
@@ -539,15 +646,22 @@ const SolarPopup = (props) => {
             </TextContainer>
             <br />
             <LearnMore>
-              {/* <div>What is a Coronal Mass Ejection?</div> */}
-              <button>Help Article</button>
-              <button>Video Explains</button>
+              <button onClick={() => window.open("https://www.anything.com")}>
+                What is a CME analsis? (video)
+              </button>
+              <button onClick={() => window.open("https://www.anything.com")}>
+                Help Article
+              </button>
             </LearnMore>
             <br />
             <Footer>
               <a href={`${URL}`}>Event Details</a>
-              <a href={``}>Longer Article</a>
-              <a href={``}>Longer Video</a>
+              <a href={``} target="_blank" rel="noopener noreferrer">
+                Advanced Article
+              </a>
+              <a href={``} target="_blank" rel="noopener noreferrer">
+                Advanced Video
+              </a>
             </Footer>
             <br />
           </Content>

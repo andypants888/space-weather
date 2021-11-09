@@ -141,6 +141,7 @@ export const LearnMore = styled.div`
   flex-direction: column;
   justify-content: space-around;
 
+
   div {
     margin-bottom: 10px;
     padding: 6px;
@@ -201,5 +202,6 @@ export const Footer = styled.div`
   padding-bottom: 10px;
   a {
     color: var(--main);
+    /* width: 100% */
   }
 `;
