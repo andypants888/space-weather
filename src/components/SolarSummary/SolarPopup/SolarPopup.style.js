@@ -48,6 +48,7 @@ export const CloseBanner = styled.div`
   position: sticky;
   top: -5px;
   left: 5px;
+  z-index: 10;
   button {
     color: black;
     font-size: 20px;

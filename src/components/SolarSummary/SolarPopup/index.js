@@ -455,20 +455,35 @@ const SolarPopup = (props) => {
             </TextContainer>
             <br />
             <LearnMore>
-              <button onClick={() => window.open("https://www.anything.com")}>
-                What is a CME analsis? (video)
+              <button
+                onClick={() =>
+                  window.open("https://www.youtube.com/watch?v=twB62NYsaIg")
+                }
+              >
+                How does Solar Energetic Particles (Solar Wind) affect Earth?
+                (video)
               </button>
-              <button onClick={() => window.open("https://www.anything.com")}>
+              <button
+                onClick={() => window.open("https://svs.gsfc.nasa.gov/20320")}
+              >
                 Help Article
               </button>
             </LearnMore>
             <br />
             <Footer>
               <a href={`${URL}`}>Event Details</a>
-              <a href={``} target="_blank" rel="noopener noreferrer">
+              <a
+                href={`https://www.nasa.gov/feature/goddard/2021/in-first-scientists-trace-fastest-solar-particles-to-their-roots-on-the-sun`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Advanced Article
               </a>
-              <a href={``} target="_blank" rel="noopener noreferrer">
+              <a
+                href={`https://youtu.be/DLyYd89uj9Q?t=95`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Advanced Video
               </a>
             </Footer>
@@ -518,20 +533,38 @@ const SolarPopup = (props) => {
             </TextContainer>
             <br />
             <LearnMore>
-              <button onClick={() => window.open("https://www.anything.com")}>
+              <button
+                onClick={() =>
+                  window.open("https://www.youtube.com/watch?v=oOXVZo7KikE")
+                }
+              >
                 What is a CME analsis? (video)
               </button>
-              <button onClick={() => window.open("https://www.anything.com")}>
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://www.esa.int/Science_Exploration/Space_Science/What_are_solar_flares"
+                  )
+                }
+              >
                 Help Article
               </button>
             </LearnMore>
             <br />
             <Footer>
               <a href={`${URL}`}>Event Details</a>
-              <a href={``} target="_blank" rel="noopener noreferrer">
+              <a
+                href={`https://hesperia.gsfc.nasa.gov/sftheory/flare.htm`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Advanced Article
               </a>
-              <a href={``} target="_blank" rel="noopener noreferrer">
+              <a
+                href={`https://www.youtube.com/watch?v=TWjtYSRlOUI`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Advanced Video
               </a>
             </Footer>
@@ -582,20 +615,38 @@ const SolarPopup = (props) => {
             </TextContainer>
             <br />
             <LearnMore>
-              <button onClick={() => window.open("https://www.anything.com")}>
-                What is a CME analsis? (video)
+              <button
+                onClick={() =>
+                  window.open("https://www.youtube.com/watch?v=HJfy8acFaOg")
+                }
+              >
+                What causes a Geomagnetic/Solar Storm? (video)
               </button>
-              <button onClick={() => window.open("https://www.anything.com")}>
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://www.britannica.com/science/geomagnetic-storm"
+                  )
+                }
+              >
                 Help Article
               </button>
             </LearnMore>
             <br />
             <Footer>
               <a href={`${URL}`}>Event Details</a>
-              <a href={``} target="_blank" rel="noopener noreferrer">
+              <a
+                href={`http://www.northernlighthouse.ca/geomagnetic-storms/`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Advanced Article
               </a>
-              <a href={``} target="_blank" rel="noopener noreferrer">
+              <a
+                href={`https://www.youtube.com/watch?v=mEqE-g128kk`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Advanced Video
               </a>
             </Footer>
