@@ -27,10 +27,12 @@ const Tutorial = () => {
             <img src={Image1} />
           </Card>
         </NavLink>
-        <Card>
-          2. How does the earth's aurora's happen?
-          <img src={Image2} />
-        </Card>
+        <NavLink to="lesson02">
+          <Card>
+            2. How does the earth's aurora's happen?
+            <img src={Image2} />
+          </Card>
+        </NavLink>
         <Card>
           3. How do scientists keep track of solar events?
           <img src={Image3} />
