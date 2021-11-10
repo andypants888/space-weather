@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Content = styled.div`
+  /* background-color: yellow; */
   display: grid;
   a,
   a:visited {
@@ -24,18 +25,30 @@ export const Content = styled.div`
   @media (pointer: fine) {
     /* background-color: green; */
 
-    grid-template-columns: 15% 15% 15%;
+    grid-template-columns: 18% 18% 18%;
     grid-column-gap: 20px;
     grid-template-rows: auto auto;
     grid-row-gap: 5px;
     padding: 30px;
+    
+    position: relative;
+    margin-left: 25%;
   }
 `;
 
 export const Title = styled.div`
   font-size: 50px;
   margin-left: 10px;
+  margin-top: 10px;
   font-family: monospace;
+  /* background-color: blue; */
+
+  @media (pointer: coarse) {
+  }
+  @media (pointer: fine) {
+    position: relative;
+    margin-left: 25%;
+  }
 `;
 
 export const Card = styled.div`

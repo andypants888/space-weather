@@ -39,7 +39,7 @@ const Lesson01 = () => {
           </p>
         </div>
         <textarea rows="7" cols="43">
-          - CME stands for ... - Type here!!!
+          - CME stands for ___ Type here!!!
         </textarea>
         <SurveyContainer>
           <Quiz01 />

@@ -33,7 +33,8 @@ export const BioBox = styled.div`
     @media (pointer: fine) {
       display: flex;
       /* background-color: green; */
-      width: 90%;
+      width: 100%;
+      height: 100%
       div {
         padding: 10px;
       }

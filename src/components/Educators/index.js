@@ -46,6 +46,30 @@ const Educators = () => {
             analyze space weather throughout the project
           </div>
         </p>
+        <h2>My students struggle with English, what can I do?</h2>
+        <p>
+          <div>
+            - There are several extensions for chrome browsers that can
+            auto-translate youtube/netflix subtitles, and hover-translate
+          </div>
+          <div>
+            - In general you should only use extensions with a{" "}
+            <strong>large number of users</strong> and a{" "}
+            <strong>high star-rating</strong>.
+          </div>
+          <div>
+            - I personally use{" "}
+            <a href="https://chrome.google.com/webstore/detail/youtube-dual-subtitles/hkbdddpiemdeibjoknnofflfgbgnebcm/related?hl=en">
+              Youtube Dual Subtitles
+            </a>{" "}
+            and{" "}
+            <a href="https://chrome.google.com/webstore/detail/transover/aggiiclaiamajehmlfpkjmlbadmkledi/related?utm_source=chrome-ntp-icon">
+              TransOver{" "}
+            </a>
+            (Hover-Translate) for English to Chinese. But there are many good
+            extensions on the chrome web store
+          </div>
+        </p>
         <h2>What standards does this web-app cover?</h2>
         <p>
           <div>
@@ -82,18 +106,10 @@ const Educators = () => {
           <div>
             A solar storm can be several types, and all originate from the Sun.{" "}
           </div>
-          <div>
-            - Coronal Mass Ejections (CME) (Made of Gas/Plasma)
-          </div>
-          <div>
-            - Solar Flares (Made of Light / X-Rays)
-          </div>
-          <div>
-            - Geomagnetic Storm (GST)
-          </div>
-          <div>
-            - Solar Energetic Particle Storms (SEP)
-          </div>
+          <div>- Coronal Mass Ejections (CME) (Made of Gas/Plasma)</div>
+          <div>- Solar Flares (Made of Light / X-Rays)</div>
+          <div>- Geomagnetic Storm (GST)</div>
+          <div>- Solar Energetic Particle Storms (SEP)</div>
           <div>
             - <a href="en.wikipedia.org/wiki/Solar_storm">More info</a>
           </div>
