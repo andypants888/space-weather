@@ -15,6 +15,7 @@ import Contact from "./components/Contact";
 // Tutorial Pages
 import Lesson01 from "./components/Tutorial/Lesson01";
 import Lesson02 from "./components/Tutorial/Lesson02";
+import Lesson03 from "./components/Tutorial/Lesson03";
 
 // Styles
 import { GlobalStyle } from "./GlobalStyle";
@@ -33,6 +34,7 @@ function App() {
           <Route path="tutorial/">
             <Route path="lesson01" element={<Lesson01 />} />
             <Route path="lesson02" element={<Lesson02 />} />
+            <Route path="lesson03" element={<Lesson03 />} />
           </Route>
           <Route path="educators" element={<Educators />} />
           <Route path="contact" element={<Contact />} />

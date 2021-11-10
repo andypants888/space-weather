@@ -33,10 +33,12 @@ const Tutorial = () => {
             <img src={Image2} />
           </Card>
         </NavLink>
-        <Card>
-          3. How do scientists keep track of solar events?
-          <img src={Image3} />
-        </Card>
+        <NavLink to="lesson03">
+          <Card>
+            3. How do scientists keep track of solar events?
+            <img src={Image3} />
+          </Card>
+        </NavLink>
       </Content>
       <Title>Bonus</Title>
       <Content>
