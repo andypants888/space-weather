@@ -7,13 +7,13 @@ import { Wrapper, Content, Title, Card } from "./Tutorial.styles";
 import { NavLink } from "react-router-dom";
 
 // Card Images
-import Image1 from "../../images/00-flare-web.gif";
-import Image2 from "../../images/02-nasa-northern-lights.jpg";
-import Image3 from "../../images/03-soho-nasa-esa.jpg";
-import Image4 from "../../images/04-magnetic-sun.jpg";
-import Image5 from "../../images/05-stereo-ab.jpg";
-import Image6 from "../../images/06-observe-sun.jpg";
-import Image7 from "../../images/07-lagrange.jpg";
+import FlareImage from "../../images/flare-web.gif";
+import AuroraImage from "../../images/nasa-northern-lights.jpg";
+import SohoImage from "../../images/soho-nasa-esa.jpg";
+import ConstructImage from "../../images/construction.jpg";
+import OrbitImage from "../../images/orbits.jpg"
+import SupernovaImage from "../../images/supernova.jpg"
+import SunImage from "../../images/observe-sun.jpg";
 
 const Tutorial = () => {
   // console.log('tutorial running')
@@ -24,37 +24,48 @@ const Tutorial = () => {
         <NavLink to="lesson01">
           <Card>
             1. What is Space Weather?
-            <img src={Image1} />
+            <img src={FlareImage} />
           </Card>
         </NavLink>
         <NavLink to="lesson02">
           <Card>
             2. How does the earth's aurora's happen?
-            <img src={Image2} />
+            <img src={AuroraImage} />
           </Card>
         </NavLink>
         <NavLink to="lesson03">
           <Card>
             3. How do scientists keep track of solar events?
-            <img src={Image3} />
+            <img src={SohoImage} />
           </Card>
         </NavLink>
       </Content>
       <Title>Bonus (under construction 👷)</Title>
       <Content>
         <Card>
-          1. What is the sun's magnetic field?
-          <img src={Image4} />
+          1. How does the Sun make its energy?
+          <img src={SunImage} />
         </Card>
         <Card>
-          2. What are stereo A and B?
-          <img src={Image5} />
+          2. How can stars make Gold?
+          <img src={SupernovaImage} />
         </Card>
         <Card>
-          3. Observing the Sun <img src={Image6} />
+          3. Can I play with Orbits?
+          <img src={OrbitImage} />
+        </Card>
+      </Content>
+      <Title>Big Bang 👷</Title>
+      <Content>
+        <Card>
+          1. What really happened in the Big Bang? <img src={ConstructImage} />
         </Card>
         <Card>
-          4. Satelites at L1 <img src={Image7} />
+          2. What are cosmic rays? <img src={ConstructImage} />
+        </Card>
+        <Card>
+          3. How do we know the Big Bang is real or fake?{" "}
+          <img src={ConstructImage} />
         </Card>
       </Content>
     </Wrapper>
