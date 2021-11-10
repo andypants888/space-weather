@@ -40,7 +40,7 @@ const Tutorial = () => {
           </Card>
         </NavLink>
       </Content>
-      <Title>Bonus</Title>
+      <Title>Bonus (under construction 👷)</Title>
       <Content>
         <Card>
           1. What is the sun's magnetic field?

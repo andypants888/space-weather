@@ -39,8 +39,33 @@ export const SolarEvent = styled.div`
 
   button {
     flex-basis: 40px;
-    /* padding-left: -10px; */
-    /* z-index: 10; */
+    color: black;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 10px 0px;
+    padding: 6px;
+    border-radius: 6px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    background-image: linear-gradient(
+      to right,
+      rgb(255, 240, 0) 0%,
+      rgb(30, 255, 0) 100%
+    );
+    /* box-shadow: #42ff0c 3px 2px 15px 0px; */
+    border: 2px solid rgba(0, 0, 0);
+  }
+  button:hover {
+    @media (pointer: fine) {
+      background: #ff0000;
+    }
+  }
+  button:active {
+    background: #ff7e00;
   }
 `;
 
