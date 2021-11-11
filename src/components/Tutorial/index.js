@@ -14,9 +14,9 @@ import ConstructImage from "../../images/construction.jpg";
 import OrbitImage from "../../images/orbits.jpg";
 import SupernovaImage from "../../images/supernova.jpg";
 import SunImage from "../../images/observe-sun.jpg";
-import BigBangImage from "../../images/big-bang.jpg"
-import CosmicRaysImage from "../../images/cosmic-rays.jpg"
-import Conspiracy from "../../images/conspiracy.jpg"
+import BigBangImage from "../../images/big-bang.jpg";
+import CosmicRaysImage from "../../images/cosmic-rays.jpg";
+import Conspiracy from "../../images/conspiracy.jpg";
 
 const Tutorial = () => {
   // console.log('tutorial running')
@@ -66,16 +66,22 @@ const Tutorial = () => {
       </Content>
       <Title>💫 Big Bang 💫</Title>
       <Content>
-        <Card>
-          1. What really happened in the Big Bang? <img src={BigBangImage} />
-        </Card>
+        <NavLink to="bigbang01">
+          <Card>
+            1. What really happened in the Big Bang? <img src={BigBangImage} />
+          </Card>
+        </NavLink>
+        <NavLink to="bigbang02">
         <Card>
           2. What are cosmic rays? <img src={CosmicRaysImage} />
         </Card>
+        </NavLink>
+        <NavLink to="bigbang03">
         <Card>
           3. How do we know if the Big Bang is real or fake?{" "}
           <img src={Conspiracy} />
         </Card>
+        </NavLink>
       </Content>
     </Wrapper>
   );

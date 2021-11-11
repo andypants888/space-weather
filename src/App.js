@@ -19,6 +19,9 @@ import Lesson03 from "./components/Tutorial/Lesson03";
 import Bonus01 from "./components/Tutorial/Bonus01";
 import Bonus02 from "./components/Tutorial/Bonus02";
 import Bonus03 from "./components/Tutorial/Bonus03";
+import BigBang01 from "./components/Tutorial/BigBang01";
+import BigBang02 from "./components/Tutorial/BigBang02";
+import BigBang03 from "./components/Tutorial/BigBang03";
 
 // Styles
 import { GlobalStyle } from "./GlobalStyle";
@@ -41,6 +44,9 @@ function App() {
             <Route path="bonus01" element={<Bonus01 />} />
             <Route path="bonus02" element={<Bonus02 />} />
             <Route path="bonus03" element={<Bonus03 />} />
+            <Route path="bigbang01" element={<BigBang01 />} />
+            <Route path="bigbang02" element={<BigBang02 />} />
+            <Route path="bigbang03" element={<BigBang03 />} />
           </Route>
           <Route path="educators" element={<Educators />} />
           <Route path="contact" element={<Contact />} />
