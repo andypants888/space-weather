@@ -94,7 +94,7 @@ const BonusQuiz01 = () => {
             type: "comment",
             name: "whatifnosun",
             title:
-              "What would happen to Earth if the Sun's nuclear reactions stopped? Explain in 2-3 sentences, ",
+              "What would happen to Earth if the Sun's nuclear reactions stopped? Explain in 2-3 sentences",
             // choicesOrder: "random",
             maxLength: 500,
           },

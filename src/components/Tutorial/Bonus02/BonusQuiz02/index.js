@@ -31,20 +31,20 @@ const BonusQuiz02 = () => {
         questions: [
           {
             type: "radiogroup",
-            name: "energy",
+            name: "fusion",
             title:
-              "The sun's massive gravity causes _____ to produce energy",
+              "Scientists can add ___ to elements to create real gold?",
             choicesOrder: "random",
             isRequired: true,
             choices: [
-              "Nuclear fusion",
-              "Evaporation",
-              "Combustion",
-              "Evolution",
+              "Atoms",
+              "Electrons",
+              "Energy",
+              "Supernovas",
               "Solar Wind",
             ],
             correctAnswer:
-              "Nuclear fusion",
+              "Atoms",
           },
         ],
       },
@@ -52,16 +52,16 @@ const BonusQuiz02 = () => {
         questions: [
           {
             type: "radiogroup",
-            name: "nebula",
-            title: "What was the original, early form of the Sun? ",
+            name: "supernova",
+            title: "Why do stars explode into supernova? ",
             choicesOrder: "random",
             isRequired: true,
             choices: [
-              "A cloud of gas, called a nebula",
-              "A comet, called Halley's Comet",
-              "It was originally the center of the Big Bang",
-              "It was originally the Earth's Moon.",
-              "The sun was always a star, there was nothing before it",
+              "They run out of fuel like hydrogen, helium & other elements",
+              "Stars explode when they collide with black holes",
+              "Actually, stars will never supernova, but shrink instead",
+              "They run out of fire & gasoline, the main fuel for a star",
+              "Combining hydrogen and helium cause stars to explode",
             ],
             correctAnswer: "A cloud of gas, called a nebula",
           },
@@ -71,19 +71,19 @@ const BonusQuiz02 = () => {
         questions: [
           {
             type: "radiogroup",
-            name: "fusion",
+            name: "goldorigin",
             title:
-              "What two elements are the MAIN part of the Sun's nuclear fusion?",
+              "Where does gold ORIGINALLY come from?",
             choicesOrder: "random",
             isRequired: true,
             choices: [
-              "Hydrogen & Helium",
-              "Iron & Nickel",
-              "Oxygen & Nitrogen",
-              "Carbon Dioxide",
-              "Air & Fire",
+              "It is ejected from Supernovas in space",
+              "You can find it as dust in the oceans",
+              "Gold is buried deep in the earth",
+              "You can find gold in local jewelry stores",
+              "It is from the atmosphere of the sun, the Corona",
             ],
-            correctAnswer: "Hydrogen & Helium",
+            correctAnswer: "It is ejected from Supernovas in space",
           },
         ],
       },
@@ -92,9 +92,9 @@ const BonusQuiz02 = () => {
         questions: [
           {
             type: "comment",
-            name: "whatifnosun",
+            name: "stargold",
             title:
-              "What would happen to Earth if the Sun's nuclear reactions stopped? Explain in 2-3 sentences, ",
+              "How does a star change hydrogen to lead or gold? Explain in 2-3 sentences",
             // choicesOrder: "random",
             maxLength: 500,
           },

@@ -16,7 +16,7 @@ const Lesson03 = () => {
           <h1>Tutorial</h1>
         </div>
         <div>
-          <h3>Lesson 03: Earth's Aurora</h3>
+          <h3>Lesson 03: Eyes in the Sky</h3>
         </div>
         <iframe
           // width="560"
