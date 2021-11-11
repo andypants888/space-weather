@@ -26,9 +26,6 @@ const CMEUpdateRegexReader = (props) => {
     <Wrapper>
       <Content>
         <Title>Analysis of previous CME</Title>
-        <Warning>
-          BETA PRODUCT. ENSEMBLE (Update) PRODUCT IS STILL IN DEVELOPMENT MODE.
-        </Warning>
         <Main>
           <div><Date>{detailedTime}</Date></div>
           <div>{message.match(summaryBrute)}</div>

@@ -11,7 +11,7 @@ const BigBangQuiz02 = () => {
   var defaultThemeColors = Survey.StylesManager.applyTheme("default");
 
   var surveyJSON = {
-    title: "CME's & Space Weather Quiz",
+    title: "Cosmic Rays Quiz",
     showProgressBar: "bottom",
     // showTimerPanel: "top",
     // maxTimeToFinishPage: 30,
@@ -31,20 +31,20 @@ const BigBangQuiz02 = () => {
         questions: [
           {
             type: "radiogroup",
-            name: "energy",
+            name: "cosmicrayscannot",
             title:
-              "The sun's massive gravity causes _____ to produce energy",
+              "Cosmic Rays CANNOT tell us about ______",
             choicesOrder: "random",
             isRequired: true,
             choices: [
-              "Nuclear fusion",
-              "Evaporation",
-              "Combustion",
-              "Evolution",
-              "Solar Wind",
+              "The age of our Earth",
+              "What the universe is made of, (mostly Hydrogen & Helium)",
+              "Dark matter and antimatter out in space",
+              "Where the cosmic rays come from",
+              "The velocity or the frequency of incoming cosmic rays",
             ],
             correctAnswer:
-              "Nuclear fusion",
+              "The age of our Earth",
           },
         ],
       },
@@ -52,18 +52,18 @@ const BigBangQuiz02 = () => {
         questions: [
           {
             type: "radiogroup",
-            name: "nebula",
-            title: "What was the original, early form of the Sun? ",
+            name: "whatis",
+            title: "Generally what is a cosmic ray? ",
             choicesOrder: "random",
             isRequired: true,
             choices: [
-              "A cloud of gas, called a nebula",
-              "A comet, called Halley's Comet",
-              "It was originally the center of the Big Bang",
-              "It was originally the Earth's Moon.",
-              "The sun was always a star, there was nothing before it",
+              "A beam of light from outside the solar system",
+              "Particles launched from stars or supernova outside our solar system",
+              "It is the light from our own sun, also called photons",
+              "Cosmic rays are a type of fish related to sharks",
+              "Cosmic rays are used by phones to send text messages",
             ],
-            correctAnswer: "A cloud of gas, called a nebula",
+            correctAnswer: "Particles launched from stars or supernova outside our solar system",
           },
         ],
       },
@@ -71,19 +71,19 @@ const BigBangQuiz02 = () => {
         questions: [
           {
             type: "radiogroup",
-            name: "fusion",
+            name: "source",
             title:
-              "What two elements are the MAIN part of the Sun's nuclear fusion?",
+              "Where do cosmic rays come from?",
             choicesOrder: "random",
             isRequired: true,
             choices: [
-              "Hydrogen & Helium",
-              "Iron & Nickel",
-              "Oxygen & Nitrogen",
-              "Carbon Dioxide",
-              "Air & Fire",
+              "They come only from our Sun",
+              "From stars and supernovas beyond our solar system",
+              "They come from only black holes",
+              "From all the planets and moons",
+              "Cosmic rays are actually made on Earth",
             ],
-            correctAnswer: "Hydrogen & Helium",
+            correctAnswer: "From stars and supernovas beyond our solar system",
           },
         ],
       },
@@ -92,9 +92,9 @@ const BigBangQuiz02 = () => {
         questions: [
           {
             type: "comment",
-            name: "whatifnosun",
+            name: "whatiscosmicray",
             title:
-              "What would happen to Earth if the Sun's nuclear reactions stopped? Explain in 2-3 sentences, ",
+              "What are cosmic rays and why do scientists care about them? Explain in 2-3 sentences",
             // choicesOrder: "random",
             maxLength: 500,
           },
