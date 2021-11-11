@@ -30,6 +30,7 @@ export const Main = styled.div`
   /* padding: 0px 15px; */
 
   div {
+    white-space: pre-wrap;
     margin: 10px 0px;
   }
   @media (pointer: coarse) {
@@ -44,4 +45,11 @@ export const Warning = styled.div`
   font-family: monospace;
   font-weight: 400;
   color: lightblue;
+`;
+
+export const Date = styled.div`
+  font-family: monospace;
+  font-weight: 400;
+  color: orange;
+  font-size: 20px;
 `;

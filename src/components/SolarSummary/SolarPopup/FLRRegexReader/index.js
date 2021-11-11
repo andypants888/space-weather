@@ -1,7 +1,7 @@
 import React from "react";
 
 // Styles
-import { Wrapper, Content, Title, Main } from "./FLRRegexReader.style.js";
+import { Wrapper, Content, Title, Main, Date } from "./FLRRegexReader.style.js";
 
 const FLRRegexReader = (props) => {
   const { message, eventType, eventTime } = props;
@@ -25,7 +25,7 @@ const FLRRegexReader = (props) => {
       <Content>
         <Title>New Solar Flare Detected</Title>
         <Main>
-          <div>{detailedTime}</div>
+          <div><Date>{detailedTime}</Date></div>
           <div>{message.match(summaryBrute)}</div>
         </Main>
       </Content>

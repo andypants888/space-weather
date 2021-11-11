@@ -31,6 +31,7 @@ export const Main = styled.div`
 
   div {
     margin: 10px 0px;
+    white-space: pre-wrap;
   }
   @media (pointer: coarse) {
     align-items: flex-start;
@@ -45,4 +46,11 @@ export const Warning = styled.div`
   font-weight: 400;
   color: lightblue;
   padding: 5px;
+`;
+
+export const Date = styled.div`
+  font-family: monospace;
+  font-weight: 400;
+  color: orange;
+  font-size: 20px;
 `;

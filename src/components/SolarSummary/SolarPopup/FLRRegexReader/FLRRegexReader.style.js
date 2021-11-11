@@ -26,10 +26,20 @@ export const Main = styled.div`
   align-items: flex-start;
   justify-content: space-evenly;
   height: auto;
+  white-space: pre-wrap;
 `;
 
 export const Warning = styled.div`
   font-family: monospace;
   font-weight: 400;
   color: lightblue;
+`;
+
+export const Date = styled.div`
+  font-family: monospace;
+  font-weight: 400;
+  color: orange;
+  font-size: 20px;
+  margin: 10px 0px;
+
 `;

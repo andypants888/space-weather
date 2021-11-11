@@ -7,6 +7,7 @@ import {
   Title,
   Main,
   Warning,
+  Date,
 } from "./CMERegexReader.style.js";
 
 const CMERegexReader = (props) => {
@@ -23,63 +24,12 @@ const CMERegexReader = (props) => {
   // cmeStandard Regex Markers
   const summaryBrute = /## Summary:.*(##)/gs;
 
-  // const potentialImpact = /(\()\S+.*/;
-  // const cmeType = /(.-type CME.*)/g;
-  // const cmeSpeed = /Estimated speed: ~\d\d\d \w\w.\w/g;
-  // const nearEarth = /reach \w.*/g;
-  // const nearEarthTimeRegex = /(\d\d\d\d-\d\d-\d\d[A-Z]\d\d:\d\dZ)/g;
-  // const nearEarthUTC = message.match(nearEarth)[0].match(nearEarthTimeRegex);
-  // const nearEarthJSDate = new Date(nearEarthUTC);
-  // const nearEarthLocal = nearEarthJSDate.toLocaleString("en-US", {
-  //   // weekday: "long",
-  //   month: "short",
-  //   day: "numeric",
-  //   hour: "2-digit",
-  //   minute: "2-digit",
-  //   timeZoneName: "short",
-  // });
-
-  // // Regex Markers
-  // const discoverRegex = /reach \w.*/;
-  // let discoverText = [];
-
-  // const discoverList = message.match(discoverRegex)
-  // // UTC --> Local "Discovered At" Only
-  // for (let i = 0; i < discoverList.length; i++) {
-  //   const UTCDatesRegex = /(\d\d\d\d-\d\d-\d\d[A-Z]\d\d:\d\dZ)/g;
-  //   const UTCDates = discoverList[i].match(UTCDatesRegex);
-  //   const JSDateArr = UTCDates.map((utc) => new Date(utc));
-  //   const LocalDateArr = JSDateArr.map((date) =>
-  //     date.toLocaleString("en-US", {
-  //       weekday: "short",
-  //       month: "short",
-  //       day: "numeric",
-  //       hour: "2-digit",
-  //       minute: "2-digit",
-  //       // timeZoneName: "short",
-  //     })
-  //   );
-
-  //   // console.log(UTCDates);
-  //   // console.log("sateliteImpactText: ", sateliteImpactText);
-
-  //   for (let j = 0; j < JSDateArr.length; j++) {
-  //     let replaced = discoverList[i].replace(UTCDates[j], LocalDateArr[j]);
-  //   //   console.log(replaced);
-  //     discoverList[i] = replaced;
-  //     if (!UTCDatesRegex.test(discoverList[i])) {
-  //       discoverText.push(discoverList[i]);
-  //     }
-  //   }
-  // }
-  // // cmeUpdate Regex Markers
-
   return (
     <Wrapper>
       <Content>
         <Title>New Eruption of Solar Gas & Plasma</Title>
         <Main>
-          <div>{detailedTime}</div>
+          <div><Date>{detailedTime}</Date></div>
           <div>{message.match(summaryBrute)}</div>
         </Main>
 

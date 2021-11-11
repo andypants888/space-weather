@@ -7,6 +7,7 @@ import {
   Title,
   Main,
   Warning,
+  Date,
 } from "./CMEUpdateRegexReader.style.js";
 
 const CMEUpdateRegexReader = (props) => {
@@ -29,7 +30,7 @@ const CMEUpdateRegexReader = (props) => {
           BETA PRODUCT. ENSEMBLE (Update) PRODUCT IS STILL IN DEVELOPMENT MODE.
         </Warning>
         <Main>
-          <div>{detailedTime}</div>
+          <div><Date>{detailedTime}</Date></div>
           <div>{message.match(summaryBrute)}</div>
         </Main>
       </Content>
