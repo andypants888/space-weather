@@ -13,15 +13,15 @@ const BigBang01 = () => {
     <Wrapper>
       <Content>
         <div>
-          <h1>Bonus</h1>
+          <h1>Big Bang</h1>
         </div>
         <div>
-          <h3>3. Orbit Simulator</h3>
+          <h3>1. What really happened?</h3>
         </div>
         <iframe
           // width="560"
           // height="315"
-          src="https://www.youtube.com/embed/2HoTK_Gqi2Q"
+          src="https://www.youtube.com/embed/wNDGgL73ihY"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"

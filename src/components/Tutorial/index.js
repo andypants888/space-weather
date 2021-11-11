@@ -16,7 +16,7 @@ import SupernovaImage from "../../images/supernova.jpg";
 import SunImage from "../../images/observe-sun.jpg";
 import BigBangImage from "../../images/big-bang.jpg";
 import CosmicRaysImage from "../../images/cosmic-rays.jpg";
-import Conspiracy from "../../images/conspiracy.jpg";
+import GeorgesImage from "../../images/georges.jpg";
 
 const Tutorial = () => {
   // console.log('tutorial running')
@@ -78,8 +78,8 @@ const Tutorial = () => {
         </NavLink>
         <NavLink to="bigbang03">
         <Card>
-          3. How do we know if the Big Bang is real or fake?{" "}
-          <img src={Conspiracy} />
+          3. Is the Big Bang really true?{" "}
+          <img src={GeorgesImage} />
         </Card>
         </NavLink>
       </Content>

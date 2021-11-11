@@ -11,7 +11,7 @@ const BigBangQuiz01 = () => {
   var defaultThemeColors = Survey.StylesManager.applyTheme("default");
 
   var surveyJSON = {
-    title: "CME's & Space Weather Quiz",
+    title: "Big Bang Quiz",
     showProgressBar: "bottom",
     // showTimerPanel: "top",
     // maxTimeToFinishPage: 30,
@@ -31,20 +31,20 @@ const BigBangQuiz01 = () => {
         questions: [
           {
             type: "radiogroup",
-            name: "energy",
+            name: "firstelement",
             title:
-              "The sun's massive gravity causes _____ to produce energy",
+              "What was the first element created by the Big Bang",
             choicesOrder: "random",
             isRequired: true,
             choices: [
-              "Nuclear fusion",
-              "Evaporation",
-              "Combustion",
-              "Evolution",
-              "Solar Wind",
+              "Hydrogen",
+              "Carbon Dioxide",
+              "Oxygen",
+              "Helium",
+              "Lithium",
             ],
             correctAnswer:
-              "Nuclear fusion",
+              "Hydrogen",
           },
         ],
       },
@@ -52,18 +52,18 @@ const BigBangQuiz01 = () => {
         questions: [
           {
             type: "radiogroup",
-            name: "nebula",
-            title: "What was the original, early form of the Sun? ",
+            name: "unknown",
+            title: "What is totally unknown about the Big Bang?",
             choicesOrder: "random",
             isRequired: true,
             choices: [
-              "A cloud of gas, called a nebula",
-              "A comet, called Halley's Comet",
-              "It was originally the center of the Big Bang",
-              "It was originally the Earth's Moon.",
-              "The sun was always a star, there was nothing before it",
+              "What came before the Big Bang is unknown",
+              "What happened in the first 10 minutes of the Big Bang is unknown",
+              "We don't know why the universe cooled down",
+              "We don't have any data on how stars formed",
+              "It is unknown how the first elements formed",
             ],
-            correctAnswer: "A cloud of gas, called a nebula",
+            correctAnswer: "What came before the Big Bang is unknown",
           },
         ],
       },
@@ -71,19 +71,19 @@ const BigBangQuiz01 = () => {
         questions: [
           {
             type: "radiogroup",
-            name: "fusion",
+            name: "acceptance",
             title:
-              "What two elements are the MAIN part of the Sun's nuclear fusion?",
+              "When did the Big Bang first gain scientific acceptance?",
             choicesOrder: "random",
             isRequired: true,
             choices: [
-              "Hydrogen & Helium",
-              "Iron & Nickel",
-              "Oxygen & Nitrogen",
-              "Carbon Dioxide",
-              "Air & Fire",
+              "1960s",
+              "1800s",
+              "1990s",
+              "1700s",
+              "1920s",
             ],
-            correctAnswer: "Hydrogen & Helium",
+            correctAnswer: "1960s",
           },
         ],
       },
@@ -92,9 +92,9 @@ const BigBangQuiz01 = () => {
         questions: [
           {
             type: "comment",
-            name: "whatifnosun",
+            name: "generalsummary",
             title:
-              "What would happen to Earth if the Sun's nuclear reactions stopped? Explain in 2-3 sentences, ",
+              "Generally what happened during the Big Bang? Explain in 2-3 sentences",
             // choicesOrder: "random",
             maxLength: 500,
           },
