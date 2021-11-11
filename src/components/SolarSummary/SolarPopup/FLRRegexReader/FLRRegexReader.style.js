@@ -41,5 +41,4 @@ export const Date = styled.div`
   color: orange;
   font-size: 20px;
   margin: 10px 0px;
-
 `;
