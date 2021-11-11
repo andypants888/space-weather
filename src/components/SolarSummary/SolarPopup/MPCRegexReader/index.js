@@ -1,7 +1,7 @@
 import React from "react";
 
 // Styles
-import { Wrapper, Content, Title, Main } from "./MPCRegexReader.style.js";
+import { Wrapper, Content, Title, Main, Date } from "./MPCRegexReader.style.js";
 
 const MPCRegexReader = (props) => {
   const { message, eventType, eventTime } = props;
@@ -25,7 +25,9 @@ const MPCRegexReader = (props) => {
       <Content>
         <Title>Solar Wind currently crossing magnetopause</Title>
         <Main>
-          <div>{detailedTime}</div>
+          <div>
+            <Date>{detailedTime}</Date>
+          </div>
           <div>{message.match(summaryBrute)}</div>
         </Main>
       </Content>

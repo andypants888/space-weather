@@ -1,7 +1,7 @@
 import React from "react";
 
 // Styles
-import { Wrapper, Content, Title, Main } from "./RBERegexReader.style.js";
+import { Wrapper, Content, Title, Main, Date } from "./RBERegexReader.style.js";
 
 const RBERegexReader = (props) => {
   const { message, eventType, eventTime } = props;
@@ -25,7 +25,7 @@ const RBERegexReader = (props) => {
       <Content>
         <Title>Ongoing Enhanced Radiation Belts</Title>
         <Main>
-          <div>{detailedTime}</div>
+          <div><Date>{detailedTime}</Date></div>
           <div>{message.match(summaryBrute)}</div>
         </Main>
       </Content>

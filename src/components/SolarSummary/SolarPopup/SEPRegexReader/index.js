@@ -1,7 +1,7 @@
 import React from "react";
 
 // Styles
-import { Wrapper, Content, Title, Main } from "./SEPRegexReader.style.js";
+import { Wrapper, Content, Title, Main, Date } from "./SEPRegexReader.style.js";
 
 const SEPRegexReader = (props) => {
   const { message, eventType, eventTime } = props;
@@ -23,9 +23,9 @@ const SEPRegexReader = (props) => {
   return (
     <Wrapper>
       <Content>
-        <Title>Solar Wind currently extra fast</Title>
+        <Title>Solar Energetic Particle Storm</Title>
         <Main>
-          <div>{detailedTime}</div>
+          <div><Date>{detailedTime}</Date></div>
           <div>{message.match(summaryBrute)}</div>
         </Main>
       </Content>
