@@ -6,7 +6,7 @@ import { Wrapper, Content, SurveyContainer } from "./Bonus03.style";
 
 // SurveyJS
 
-import BonusQuiz03 from "./BonusQuiz03";
+// import BonusQuiz03 from "./BonusQuiz03";
 
 const Bonus03 = () => {
   return (
@@ -16,12 +16,12 @@ const Bonus03 = () => {
           <h1>Bonus</h1>
         </div>
         <div>
-          <h3>3. Orbit Simulator</h3>
+          <h3>3. University of Colorado Orbit Simulator</h3>
         </div>
         <iframe
           // width="560"
           // height="315"
-          src="https://www.youtube.com/embed/2HoTK_Gqi2Q"
+          src="https://www.youtube.com/embed/m6e2y4fef1I"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
@@ -32,18 +32,19 @@ const Bonus03 = () => {
           allowfullscreen
         ></iframe>
         <div>
-          <p>
-            Watch the video! <br />
-            Take notes! <br />
-            Be ready for quiz! 😱
-          </p>
+          <h2>
+            Video Explains the Simulator! <br />
+            Or{" "}
+            <a href="https://phet.colorado.edu/sims/html/gravity-and-orbits/latest/gravity-and-orbits_en.html">
+              <strong>GET STARTED</strong>
+            </a>{" "}
+            by clicking the{" "}
+            <a href="https://phet.colorado.edu/sims/html/gravity-and-orbits/latest/gravity-and-orbits_en.html">
+              <strong>link</strong>
+            </a>
+            !
+          </h2>
         </div>
-        <textarea rows="7" cols="43">
-          - Type notes here...
-        </textarea>
-        <SurveyContainer>
-          <BonusQuiz03 />
-        </SurveyContainer>
       </Content>
     </Wrapper>
   );
