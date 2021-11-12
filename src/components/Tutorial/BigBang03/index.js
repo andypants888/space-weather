@@ -13,15 +13,15 @@ const BigBang03 = () => {
     <Wrapper>
       <Content>
         <div>
-          <h1>Bonus</h1>
+          <h1>Big Bang</h1>
         </div>
         <div>
-          <h3>3. Orbit Simulator</h3>
+          <h3>3. Evidence for Big Bang</h3>
         </div>
         <iframe
           // width="560"
           // height="315"
-          src="https://www.youtube.com/embed/2HoTK_Gqi2Q"
+          src="https://www.youtube.com/embed/aPStj2ZuXug"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
@@ -33,6 +33,7 @@ const BigBang03 = () => {
         ></iframe>
         <div>
           <p>
+            <strong>**Main Video Ends at 8:50 minutes**</strong> <br />
             Watch the video! <br />
             Take notes! <br />
             Be ready for quiz! 😱

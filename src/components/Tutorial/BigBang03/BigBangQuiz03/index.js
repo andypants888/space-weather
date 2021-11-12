@@ -11,7 +11,7 @@ const BigBangQuiz03 = () => {
   var defaultThemeColors = Survey.StylesManager.applyTheme("default");
 
   var surveyJSON = {
-    title: "CME's & Space Weather Quiz",
+    title: "Big Bang Evidence Quiz",
     showProgressBar: "bottom",
     // showTimerPanel: "top",
     // maxTimeToFinishPage: 30,
@@ -31,20 +31,20 @@ const BigBangQuiz03 = () => {
         questions: [
           {
             type: "radiogroup",
-            name: "energy",
+            name: "leastknow",
             title:
-              "The sun's massive gravity causes _____ to produce energy",
+              "What time period do scientists know LEAST about the Big Bang?",
             choicesOrder: "random",
             isRequired: true,
             choices: [
-              "Nuclear fusion",
-              "Evaporation",
-              "Combustion",
-              "Evolution",
-              "Solar Wind",
+              "The first second",
+              "The first 20 minutes",
+              "The first 400,000 years",
+              "Between 400,000 years to current day",
+              "The current day status",
             ],
             correctAnswer:
-              "Nuclear fusion",
+              "The first second",
           },
         ],
       },
@@ -52,18 +52,18 @@ const BigBangQuiz03 = () => {
         questions: [
           {
             type: "radiogroup",
-            name: "nebula",
-            title: "What was the original, early form of the Sun? ",
+            name: "notevidence",
+            title: "What is NOT a line of evidence for the Big Bang? ",
             choicesOrder: "random",
             isRequired: true,
             choices: [
-              "A cloud of gas, called a nebula",
-              "A comet, called Halley's Comet",
-              "It was originally the center of the Big Bang",
-              "It was originally the Earth's Moon.",
-              "The sun was always a star, there was nothing before it",
+              "The age of the Earth is 4.5 billion years old",
+              "The universe is made mostly of Hydrogen & Helium",
+              "Cosmic Background Radiation",
+              "An expanding universe",
+              "Particle accelarators can simulate conditions of the Big Bang",
             ],
-            correctAnswer: "A cloud of gas, called a nebula",
+            correctAnswer: "The age of the Earth is 4.5 billion years old",
           },
         ],
       },
@@ -71,19 +71,19 @@ const BigBangQuiz03 = () => {
         questions: [
           {
             type: "radiogroup",
-            name: "fusion",
+            name: "expanding",
             title:
-              "What two elements are the MAIN part of the Sun's nuclear fusion?",
+              "Why does an expanding universe give support to the Big Bang??",
             choicesOrder: "random",
             isRequired: true,
             choices: [
-              "Hydrogen & Helium",
-              "Iron & Nickel",
-              "Oxygen & Nitrogen",
-              "Carbon Dioxide",
-              "Air & Fire",
+              "An expanding universe suggests our past universe was very small",
+              "The expanding universe is not one of the lines of evidence for the Big Bang",
+              "The universe expands because it is alive",
+              "The universe expanding shows that the center is our Sun",
+              "The universe is currently shrinking, not expanding",
             ],
-            correctAnswer: "Hydrogen & Helium",
+            correctAnswer: "An expanding universe suggests our past universe was very small",
           },
         ],
       },
@@ -94,7 +94,7 @@ const BigBangQuiz03 = () => {
             type: "comment",
             name: "whatifnosun",
             title:
-              "What would happen to Earth if the Sun's nuclear reactions stopped? Explain in 2-3 sentences, ",
+              "In general, explain what the evidence is for the Big Bang in 2-3 sentences. ",
             // choicesOrder: "random",
             maxLength: 500,
           },

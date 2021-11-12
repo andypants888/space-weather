@@ -17,29 +17,30 @@ export const Content = styled.div`
 
   img {
     @media (pointer: coarse) {
-      width: 100%;
+      width: 90%;
+      height: 90%;
     }
 
     @media (pointer: fine) {
       width: 30%;
+      height: 30%;
     }
   }
 `;
 
 export const BioBox = styled.div`
-@media (pointer: coarse) {
-    }
+  @media (pointer: coarse) {
+  }
 
-    @media (pointer: fine) {
-      display: flex;
-      /* background-color: green; */
-      width: 100%;
-      height: 100%
-      div {
-        padding: 10px;
-      }
-      p {
-       padding: 10px;
-      }
+  @media (pointer: fine) {
+    display: flex;
+    /* background-color: green; */
+    width: 100%;
+    height: 100% div {
+      padding: 10px;
     }
+    p {
+      padding: 10px;
+    }
+  }
 `;
