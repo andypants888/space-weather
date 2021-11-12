@@ -11,7 +11,7 @@ const Quiz03 = () => {
   var defaultThemeColors = Survey.StylesManager.applyTheme("default");
 
   var surveyJSON = {
-    title: "CME's & Space Weather Quiz",
+    title: "Space Research Quiz",
     showProgressBar: "bottom",
     // showTimerPanel: "top",
     // maxTimeToFinishPage: 30,

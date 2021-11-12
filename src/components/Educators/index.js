@@ -46,6 +46,50 @@ const Educators = () => {
             analyze space weather throughout the project
           </div>
         </p>
+        <h2>What standards does this web-app cover?</h2>
+        <p>
+          <div>
+            <a href="https://www.nextgenscience.org/topic-arrangement/hsspace-systems">
+              (HS-ESS1-1)
+            </a>{" "}
+            Develop a model based on evidence to illustrate the life span of the
+            sun and the role of nuclear fusion in the sun’s core to release
+            energy that eventually reaches Earth in the form of radiation.
+            <div>- The Weather Events Page</div>
+            <div>- Tutorial 1, 2, & 3</div>
+            <div>- Bonus 1</div>
+          </div>
+          <div>
+            <a href="https://www.nextgenscience.org/topic-arrangement/hsspace-systems">
+              (HS-ESS1-2)
+            </a>{" "}
+            Construct an explanation of the Big Bang theory based on
+            astronomical evidence of light spectra, motion of distant galaxies,
+            and composition of matter in the universe.
+            <div>- Big Bang 1, 2, & 3</div>
+          </div>
+          <div>
+            <a href="https://www.nextgenscience.org/topic-arrangement/hsspace-systems">
+              (HS-ESS1-3)
+            </a>{" "}
+            Use mathematical or computational representations to predict the
+            motion of orbiting objects in the solar system.
+            <div>- Bonus 3 (Orbit Simulator from University of Colorado)</div>
+            <div>
+              - Tutorial 3 (Orbit Simulator used by the video on research)
+            </div>
+          </div>
+          <div>
+            <a href="https://www.nextgenscience.org/topic-arrangement/hsspace-systems">
+              (HS-ESS1-4)
+            </a>{" "}
+            Construct an explanation of the Big Bang theory based on
+            astronomical evidence of light spectra, motion of distant galaxies,
+            and composition of matter in the universe.
+            <div>- Big Bang 1, 2, & 3</div>
+            <div>- Bonus 2 (All found in tutorial page)</div>
+          </div>
+        </p>
         <h2>My students struggle with English, what can I do?</h2>
         <p>
           <div>
@@ -68,23 +112,6 @@ const Educators = () => {
             </a>
             (Hover-Translate) for English to Chinese. But there are many good
             extensions on the chrome web store
-          </div>
-        </p>
-        <h2>What standards does this web-app cover?</h2>
-        <p>
-          <div>
-            - Develop a model based on evidence to illustrate the life span of
-            the sun and the role of nuclear fusion in the sun’s core to release
-            energy that eventually reaches Earth in the form of radiation.{" "}
-            <a href="https://www.nextgenscience.org/topic-arrangement/hsspace-systems">
-              (HS-ESS1-1)
-            </a>
-          </div>
-          <div>
-            - Examples of evidence for the model include observations of the
-            masses and lifetimes of other stars, as well as the ways that the
-            sun’s radiation varies due to sudden solar flares (“space weather”),
-            the 11-year sunspot cycle, and non-cyclic variations over centuries.
           </div>
         </p>
         <h2>How do I use this for college students?</h2>

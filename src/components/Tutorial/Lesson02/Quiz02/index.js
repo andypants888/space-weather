@@ -11,7 +11,7 @@ const Quiz02 = () => {
   var defaultThemeColors = Survey.StylesManager.applyTheme("default");
 
   var surveyJSON = {
-    title: "CME's & Space Weather Quiz",
+    title: "Earth's Aurora Quiz",
     showProgressBar: "bottom",
     // showTimerPanel: "top",
     // maxTimeToFinishPage: 30,
@@ -91,7 +91,7 @@ const Quiz02 = () => {
         questions: [
           {
             type: "comment",
-            name: "earthImpact",
+            name: "aurorasun",
             title:
               "Explain how the northern lights (auroras) are connected to the Sun in 3 - 4 sentences",
             // choicesOrder: "random",

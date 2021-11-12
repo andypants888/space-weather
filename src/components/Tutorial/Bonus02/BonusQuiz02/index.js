@@ -11,7 +11,7 @@ const BonusQuiz02 = () => {
   var defaultThemeColors = Survey.StylesManager.applyTheme("default");
 
   var surveyJSON = {
-    title: "CME's & Space Weather Quiz",
+    title: "Stars & Elements Quiz",
     showProgressBar: "bottom",
     // showTimerPanel: "top",
     // maxTimeToFinishPage: 30,
