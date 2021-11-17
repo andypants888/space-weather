@@ -19,7 +19,7 @@ const SolarBody = () => {
     const endpoint = `https://api.nasa.gov/DONKI/notifications?startDate=YYYY-MM-DD&endDate=${today}&type=all&api_key=${API_KEY}`;
 
     // End Date == Today!
-    // Testing Historical Events
+    // Testing Historical Weather Events
 
     // const testEndDate = "2021-7-17";
     // const testStartDate = "2021-6-5";

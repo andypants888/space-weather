@@ -74,6 +74,7 @@ const SolarPopup = (props) => {
             <GifContainer>
               <iframe
                 src="https://giphy.com/embed/mtRLckxvlwtStCZWd8"
+                title="giphy embed"
                 frameBorder="0"
                 allowFullScreen
               ></iframe>
@@ -153,6 +154,7 @@ const SolarPopup = (props) => {
             <GifContainer>
               <iframe
                 src="https://giphy.com/embed/gbRLaGDygGpkgdaLjA"
+                title="giphy embed"
                 frameBorder="0"
                 allowFullScreen
               ></iframe>
@@ -239,6 +241,7 @@ const SolarPopup = (props) => {
             <GifContainer>
               <iframe
                 src="https://giphy.com/embed/nFrkObrecjIGapisw5"
+                title="giphy embed"
                 frameBorder="0"
                 allowFullScreen
               ></iframe>
@@ -318,10 +321,10 @@ const SolarPopup = (props) => {
             <GifContainer>
               <iframe
                 src="https://giphy.com/embed/vS573qTiGzVWDppUMJ"
+                title="giphy embed"
                 // width="480"
                 // height="270"
                 frameBorder="0"
-                // class="giphy-embed"
                 allowFullScreen
               ></iframe>
               (Astronaut on ISS)
@@ -390,10 +393,10 @@ const SolarPopup = (props) => {
             <GifContainer>
               <iframe
                 src="https://giphy.com/embed/UbUUWf4pzLDmeZOn9E"
+                title="giphy embed"
                 // width="480"
                 // height="270"
                 frameBorder="0"
-                // class="giphy-embed"
                 allowFullScreen
               ></iframe>
               (Extra radiation trapped in "Van Allen Belts" around earth.)
@@ -465,10 +468,10 @@ const SolarPopup = (props) => {
             <GifContainer>
               <iframe
                 src="https://giphy.com/embed/1oMi442QfTrBU0VyOK"
+                title="giphy embed"
                 // width="480"
                 // height="270"
                 frameBorder="0"
-                // class="giphy-embed"
                 allowFullScreen
               ></iframe>
               (Simulation of Solar Energetic Particles (SEP) & Coronal Mass
@@ -544,10 +547,10 @@ const SolarPopup = (props) => {
             <GifContainer>
               <iframe
                 src="https://giphy.com/embed/BK5jP59AWUUqLauDlF"
+                title="giphy embed"
                 // width="480"
                 // height="400"
                 frameBorder="0"
-                // class="giphy-embed"
                 allowFullScreen
               ></iframe>
               (Flares are a form of light, not traditional particles)
@@ -625,10 +628,10 @@ const SolarPopup = (props) => {
             <GifContainer>
               <iframe
                 src="https://giphy.com/embed/35NGT2lm6mfHlNAkMu"
+                title="giphy embed"
                 // width="480"
                 // height="270"
                 frameBorder="0"
-                // class="giphy-embed"
                 allowFullScreen
               ></iframe>
               (Geomagnetic storms may damage orbiting electronics & make pretty
@@ -707,10 +710,10 @@ const SolarPopup = (props) => {
             <GifContainer>
               <iframe
                 src="https://giphy.com/embed/6YuuiPRwxjFsiV5ZxW"
+                title="giphy embed"
                 // width="480"
                 // height="270"
                 frameBorder="0"
-                // class="giphy-embed"
                 allowFullScreen
               ></iframe>
               (Earth's magnetosphere & magnetopause normally block solar wind,
