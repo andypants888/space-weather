@@ -4,7 +4,7 @@ import React from "react";
 import { Wrapper, Content, Title, Main, Date } from "./GSTRegexReader.style.js";
 
 const GSTRegexReader = (props) => {
-  const { message, eventType, eventTime } = props;
+  const { message, eventTime } = props;
 
   // Notification Event Time
   const detailedTime = eventTime.toLocaleString("en-US", {

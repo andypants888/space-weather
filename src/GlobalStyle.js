@@ -3,13 +3,8 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
  :root {
      --iconHeight: 50px;
-     --maxWidth: 100%;
      --bgColor1: #43413C;
      --main: #FF3C00;
-     --fontSuperBig: 2.5rem;
-     --fontBig: 1.7rem;
-     --fontMed: 1.2rem;
-     --fontSmall: 1rem;
      font-family: Tahoma, Helvetica, sans-serif;
  }
 

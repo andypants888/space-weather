@@ -29,12 +29,6 @@ export const Main = styled.div`
   white-space: pre-wrap;
 `;
 
-export const Warning = styled.div`
-  font-family: monospace;
-  font-weight: 400;
-  color: lightblue;
-`;
-
 export const Date = styled.div`
   font-family: monospace;
   font-weight: 400;

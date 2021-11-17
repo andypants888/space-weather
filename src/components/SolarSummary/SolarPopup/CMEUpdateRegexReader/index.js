@@ -6,12 +6,11 @@ import {
   Content,
   Title,
   Main,
-  Warning,
   Date,
 } from "./CMEUpdateRegexReader.style.js";
 
 const CMEUpdateRegexReader = (props) => {
-  const { message, eventType, eventTime } = props;
+  const { message, eventTime } = props;
   const detailedTime = eventTime.toLocaleString("en-US", {
     hour: "2-digit",
     minute: "2-digit",

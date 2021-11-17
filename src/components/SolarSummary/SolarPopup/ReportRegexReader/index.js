@@ -6,12 +6,11 @@ import {
   Content,
   Title,
   Main,
-  Warning,
   Date,
 } from "./ReportRegexReader.style.js";
 
 const ReportRegexReader = (props) => {
-  const { message, eventType, eventTime } = props;
+  const { message, eventTime } = props;
   const detailedTime = eventTime.toLocaleString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
@@ -32,7 +31,6 @@ const ReportRegexReader = (props) => {
           <div><Date>{detailedTime}</Date></div>
           <div>{message.match(summaryBrute)}</div>
         </Main>
-        {/* <Main>{message.match(geomagneticOutlookRegex)}</Main> */}
       </Content>
     </Wrapper>
   );

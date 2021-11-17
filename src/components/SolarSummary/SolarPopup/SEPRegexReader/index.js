@@ -4,7 +4,7 @@ import React from "react";
 import { Wrapper, Content, Title, Main, Date } from "./SEPRegexReader.style.js";
 
 const SEPRegexReader = (props) => {
-  const { message, eventType, eventTime } = props;
+  const { message, eventTime } = props;
 
   // Notification Event Time
   const detailedTime = eventTime.toLocaleString("en-US", {
@@ -17,7 +17,6 @@ const SEPRegexReader = (props) => {
   });
 
   // Regex Markers
-  // const activityID = /Activity ID: \d\d\d\d-\d\d-\d\d.*/g;
   const summaryBrute = /## Summary:.*(##)/gs;
 
   return (

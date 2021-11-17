@@ -30,7 +30,6 @@ import { NavBlock } from "./App.style";
 function App() {
   return (
     <BrowserRouter>
-      {/* <Route /> */}
       <Header />
       <Routes>
         <Route path="/" element={<Landing />} exact />

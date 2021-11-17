@@ -10,7 +10,6 @@ import { NavLink } from "react-router-dom";
 import FlareImage from "../../images/flare-web.gif";
 import AuroraImage from "../../images/nasa-northern-lights.jpg";
 import SohoImage from "../../images/soho-nasa-esa.jpg";
-import ConstructImage from "../../images/construction.jpg";
 import OrbitImage from "../../images/orbits.jpg";
 import SupernovaImage from "../../images/supernova.jpg";
 import SunImage from "../../images/observe-sun.jpg";
@@ -19,7 +18,6 @@ import CosmicRaysImage from "../../images/cosmic-rays.jpg";
 import GeorgesImage from "../../images/georges.jpg";
 
 const Tutorial = () => {
-  // console.log('tutorial running')
   return (
     <Wrapper>
       <Title>📚 Tutorial 📚</Title>

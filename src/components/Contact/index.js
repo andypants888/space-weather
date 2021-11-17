@@ -2,7 +2,7 @@ import React from "react";
 
 import { Wrapper, Content, BioBox } from "./Contact.styles";
 
-import bioGif from "../../gifs/teacher-2018.gif";
+import bioGif from "../../images/teacher-2018.gif";
 
 const Contact = () => {
   return (
@@ -24,7 +24,7 @@ const Contact = () => {
         <p></p>
         <h1>About Me</h1>
         <BioBox>
-          <img src={bioGif} />
+          <img src={bioGif} alt="developer" />
           <p>
             <div>
               Hi, I'm Andrew, a full-stack software-engineer / web-developer
@@ -85,7 +85,7 @@ const Contact = () => {
           </div>
           <div>
             Gap Icon made by{" "}
-            <a href="" title="geotatah">
+            <a href="https://www.flaticon.com/authors/geotatah" title="geotatah">
               geotatah
             </a>{" "}
             from{" "}
@@ -109,7 +109,7 @@ const Contact = () => {
 
           <div>
             News Icon made by{" "}
-            <a href="" title="BZZRINCANTATION">
+            <a href="https://www.flaticon.com/authors/BZZRINCANTATION" title="BZZRINCANTATION">
               BZZRINCANTATION
             </a>{" "}
             from{" "}
@@ -120,7 +120,7 @@ const Contact = () => {
 
           <div>
             Quiz Icon made by{" "}
-            <a href="" title="rsetiawan">
+            <a href="https://www.flaticon.com/authors/rsetiawan" title="rsetiawan">
               rsetiawan
             </a>{" "}
             from{" "}

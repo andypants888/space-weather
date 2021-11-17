@@ -10,7 +10,7 @@ import {
 } from "./IPSRegexReader.style.js";
 
 const IPSRegexReader = (props) => {
-  const { message, eventType, eventTime } = props;
+  const { message, eventTime } = props;
   const detailedTime = eventTime.toLocaleString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
@@ -21,8 +21,6 @@ const IPSRegexReader = (props) => {
   });
 
   // Regex Markers
-  const activityID = /Activity ID: \d\d\d\d-\d\d-\d\d.*/g;
-  const causeRegex = /The shock .*/g;
   const summaryBrute = /## Summary:.*(##)/gs;
 
   return (

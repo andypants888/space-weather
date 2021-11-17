@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
 `;
 
 export const Content = styled.div`
-  /* background-color: yellow; */
   display: grid;
   a,
   a:visited {
@@ -14,7 +13,6 @@ export const Content = styled.div`
   }
 
   @media (pointer: coarse) {
-    /* background-color: red; */
 
     grid-template-columns: 32% 32% 32%;
     grid-column-gap: 5px;
@@ -23,7 +21,6 @@ export const Content = styled.div`
     padding: 5px;
   }
   @media (pointer: fine) {
-    /* background-color: green; */
 
     grid-template-columns: 18% 18% 18%;
     grid-column-gap: 20px;
@@ -41,7 +38,6 @@ export const Title = styled.div`
   margin-left: 10px;
   margin-top: 10px;
   font-family: monospace;
-  /* background-color: blue; */
 
   @media (pointer: coarse) {
   }

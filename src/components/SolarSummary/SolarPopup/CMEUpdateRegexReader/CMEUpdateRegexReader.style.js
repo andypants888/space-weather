@@ -41,13 +41,6 @@ export const Main = styled.div`
   }
 `;
 
-export const Warning = styled.div`
-  font-family: monospace;
-  font-weight: 400;
-  color: lightblue;
-  padding: 5px;
-`;
-
 export const Date = styled.div`
   font-family: monospace;
   font-weight: 400;
