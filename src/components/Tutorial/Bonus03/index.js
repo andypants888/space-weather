@@ -2,7 +2,7 @@ import React from "react";
 // import ReactDOM from "react-dom";
 // Styles
 
-import { Wrapper, Content, SurveyContainer } from "./Bonus03.style";
+import { Wrapper, Content } from "./Bonus03.style";
 
 // SurveyJS
 

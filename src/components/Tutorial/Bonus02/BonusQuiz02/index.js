@@ -8,8 +8,6 @@ import * as Survey from "survey-react";
 import "survey-react/survey.css";
 
 const BonusQuiz02 = () => {
-  var defaultThemeColors = Survey.StylesManager.applyTheme("default");
-
   var surveyJSON = {
     title: "Stars & Elements Quiz",
     showProgressBar: "bottom",
@@ -32,8 +30,7 @@ const BonusQuiz02 = () => {
           {
             type: "radiogroup",
             name: "fusion",
-            title:
-              "Scientists can add ___ to elements to create real gold?",
+            title: "Scientists can add ___ to elements to create real gold?",
             choicesOrder: "random",
             isRequired: true,
             choices: [
@@ -43,8 +40,7 @@ const BonusQuiz02 = () => {
               "Supernovas",
               "Solar Wind",
             ],
-            correctAnswer:
-              "Atoms",
+            correctAnswer: "Atoms",
           },
         ],
       },
@@ -72,8 +68,7 @@ const BonusQuiz02 = () => {
           {
             type: "radiogroup",
             name: "goldorigin",
-            title:
-              "Where does gold ORIGINALLY come from?",
+            title: "Where does gold ORIGINALLY come from?",
             choicesOrder: "random",
             isRequired: true,
             choices: [
@@ -105,8 +100,6 @@ const BonusQuiz02 = () => {
       "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>",
     // End of SurveyJSON
   };
-
-  // window.survey = new Survey.Model(surveyJSON);
 
   return (
     <Wrapper>

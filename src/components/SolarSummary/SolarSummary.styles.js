@@ -11,12 +11,6 @@ export const Content = styled.div`
   margin: 0 auto;
   color: white;
   border: 1px solid white;
-
-  @media (pointer:fine) {
-    /* position: relative; */
-    /* margin-left: 150px; */
-    /* z-index: -10; */
-  }
 `;
 
 export const SolarEvent = styled.div`
@@ -71,13 +65,3 @@ export const SolarEvent = styled.div`
 
 export const Icon = styled.div``;
 
-export const Title = styled.div``;
-
-export const OriginalTime = styled.div``;
-
-export const MoreInfo = styled.div`
-  button {
-    padding: 10px;
-    /* width: 10%; */
-  }
-`;

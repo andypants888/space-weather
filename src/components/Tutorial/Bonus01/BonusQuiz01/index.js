@@ -8,8 +8,6 @@ import * as Survey from "survey-react";
 import "survey-react/survey.css";
 
 const BonusQuiz01 = () => {
-  var defaultThemeColors = Survey.StylesManager.applyTheme("default");
-
   var surveyJSON = {
     title: "Sun's Nuclear Reactor Quiz",
     showProgressBar: "bottom",
@@ -32,8 +30,7 @@ const BonusQuiz01 = () => {
           {
             type: "radiogroup",
             name: "energy",
-            title:
-              "The sun's massive gravity causes _____ to produce energy",
+            title: "The sun's massive gravity causes _____ to produce energy",
             choicesOrder: "random",
             isRequired: true,
             choices: [
@@ -43,8 +40,7 @@ const BonusQuiz01 = () => {
               "Evolution",
               "Solar Wind",
             ],
-            correctAnswer:
-              "Nuclear fusion",
+            correctAnswer: "Nuclear fusion",
           },
         ],
       },
@@ -105,8 +101,6 @@ const BonusQuiz01 = () => {
       "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>",
     // End of SurveyJSON
   };
-
-  // window.survey = new Survey.Model(surveyJSON);
 
   return (
     <Wrapper>

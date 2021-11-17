@@ -8,8 +8,6 @@ import * as Survey from "survey-react";
 import "survey-react/survey.css";
 
 const BigBangQuiz03 = () => {
-  var defaultThemeColors = Survey.StylesManager.applyTheme("default");
-
   var surveyJSON = {
     title: "Big Bang Evidence Quiz",
     showProgressBar: "bottom",
@@ -43,8 +41,7 @@ const BigBangQuiz03 = () => {
               "Between 400,000 years to current day",
               "The current day status",
             ],
-            correctAnswer:
-              "The first second",
+            correctAnswer: "The first second",
           },
         ],
       },
@@ -83,7 +80,8 @@ const BigBangQuiz03 = () => {
               "The universe expanding shows that the center is our Sun",
               "The universe is currently shrinking, not expanding",
             ],
-            correctAnswer: "An expanding universe suggests our past universe was very small",
+            correctAnswer:
+              "An expanding universe suggests our past universe was very small",
           },
         ],
       },
@@ -105,8 +103,6 @@ const BigBangQuiz03 = () => {
       "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>",
     // End of SurveyJSON
   };
-
-  // window.survey = new Survey.Model(surveyJSON);
 
   return (
     <Wrapper>

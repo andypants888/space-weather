@@ -8,8 +8,6 @@ import * as Survey from "survey-react";
 import "survey-react/survey.css";
 
 const BigBangQuiz01 = () => {
-  var defaultThemeColors = Survey.StylesManager.applyTheme("default");
-
   var surveyJSON = {
     title: "Big Bang Quiz",
     showProgressBar: "bottom",
@@ -32,8 +30,7 @@ const BigBangQuiz01 = () => {
           {
             type: "radiogroup",
             name: "firstelement",
-            title:
-              "What was the first element created by the Big Bang",
+            title: "What was the first element created by the Big Bang",
             choicesOrder: "random",
             isRequired: true,
             choices: [
@@ -43,8 +40,7 @@ const BigBangQuiz01 = () => {
               "Helium",
               "Lithium",
             ],
-            correctAnswer:
-              "Hydrogen",
+            correctAnswer: "Hydrogen",
           },
         ],
       },
@@ -72,17 +68,10 @@ const BigBangQuiz01 = () => {
           {
             type: "radiogroup",
             name: "acceptance",
-            title:
-              "When did the Big Bang first gain scientific acceptance?",
+            title: "When did the Big Bang first gain scientific acceptance?",
             choicesOrder: "random",
             isRequired: true,
-            choices: [
-              "1960s",
-              "1800s",
-              "1990s",
-              "1700s",
-              "1920s",
-            ],
+            choices: ["1960s", "1800s", "1990s", "1700s", "1920s"],
             correctAnswer: "1960s",
           },
         ],
@@ -105,8 +94,6 @@ const BigBangQuiz01 = () => {
       "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>",
     // End of SurveyJSON
   };
-
-  // window.survey = new Survey.Model(surveyJSON);
 
   return (
     <Wrapper>

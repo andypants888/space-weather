@@ -8,8 +8,6 @@ import * as Survey from "survey-react";
 import "survey-react/survey.css";
 
 const Quiz02 = () => {
-  var defaultThemeColors = Survey.StylesManager.applyTheme("default");
-
   var surveyJSON = {
     title: "Earth's Aurora Quiz",
     showProgressBar: "bottom",
@@ -104,8 +102,6 @@ const Quiz02 = () => {
       "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>",
     // End of SurveyJSON
   };
-
-  // window.survey = new Survey.Model(surveyJSON);
 
   return (
     <Wrapper>

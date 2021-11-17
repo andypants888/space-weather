@@ -8,8 +8,6 @@ import * as Survey from "survey-react";
 import "survey-react/survey.css";
 
 const Quiz01 = () => {
-  var defaultThemeColors = Survey.StylesManager.applyTheme("default");
-
   var surveyJSON = {
     title: "CME's & Space Weather Quiz",
     showProgressBar: "bottom",
@@ -75,7 +73,11 @@ const Quiz01 = () => {
               "CME (Coronal Mass Ejections)",
               "Geomagnetic Storms",
             ],
-            correctAnswer: ["CME (Coronal Mass Ejections)", "Interplanetary Shocks", "Geomagnetic Storms"],
+            correctAnswer: [
+              "CME (Coronal Mass Ejections)",
+              "Interplanetary Shocks",
+              "Geomagnetic Storms",
+            ],
           },
         ],
       },
@@ -85,7 +87,8 @@ const Quiz01 = () => {
           {
             type: "comment",
             name: "earthImpact",
-            title: "Explain why people on Earth should be concerned about CME's in 3 - 4 sentences",
+            title:
+              "Explain why people on Earth should be concerned about CME's in 3 - 4 sentences",
             // choicesOrder: "random",
             maxLength: 500,
           },
@@ -97,12 +100,14 @@ const Quiz01 = () => {
     // End of SurveyJSON
   };
 
-  // window.survey = new Survey.Model(surveyJSON);
-
   return (
     <Wrapper>
       <Content>
-        <Survey.Survey json={surveyJSON} model={window.survey} onComplete={data=>console.log(data)}/>
+        <Survey.Survey
+          json={surveyJSON}
+          model={window.survey}
+          onComplete={(data) => console.log(data)}
+        />
         <NavBlock />
       </Content>
     </Wrapper>

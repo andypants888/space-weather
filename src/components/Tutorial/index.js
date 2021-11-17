@@ -25,19 +25,19 @@ const Tutorial = () => {
         <NavLink to="lesson01">
           <Card>
             1. What is Space Weather?
-            <img src={FlareImage} />
+            <img src={FlareImage} alt="flare" />
           </Card>
         </NavLink>
         <NavLink to="lesson02">
           <Card>
             2. How does the earth's aurora's happen?
-            <img src={AuroraImage} />
+            <img src={AuroraImage} alt="aurora" />
           </Card>
         </NavLink>
         <NavLink to="lesson03">
           <Card>
             3. How do scientists keep track of solar events?
-            <img src={SohoImage} />
+            <img src={SohoImage} alt="satellite" />
           </Card>
         </NavLink>
       </Content>
@@ -46,19 +46,19 @@ const Tutorial = () => {
         <NavLink to="bonus01">
           <Card>
             1. Why is the Sun so hot?
-            <img src={SunImage} />
+            <img src={SunImage} alt="sun" />
           </Card>
         </NavLink>
         <NavLink to="bonus02">
           <Card>
             2. How can stars make Gold?
-            <img src={SupernovaImage} />
+            <img src={SupernovaImage} alt="supernova" />
           </Card>
         </NavLink>
         <NavLink to="bonus03">
           <Card>
             3. Can I play with Orbits?
-            <img src={OrbitImage} />
+            <img src={OrbitImage} alt="orbits" />
           </Card>
         </NavLink>
       </Content>
@@ -66,18 +66,18 @@ const Tutorial = () => {
       <Content>
         <NavLink to="bigbang01">
           <Card>
-            1. What really happened in the Big Bang? <img src={BigBangImage} />
+            1. What really happened in the Big Bang? <img src={BigBangImage} alt="big bang diagram" />
           </Card>
         </NavLink>
         <NavLink to="bigbang02">
         <Card>
-          2. What are cosmic rays? <img src={CosmicRaysImage} />
+          2. What are cosmic rays? <img src={CosmicRaysImage} alt="cosmic rays" />
         </Card>
         </NavLink>
         <NavLink to="bigbang03">
         <Card>
           3. Is the Big Bang really true?{" "}
-          <img src={GeorgesImage} />
+          <img src={GeorgesImage} alt="george lemaitre" />
         </Card>
         </NavLink>
       </Content>

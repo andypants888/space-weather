@@ -8,15 +8,7 @@ import { useState } from "react";
 import SolarPopup from "./SolarPopup/index.js";
 
 // Styles
-import {
-  Content,
-  Wrapper,
-  SolarEvent,
-  Icon,
-  Title,
-  OriginalTime,
-  MoreInfo,
-} from "./SolarSummary.styles";
+import { Content, Wrapper, SolarEvent, Icon } from "./SolarSummary.styles";
 
 // Event Icons
 import IPSIcon from "../../icons/IPS-3.svg";
@@ -52,7 +44,8 @@ const SolarSummary = (props) => {
   );
 
   // Switch Regex Cases:
-  const cmeUpdateRegex = /(## Summary:\n\nBETA PRODUCT\.)|(## Summary:\n\nUpdate)/g;
+  const cmeUpdateRegex =
+    /(## Summary:\n\nBETA PRODUCT\.)|(## Summary:\n\nUpdate)/g;
   const cmeStandardRegex =
     /(## Summary:\n\n\w-type CME\s)|(## Summary:\n\nMultiple\s)/g;
 
@@ -87,7 +80,6 @@ const SolarSummary = (props) => {
           </Content>
         </Wrapper>
       );
-      break;
     // CME Update
     case cmeUpdateRegex.test(messageBody):
       return (
@@ -117,7 +109,6 @@ const SolarSummary = (props) => {
           </Content>
         </Wrapper>
       );
-      break;
     // Interplanetary Shock
     case messageType === "IPS":
       return (
@@ -147,7 +138,6 @@ const SolarSummary = (props) => {
           </Content>
         </Wrapper>
       );
-      break;
     // Report
     case messageType === "Report":
       return (
@@ -177,7 +167,6 @@ const SolarSummary = (props) => {
           </Content>
         </Wrapper>
       );
-      break;
     // Radiation Belt Enhancement
     case messageType === "RBE":
       return (
@@ -207,7 +196,6 @@ const SolarSummary = (props) => {
           </Content>
         </Wrapper>
       );
-      break;
     // SEP Solar Energetic Particles
     case messageType === "SEP":
       return (
@@ -238,7 +226,6 @@ const SolarSummary = (props) => {
           </Content>
         </Wrapper>
       );
-      break;
     // GST Geomagnetic Storm
     case messageType === "GST":
       return (
@@ -269,7 +256,6 @@ const SolarSummary = (props) => {
           </Content>
         </Wrapper>
       );
-      break;
     // MPC Magnetopause Crossing
     case messageType === "MPC":
       return (
@@ -300,7 +286,6 @@ const SolarSummary = (props) => {
           </Content>
         </Wrapper>
       );
-      break;
     // FLR Solar Flare
     case messageType === "FLR":
       return (
@@ -331,8 +316,7 @@ const SolarSummary = (props) => {
           </Content>
         </Wrapper>
       );
-      break;
-      // HSS High Speed Stream
+    // HSS High Speed Stream
     default:
       return null;
   }

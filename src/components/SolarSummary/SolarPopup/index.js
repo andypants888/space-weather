@@ -78,7 +78,9 @@ const SolarPopup = (props) => {
                 frameBorder="0"
                 allowFullScreen
               ></iframe>
-              <a href="https://giphy.com/gifs/europeanspaceagency-sun-european-space-agency-soho-mtRLckxvlwtStCZWd8"></a>
+              <a href="https://giphy.com/gifs/europeanspaceagency-sun-european-space-agency-soho-mtRLckxvlwtStCZWd8">
+                {" "}
+              </a>
               (Image is an example, not same event)
             </GifContainer>
             <br />
