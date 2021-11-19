@@ -16,7 +16,9 @@ const SolarBody = () => {
   const fetchSolarData = () => {
     const API_KEY = "IltOH3vL9ODoatveN6ZaNL7RFPlvjTGyp6Z6kTT9";
     const today = new Date().toISOString();
-    const endpoint = `https://api.nasa.gov/DONKI/notifications?startDate=YYYY-MM-DD&endDate=${today}&type=all&api_key=${API_KEY}`;
+    // const endpoint = `https://api.nasa.gov/DONKI/notifications?startDate=YYYY-MM-DD&endDate=${today}&type=all&api_key=${API_KEY}`;
+
+    const endpoint = 'http://127.0.0.1:3001/weather';
 
     // End Date == Today!
     // Testing Historical Weather Events
