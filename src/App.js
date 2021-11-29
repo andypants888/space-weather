@@ -27,6 +27,7 @@ import BigBang03 from "./components/Tutorial/BigBang03";
 import { GlobalStyle } from "./GlobalStyle";
 import { NavBlock } from "./App.style";
 
+
 function App() {
   return (
     <BrowserRouter>

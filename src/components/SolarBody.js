@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { Wrapper, Content } from "./SolarBody.styles";
 
 const SolarBody = () => {
-  // Store Solar Notifications
+  // Set Solar Notifications
   const [solarData, setSolarData] = useState();
 
   useEffect(() => {
@@ -14,23 +14,11 @@ const SolarBody = () => {
   }, []);
 
   const fetchSolarData = () => {
-    const API_KEY = "IltOH3vL9ODoatveN6ZaNL7RFPlvjTGyp6Z6kTT9";
-    const today = new Date().toISOString();
-    // const endpoint = `https://api.nasa.gov/DONKI/notifications?startDate=YYYY-MM-DD&endDate=${today}&type=all&api_key=${API_KEY}`;
-
-    const endpoint = 'http://127.0.0.1:3001/weather';
-
-    // End Date == Today!
-    // Testing Historical Weather Events
-
-    // const testEndDate = "2021-7-17";
-    // const testStartDate = "2021-6-5";
-    // const testEndpoint = `https://api.nasa.gov/DONKI/notifications?startDate=${testStartDate}&endDate=${testEndDate}&type=all&api_key=${API_KEY}`;
+    const endpoint = `http://spaceweather2-env.eba-cwj23cun.us-east-2.elasticbeanstalk.com/weather`;
 
     fetch(endpoint)
       .then((response) => response.json())
       .then((data) => {
-        // console.log("testEndDate: ", testDate);
         console.log(`api array test: `, data);
         return setSolarData(data);
       });
