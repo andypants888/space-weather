@@ -14,7 +14,7 @@ const SolarBody = () => {
   }, []);
 
   const fetchSolarData = () => {
-    const endpoint = `http://spaceweather2-env.eba-cwj23cun.us-east-2.elasticbeanstalk.com/weather`;
+    const endpoint = `https://space-weather-heroku.herokuapp.com/weather`;
 
     fetch(endpoint)
       .then((response) => response.json())
