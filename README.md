@@ -1,4 +1,4 @@
-# space-weather (reactJS)
+# Experimental Space Weather (react & typescript)
 
 ## [active release](https://www.expspaceweather.com/) (ready for use)
 
