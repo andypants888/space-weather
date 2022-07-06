@@ -7,7 +7,7 @@ import { Wrapper, Content } from "./SolarBody.styles";
 
 const SolarBody = () => {
   // Set Solar Notifications
-  const [solarData, setSolarData] = useState();
+  const [solarData, setSolarData] = useState<any[]>([]);
 
   useEffect(() => {
     fetchSolarData();
@@ -24,19 +24,19 @@ const SolarBody = () => {
       });
   };
 
-  if (!solarData) {
-    return "solarData not loaded yet";
-  }
-  return (
-    <Wrapper>
-      <Content>
-        <h2>Solar Weather Events</h2>
-        {solarData.map((event) => (
-          <SolarSummary key={event.messageID} data={event} />
-        ))}
-      </Content>
-    </Wrapper>
-  );
+  // if (solarData !== null) {
+    return (
+      <Wrapper>
+        <Content>
+          <h2>Solar Weather Events</h2>
+          {solarData?.map((event) => (
+            <SolarSummary key={event.messageID} data={event} />
+          ))}
+        </Content>
+      </Wrapper>
+    );
+  // }
+  
 };
 
 export default SolarBody;

@@ -24,9 +24,9 @@ import FLRIcon from "../../icons/flare.png";
 // API Event Object
 // messageBody, messageID, messageIssueTime, messageType,messageURL
 
-const SolarSummary = (props) => {
+const SolarSummary = (props: any) => {
   // Show each array object
-  // console.log("SolarSummaryindex.js props: ", props);
+  console.log("SolarSummaryindex.js props: ", props);
   // Props, States, Hooks
   const { messageType, messageIssueTime, messageURL, messageBody, messageID } =
     props.data;
