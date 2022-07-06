@@ -3,7 +3,7 @@ import React from "react";
 // Styles
 import { Wrapper, Content, Title, Main, Date } from "./MPCRegexReader.styles";
 
-const MPCRegexReader = (props) => {
+const MPCRegexReader = (props:any) => {
   const { message, eventTime } = props;
 
   // Notification Event Time

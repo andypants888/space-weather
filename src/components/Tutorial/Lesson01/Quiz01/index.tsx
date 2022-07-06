@@ -106,7 +106,7 @@ const Quiz01 = () => {
         <Survey.Survey
           json={surveyJSON}
           model={window.survey}
-          onComplete={(data) => console.log(data)}
+          onComplete={(data:any) => console.log(data)}
         />
         <NavBlock />
       </Content>

@@ -23,13 +23,13 @@ const Bonus03 = () => {
           // height="315"
           src="https://www.youtube.com/embed/m6e2y4fef1I"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-          mozallowfullscreen="mozallowfullscreen"
-          msallowfullscreen="msallowfullscreen"
-          oallowfullscreen="oallowfullscreen"
-          webkitallowfullscreen="webkitallowfullscreen"
-          allowfullscreen
+          // mozallowfullscreen="mozallowfullscreen"
+          // msallowfullscreen="msallowfullscreen"
+          // oallowfullscreen="oallowfullscreen"
+          // webkitallowfullscreen="webkitallowfullscreen"
+          // allowfullscreen
         ></iframe>
         <div>
           <h2>

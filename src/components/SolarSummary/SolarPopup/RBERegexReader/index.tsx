@@ -3,7 +3,7 @@ import React from "react";
 // Styles
 import { Wrapper, Content, Title, Main, Date } from "./RBERegexReader.styles";
 
-const RBERegexReader = (props) => {
+const RBERegexReader = (props:any) => {
   const { message, eventTime } = props;
 
   // Notification Event Time

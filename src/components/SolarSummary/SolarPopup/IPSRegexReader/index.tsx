@@ -9,7 +9,7 @@ import {
   Date,
 } from "./IPSRegexReader.styles";
 
-const IPSRegexReader = (props) => {
+const IPSRegexReader = (props:any) => {
   const { message, eventTime } = props;
   const detailedTime = eventTime.toLocaleString("en-US", {
     hour: "2-digit",

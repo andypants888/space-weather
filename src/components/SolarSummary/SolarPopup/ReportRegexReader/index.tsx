@@ -9,7 +9,7 @@ import {
   Date,
 } from "./ReportRegexReader.styles";
 
-const ReportRegexReader = (props) => {
+const ReportRegexReader = (props:any) => {
   const { message, eventTime } = props;
   const detailedTime = eventTime.toLocaleString("en-US", {
     hour: "2-digit",

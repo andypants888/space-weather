@@ -3,7 +3,7 @@ import React from "react";
 // Styles
 import { Wrapper, Content, Title, Main, Date } from "./FLRRegexReader.styles";
 
-const FLRRegexReader = (props) => {
+const FLRRegexReader = (props:any) => {
   const { message, eventTime } = props;
 
   // Notification Event Time

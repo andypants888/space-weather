@@ -9,7 +9,7 @@ import {
   Date,
 } from "./CMERegexReader.styles";
 
-const CMERegexReader = (props) => {
+const CMERegexReader = (props:any) => {
   const { message, eventTime } = props;
   const detailedTime = eventTime.toLocaleString("en-US", {
     hour: "2-digit",

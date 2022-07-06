@@ -23,13 +23,13 @@ const BigBang03 = () => {
           // height="315"
           src="https://www.youtube.com/embed/aPStj2ZuXug"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-          mozallowfullscreen="mozallowfullscreen"
-          msallowfullscreen="msallowfullscreen"
-          oallowfullscreen="oallowfullscreen"
-          webkitallowfullscreen="webkitallowfullscreen"
-          allowfullscreen
+          // mozallowfullscreen="mozallowfullscreen"
+          // msallowfullscreen="msallowfullscreen"
+          // oallowfullscreen="oallowfullscreen"
+          // webkitallowfullscreen="webkitallowfullscreen"
+          // allowfullscreen
         ></iframe>
         <div>
           <p>
@@ -39,7 +39,7 @@ const BigBang03 = () => {
             Be ready for quiz! 😱
           </p>
         </div>
-        <textarea rows="7" cols="43">
+        <textarea rows={7} cols={43}>
           - Type notes here...
         </textarea>
         <SurveyContainer>

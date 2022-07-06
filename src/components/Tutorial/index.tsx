@@ -17,6 +17,15 @@ import BigBangImage from "../../images/big-bang.jpg";
 import CosmicRaysImage from "../../images/cosmic-rays.jpg";
 import GeorgesImage from "../../images/georges.jpg";
 
+declare global {
+  interface Window {
+      survey:any;
+  }
+}
+
+let survey = window.survey; 
+// https://stackoverflow.com/questions/56457935/typescript-error-property-x-does-not-exist-on-type-window
+
 const Tutorial = () => {
   return (
     <Wrapper>

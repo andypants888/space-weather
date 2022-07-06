@@ -23,7 +23,7 @@ const Bonus02 = () => {
           // height="315"
           src="https://www.youtube.com/embed/jf_4z4AKwJg"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
           mozallowfullscreen="mozallowfullscreen"
           msallowfullscreen="msallowfullscreen"
@@ -38,7 +38,7 @@ const Bonus02 = () => {
             Be ready for quiz! 😱
           </p>
         </div>
-        <textarea rows="7" cols="43">
+        <textarea rows={7} cols={43}>
           - Type notes here...
         </textarea>
         <SurveyContainer>

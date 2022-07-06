@@ -3,7 +3,7 @@ import React from "react";
 // Styles
 import { Wrapper, Content, Title, Main, Date } from "./SEPRegexReader.styles";
 
-const SEPRegexReader = (props) => {
+const SEPRegexReader = (props:any) => {
   const { message, eventTime } = props;
 
   // Notification Event Time

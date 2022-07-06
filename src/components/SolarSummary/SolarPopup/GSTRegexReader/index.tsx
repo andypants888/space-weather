@@ -3,7 +3,7 @@ import React from "react";
 // Styles
 import { Wrapper, Content, Title, Main, Date } from "./GSTRegexReader.styles";
 
-const GSTRegexReader = (props) => {
+const GSTRegexReader = (props:any) => {
   const { message, eventTime } = props;
 
   // Notification Event Time

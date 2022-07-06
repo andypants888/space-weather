@@ -9,7 +9,7 @@ import {
   Date,
 } from "./CMEUpdateRegexReader.styles";
 
-const CMEUpdateRegexReader = (props) => {
+const CMEUpdateRegexReader = (props:any) => {
   const { message, eventTime } = props;
   const detailedTime = eventTime.toLocaleString("en-US", {
     hour: "2-digit",

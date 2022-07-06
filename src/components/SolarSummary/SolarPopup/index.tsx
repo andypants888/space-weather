@@ -36,7 +36,7 @@ import FLRIcon from "../../../icons/flare.png";
 import GSTIcon from "../../../icons/northern-lights.png";
 import MPCIcon from "../../../icons/gap.png";
 
-const SolarPopup = (props) => {
+const SolarPopup = (props: any) => {
   // Props & Destructure
   const { open, setOpen, message, eventType, URL, eventTime, messageID } =
     props;
@@ -132,9 +132,7 @@ const SolarPopup = (props) => {
             <br />
           </Content>
         </Wrapper>
-      ) : (
-        ""
-      );
+      ) : null;
     // CME Update
     case cmeUpdateRegex.test(message):
       return open ? (
@@ -217,9 +215,7 @@ const SolarPopup = (props) => {
             <br />
           </Content>
         </Wrapper>
-      ) : (
-        ""
-      );
+      ) : null;
     // Interplanetary Shock
     case eventType === "IPS":
       return open ? (
@@ -300,9 +296,7 @@ const SolarPopup = (props) => {
             <br />
           </Content>
         </Wrapper>
-      ) : (
-        ""
-      );
+      ) : null;
     // Weekly Report
     case eventType === "Report":
       return props.open ? (
@@ -372,9 +366,7 @@ const SolarPopup = (props) => {
             <br />
           </Content>
         </Wrapper>
-      ) : (
-        ""
-      );
+      ) : null;
     // Radiation Belt Enhancement RBE
     case eventType === "RBE":
       return props.open ? (
@@ -446,9 +438,7 @@ const SolarPopup = (props) => {
             <br />
           </Content>
         </Wrapper>
-      ) : (
-        ""
-      );
+      ) : null;
 
     // Solar Energetic Particles
     case eventType === "SEP":
@@ -525,9 +515,7 @@ const SolarPopup = (props) => {
             <br />
           </Content>
         </Wrapper>
-      ) : (
-        ""
-      );
+      ) : null;
 
     // Solar Flare FLR
     case eventType === "FLR":
@@ -606,9 +594,7 @@ const SolarPopup = (props) => {
             <br />
           </Content>
         </Wrapper>
-      ) : (
-        ""
-      );
+      ) : null;
 
     // Geomagnetic Storm GST
     case eventType === "GST":
@@ -688,9 +674,7 @@ const SolarPopup = (props) => {
             <br />
           </Content>
         </Wrapper>
-      ) : (
-        ""
-      );
+      ) : null;
 
     // Magnetopause Crossing MPC
     case eventType === "MPC":
@@ -770,9 +754,7 @@ const SolarPopup = (props) => {
             <br />
           </Content>
         </Wrapper>
-      ) : (
-        ""
-      );
+      ) : null;
     default:
       return null;
   }
