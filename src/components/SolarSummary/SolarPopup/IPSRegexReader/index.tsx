@@ -1,12 +1,16 @@
 import React from "react";
 
 // Styles
-import { Wrapper, Content, Title, Main, Date } from "./MPCRegexReader.style.js";
+import {
+  Wrapper,
+  Content,
+  Title,
+  Main,
+  Date,
+} from "./IPSRegexReader.styles";
 
-const MPCRegexReader = (props) => {
+const IPSRegexReader = (props) => {
   const { message, eventTime } = props;
-
-  // Notification Event Time
   const detailedTime = eventTime.toLocaleString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
@@ -22,11 +26,9 @@ const MPCRegexReader = (props) => {
   return (
     <Wrapper>
       <Content>
-        <Title>Solar Wind currently crossing magnetopause</Title>
+        <Title>IPS Event</Title>
         <Main>
-          <div>
-            <Date>{detailedTime}</Date>
-          </div>
+          <div><Date>{detailedTime}</Date></div>
           <div>{message.match(summaryBrute)}</div>
         </Main>
       </Content>
@@ -34,4 +36,4 @@ const MPCRegexReader = (props) => {
   );
 };
 
-export default MPCRegexReader;
+export default IPSRegexReader;

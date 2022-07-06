@@ -25,7 +25,7 @@ import BigBang03 from "./components/Tutorial/BigBang03";
 
 // Styles
 import { GlobalStyle } from "./GlobalStyle";
-import { NavBlock } from "./App.style";
+import { NavBlock } from "./App.styles";
 
 
 function App() {
@@ -33,7 +33,8 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Landing />} exact />
+        <Route path="/" element={<Landing />} />
+
         <Route path="/">
           <Route path="weather" element={<SolarBody />} />
           <Route path="tutorial/" element={<Tutorial />} />

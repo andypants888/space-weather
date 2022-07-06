@@ -1,12 +1,16 @@
 import React from "react";
 
 // Styles
-import { Wrapper, Content, Title, Main, Date } from "./GSTRegexReader.style.js";
+import {
+  Wrapper,
+  Content,
+  Title,
+  Main,
+  Date,
+} from "./ReportRegexReader.styles";
 
-const GSTRegexReader = (props) => {
+const ReportRegexReader = (props) => {
   const { message, eventTime } = props;
-
-  // Notification Event Time
   const detailedTime = eventTime.toLocaleString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
@@ -17,13 +21,12 @@ const GSTRegexReader = (props) => {
   });
 
   // Regex Markers
-  // const activityID = /Activity ID: \d\d\d\d-\d\d-\d\d.*/g;
   const summaryBrute = /## Summary:.*(##)/gs;
 
   return (
     <Wrapper>
       <Content>
-        <Title>Geomagnetic Storm Ongoing</Title>
+        <Title>Weekly Report</Title>
         <Main>
           <div><Date>{detailedTime}</Date></div>
           <div>{message.match(summaryBrute)}</div>
@@ -33,4 +36,4 @@ const GSTRegexReader = (props) => {
   );
 };
 
-export default GSTRegexReader;
+export default ReportRegexReader;

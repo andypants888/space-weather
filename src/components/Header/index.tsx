@@ -19,22 +19,22 @@ const Header = () => (
       </TitleWrapper>
       <Navbar>
         <ul>
-          <NavLink to="/weather" exact={true}>
+          <NavLink to="/weather">
             <li>
               <img src={SunIcon} alt="sun-icon" /> Weather
             </li>
           </NavLink>
-          <NavLink to="/tutorial" exact={true}>
+          <NavLink to="/tutorial">
             <li>
               <img src={EducationIcon} alt="education-icon" /> Tutorial
             </li>
           </NavLink>
-          <NavLink to="/educators" exact={true}>
+          <NavLink to="/educators">
             <li>
               <img src={QuizIcon} alt="educators page" /> Educators
             </li>
           </NavLink>
-          <NavLink to="/contact" exact={true}>
+          <NavLink to="/contact">
             <li>
               <img src={HackerIcon} alt="programmer-icon" /> Contact
             </li>

@@ -7,7 +7,7 @@ import {
   Title,
   Main,
   Date,
-} from "./CMERegexReader.style.js";
+} from "./CMERegexReader.styles";
 
 const CMERegexReader = (props) => {
   const { message, eventTime } = props;

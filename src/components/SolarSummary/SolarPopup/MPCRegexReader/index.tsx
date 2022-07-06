@@ -1,9 +1,9 @@
 import React from "react";
 
 // Styles
-import { Wrapper, Content, Title, Main, Date } from "./RBERegexReader.style.js";
+import { Wrapper, Content, Title, Main, Date } from "./MPCRegexReader.styles";
 
-const RBERegexReader = (props) => {
+const MPCRegexReader = (props) => {
   const { message, eventTime } = props;
 
   // Notification Event Time
@@ -22,9 +22,11 @@ const RBERegexReader = (props) => {
   return (
     <Wrapper>
       <Content>
-        <Title>Ongoing Enhanced Radiation Belts</Title>
+        <Title>Solar Wind currently crossing magnetopause</Title>
         <Main>
-          <div><Date>{detailedTime}</Date></div>
+          <div>
+            <Date>{detailedTime}</Date>
+          </div>
           <div>{message.match(summaryBrute)}</div>
         </Main>
       </Content>
@@ -32,4 +34,4 @@ const RBERegexReader = (props) => {
   );
 };
 
-export default RBERegexReader;
+export default MPCRegexReader;

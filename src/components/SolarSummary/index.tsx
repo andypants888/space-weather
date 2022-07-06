@@ -5,7 +5,7 @@ import React from "react";
 import { useState } from "react";
 
 // Child Components
-import SolarPopup from "./SolarPopup/index.js";
+import SolarPopup from "./SolarPopup/index";
 
 // Styles
 import { Content, Wrapper, SolarEvent, Icon } from "./SolarSummary.styles";

@@ -1,16 +1,12 @@
 import React from "react";
 
 // Styles
-import {
-  Wrapper,
-  Content,
-  Title,
-  Main,
-  Date,
-} from "./IPSRegexReader.style.js";
+import { Wrapper, Content, Title, Main, Date } from "./GSTRegexReader.styles";
 
-const IPSRegexReader = (props) => {
+const GSTRegexReader = (props) => {
   const { message, eventTime } = props;
+
+  // Notification Event Time
   const detailedTime = eventTime.toLocaleString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
@@ -21,12 +17,13 @@ const IPSRegexReader = (props) => {
   });
 
   // Regex Markers
+  // const activityID = /Activity ID: \d\d\d\d-\d\d-\d\d.*/g;
   const summaryBrute = /## Summary:.*(##)/gs;
 
   return (
     <Wrapper>
       <Content>
-        <Title>IPS Event</Title>
+        <Title>Geomagnetic Storm Ongoing</Title>
         <Main>
           <div><Date>{detailedTime}</Date></div>
           <div>{message.match(summaryBrute)}</div>
@@ -36,4 +33,4 @@ const IPSRegexReader = (props) => {
   );
 };
 
-export default IPSRegexReader;
+export default GSTRegexReader;

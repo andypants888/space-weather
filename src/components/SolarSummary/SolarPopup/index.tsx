@@ -23,7 +23,7 @@ import {
   LearnMore,
   Footer,
   OneLiner,
-} from "./SolarPopup.style";
+} from "./SolarPopup.styles";
 
 // Event Icons
 import IPSIcon from "../../../icons/IPS-3.svg";

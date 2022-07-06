@@ -2,7 +2,7 @@ import React from "react";
 
 import RedSun from "../../background/sun-red-nasa.jpg";
 
-import { Wrapper, Content, Title } from "./Landing.styles.js";
+import { Wrapper, Content, Title } from "./Landing.styles";
 
 const Landing = () => {
   return (

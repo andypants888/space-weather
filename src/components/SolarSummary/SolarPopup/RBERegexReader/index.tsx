@@ -1,16 +1,12 @@
 import React from "react";
 
 // Styles
-import {
-  Wrapper,
-  Content,
-  Title,
-  Main,
-  Date,
-} from "./ReportRegexReader.style.js";
+import { Wrapper, Content, Title, Main, Date } from "./RBERegexReader.styles";
 
-const ReportRegexReader = (props) => {
+const RBERegexReader = (props) => {
   const { message, eventTime } = props;
+
+  // Notification Event Time
   const detailedTime = eventTime.toLocaleString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
@@ -26,7 +22,7 @@ const ReportRegexReader = (props) => {
   return (
     <Wrapper>
       <Content>
-        <Title>Weekly Report</Title>
+        <Title>Ongoing Enhanced Radiation Belts</Title>
         <Main>
           <div><Date>{detailedTime}</Date></div>
           <div>{message.match(summaryBrute)}</div>
@@ -36,4 +32,4 @@ const ReportRegexReader = (props) => {
   );
 };
 
-export default ReportRegexReader;
+export default RBERegexReader;

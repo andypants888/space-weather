@@ -1,9 +1,9 @@
 import React from "react";
 
 // Styles
-import { Wrapper, Content, Title, Main, Date } from "./FLRRegexReader.style.js";
+import { Wrapper, Content, Title, Main, Date } from "./SEPRegexReader.styles";
 
-const FLRRegexReader = (props) => {
+const SEPRegexReader = (props) => {
   const { message, eventTime } = props;
 
   // Notification Event Time
@@ -17,13 +17,12 @@ const FLRRegexReader = (props) => {
   });
 
   // Regex Markers
-  // const activityID = /Activity ID: \d\d\d\d-\d\d-\d\d.*/g;
   const summaryBrute = /## Summary:.*(##)/gs;
 
   return (
     <Wrapper>
       <Content>
-        <Title>New Solar Flare Detected</Title>
+        <Title>Solar Energetic Particle Storm</Title>
         <Main>
           <div><Date>{detailedTime}</Date></div>
           <div>{message.match(summaryBrute)}</div>
@@ -33,4 +32,4 @@ const FLRRegexReader = (props) => {
   );
 };
 
-export default FLRRegexReader;
+export default SEPRegexReader;

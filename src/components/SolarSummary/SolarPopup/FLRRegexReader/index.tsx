@@ -1,16 +1,12 @@
 import React from "react";
 
 // Styles
-import {
-  Wrapper,
-  Content,
-  Title,
-  Main,
-  Date,
-} from "./CMEUpdateRegexReader.style.js";
+import { Wrapper, Content, Title, Main, Date } from "./FLRRegexReader.styles";
 
-const CMEUpdateRegexReader = (props) => {
+const FLRRegexReader = (props) => {
   const { message, eventTime } = props;
+
+  // Notification Event Time
   const detailedTime = eventTime.toLocaleString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
@@ -19,12 +15,15 @@ const CMEUpdateRegexReader = (props) => {
     month: "short",
     day: "numeric",
   });
+
+  // Regex Markers
+  // const activityID = /Activity ID: \d\d\d\d-\d\d-\d\d.*/g;
   const summaryBrute = /## Summary:.*(##)/gs;
 
   return (
     <Wrapper>
       <Content>
-        <Title>Analysis of previous CME</Title>
+        <Title>New Solar Flare Detected</Title>
         <Main>
           <div><Date>{detailedTime}</Date></div>
           <div>{message.match(summaryBrute)}</div>
@@ -34,4 +33,4 @@ const CMEUpdateRegexReader = (props) => {
   );
 };
 
-export default CMEUpdateRegexReader;
+export default FLRRegexReader;
