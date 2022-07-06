@@ -21,10 +21,12 @@ const SolarBody = () => {
       .then((data) => {
         console.log(`api array test: `, data);
         return setSolarData(data);
-      });
+      }).catch(err => console.log(err));
   };
 
-  // if (solarData !== null) {
+  if (!solarData) {
+    return null
+  }
     return (
       <Wrapper>
         <Content>
@@ -35,7 +37,6 @@ const SolarBody = () => {
         </Content>
       </Wrapper>
     );
-  // }
   
 };
 
