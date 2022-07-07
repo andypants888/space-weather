@@ -1,7 +1,7 @@
 import styled from "styled-components";
 // vars from GlobalStyle.js
 export const Wrapper = styled.div`
-  background-color: var(--main);
+  background-image: linear-gradient(to right, #0e0e0e, #3c3109);
   padding: 0 5x;
 `;
 
@@ -13,7 +13,8 @@ export const Content = styled.div`
 `;
 // Logo + Site Name
 export const TitleWrapper = styled.div`
-  font-size: 25px;
+  font-family: 'Carter One', cursive;  
+  font-size: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,6 +23,7 @@ export const TitleWrapper = styled.div`
 
   @media (pointer: fine) {
     justify-content: center;
+    font-size: 45px;
   }
 
   img {
@@ -34,7 +36,12 @@ export const TitleWrapper = styled.div`
 `;
 
 export const Navbar = styled.div`
-  a,
+  a {
+    font-family: 'Carter One', cursive;
+    text-decoration: none;
+    color: white;
+
+  },
   a:visited {
     color: inherit;
     text-decoration: none;
@@ -46,11 +53,12 @@ export const Navbar = styled.div`
       font-style: italic;
       background-color: black;
       /* padding: 0px 30px; */
-      width: 130px;
+      /* width: 130px; */
       height: var(--iconHeight);
 
       @media (pointer: fine) {
         padding: 15px;
+        background-color: transparent;
         height: calc(var(--iconHeight) - 10px);
       }
 
@@ -79,7 +87,7 @@ export const Navbar = styled.div`
     justify-content: space-around;
     position: fixed;
     bottom: 0px;
-    background-color: var(--main);
+    background-image: linear-gradient(to right, #0e0e0e, #3c3109);
 
     @media (pointer: fine) {
       height: calc(var(--iconHeight) - 10px);

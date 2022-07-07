@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+
  :root {
      --iconHeight: 50px;
      --bgColor1: #43413C;
