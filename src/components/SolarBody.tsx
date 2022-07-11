@@ -3,7 +3,18 @@ import SolarSummary from "./SolarSummary";
 import { useState, useEffect } from "react";
 
 // Styles
-import { Wrapper, Content, SolarEvents } from "./SolarBody.styles";
+import {
+  Wrapper,
+  Content,
+  DailyItems,
+  DailyWrapper,
+  DailyA,
+  DailyB,
+  DailyC,
+  DailyD,
+  SolarEvents,
+  EventsWrapper,
+} from "./SolarBody.styles";
 
 const SolarBody = () => {
   // Set Solar Notifications
@@ -31,13 +42,23 @@ const SolarBody = () => {
   return (
     <Wrapper>
       <Content>
-        <h2>Daily Weather</h2>
-        <h2>Solar Weather Events</h2>
-        <SolarEvents>
-          {solarData?.map((event) => (
-            <SolarSummary key={event.messageID} data={event} />
-          ))}
-        </SolarEvents>
+        <DailyWrapper>
+          <h2>Daily Weather</h2>
+          <DailyItems>
+            <DailyA>Daily Event 1</DailyA>
+            <DailyB>Daily Event 2</DailyB>
+            <DailyC>Daily Event 3</DailyC>
+            <DailyD>Daily Event 4</DailyD>
+          </DailyItems>
+        </DailyWrapper>
+        <EventsWrapper>
+          <h2>Solar Weather Events</h2>
+          <SolarEvents>
+            {solarData?.map((event) => (
+              <SolarSummary key={event.messageID} data={event} />
+            ))}
+          </SolarEvents>
+        </EventsWrapper>
       </Content>
     </Wrapper>
   );
