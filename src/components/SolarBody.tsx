@@ -3,7 +3,7 @@ import SolarSummary from "./SolarSummary";
 import { useState, useEffect } from "react";
 
 // Styles
-import { Wrapper, Content } from "./SolarBody.styles";
+import { Wrapper, Content, SolarEvents } from "./SolarBody.styles";
 
 const SolarBody = () => {
   // Set Solar Notifications
@@ -21,23 +21,26 @@ const SolarBody = () => {
       .then((data) => {
         console.log(`api array test: `, data);
         return setSolarData(data);
-      }).catch(err => console.log(err));
+      })
+      .catch((err) => console.log(err));
   };
 
   if (!solarData) {
-    return null
+    return null;
   }
-    return (
-      <Wrapper>
-        <Content>
-          <h2>Solar Weather Events</h2>
+  return (
+    <Wrapper>
+      <Content>
+        <h2>Daily Weather</h2>
+        <h2>Solar Weather Events</h2>
+        <SolarEvents>
           {solarData?.map((event) => (
             <SolarSummary key={event.messageID} data={event} />
           ))}
-        </Content>
-      </Wrapper>
-    );
-  
+        </SolarEvents>
+      </Content>
+    </Wrapper>
+  );
 };
 
 export default SolarBody;

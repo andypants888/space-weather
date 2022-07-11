@@ -23,7 +23,7 @@ export const TitleWrapper = styled.div`
 
   @media (pointer: fine) {
     justify-content: center;
-    font-size: 45px;
+    font-size: 30px;
   }
 
   img {

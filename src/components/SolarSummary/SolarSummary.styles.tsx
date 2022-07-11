@@ -17,7 +17,7 @@ export const SolarEvent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: green; */
+  background-color: red;
   padding: 5px;
   margin: 0px 5px;
   text-align: center;
@@ -64,4 +64,3 @@ export const SolarEvent = styled.div`
 `;
 
 export const Icon = styled.div``;
-
