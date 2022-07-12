@@ -35,45 +35,42 @@ export const DailyA = styled.div`
   border: 1px solid white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-auto-flow: column;
+`;
 
+export const ItemWrapperA = styled.div`
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  /* max-width: 150px; */
   * {
-    border: 1px solid white;
-    margin: 0px;
+    /* border: 1px solid white; */
+    margin: 5px;
+  }
+  h1 {
+    font-size: 80px;
   }
 `;
 export const DailyB = styled.div`
   grid-area: DailyB;
-  border: 1px solid white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  * {
-    border: 1px solid white;
-    margin: 0px;
-  }
 `;
 export const DailyC = styled.div`
   grid-area: DailyC;
-  border: 1px solid white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  * {
-    border: 1px solid white;
-    margin: 0px;
-  }
 `;
 export const DailyD = styled.div`
   grid-area: DailyD;
+`;
+export const ItemWrapperBCD = styled.div`
   border: 1px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
+  height: 200px;
   * {
-    border: 1px solid white;
-    margin: 0px;
+    /* border: 1px solid white; */
+    margin: 5px;
   }
 `;
 

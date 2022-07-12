@@ -17,6 +17,8 @@ import {
   DailyB,
   DailyC,
   DailyD,
+  ItemWrapperA,
+  ItemWrapperBCD,
   SolarEvents,
   EventsWrapper,
 } from "./SolarBody.styles";
@@ -51,30 +53,42 @@ const SolarBody = () => {
           <h2>The Sun's Daily Weather</h2>
           <DailyItems>
             <DailyA>
-              <p>Activeness</p>
-              <img src={SunIcon} alt="sun icon" />
-              <p>Solar wind released today:</p>
-              <p>Status</p>
-              <img src={SpeedIcon} alt="speed icon" />
-              <p>Very Active</p>
-              <p>Solar Flux</p>
-              <h1>86 sfu</h1>
-              <p>Monthly avg: 36 sfu</p>
+              <ItemWrapperA>
+                <p>Activeness</p>
+                <img src={SunIcon} alt="sun icon" />
+                <p>Solar wind released today:</p>
+              </ItemWrapperA>
+              <ItemWrapperA>
+                <p>Status</p>
+                <img src={SpeedIcon} alt="speed icon" />
+                <p>Very Active</p>
+              </ItemWrapperA>
+              <ItemWrapperA>
+                <p>Solar Flux</p>
+                <h1>86 sfu</h1>
+                <p>Monthly avg: 36 sfu</p>
+              </ItemWrapperA>
             </DailyA>
             <DailyB>
-              <p>Magnetic Storm Risk</p>
-              <img src={NoneIcon} alt="none icon" />
-              <p>None</p>
+              <ItemWrapperBCD>
+                <p>Magnetic Storm Risk</p>
+                <img src={NoneIcon} alt="none icon" />
+                <p>None</p>
+              </ItemWrapperBCD>
             </DailyB>
             <DailyC>
-              <p>Radio Blackout Risk</p>
-              <img src={MinorIcon} alt="minor icon" />
-              <p>Minor</p>
+              <ItemWrapperBCD>
+                <p>Radio Blackout Risk</p>
+                <img src={MinorIcon} alt="minor icon" />
+                <p>Minor</p>
+              </ItemWrapperBCD>
             </DailyC>
             <DailyD>
-              <p>Solar Radiation Risk</p>
-              <img src={StrongIcon} alt="strong icon" />
-              <p>Minor</p>
+              <ItemWrapperBCD>
+                <p>Solar Radiation Risk</p>
+                <img src={StrongIcon} alt="strong icon" />
+                <p>Minor</p>
+              </ItemWrapperBCD>
             </DailyD>
           </DailyItems>
         </DailyWrapper>
