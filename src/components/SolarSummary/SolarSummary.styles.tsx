@@ -3,14 +3,10 @@ import styled from "styled-components";
 export const Wrapper = styled.div``;
 
 export const Content = styled.div`
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-  /* max-width: 600px; */
   padding: 0 0;
   margin: 0 auto;
   color: white;
-  /* border: 1px solid white; */
+  border: 1px solid white;
 `;
 
 export const SolarEvent = styled.div`
@@ -21,7 +17,6 @@ export const SolarEvent = styled.div`
   padding: 5px;
   margin: 0px 5px;
   text-align: center;
-  /* width: 70%; */
   img {
     width: var(--iconHeight);
   }

@@ -1,6 +1,11 @@
 import React from "react";
 import SolarSummary from "./SolarSummary";
 import { useState, useEffect } from "react";
+import SunIcon from "../icons/sun.png";
+import SpeedIcon from "../icons/speedometer.png";
+import NoneIcon from "../icons/accept.png";
+import MinorIcon from "../icons/blue-warning.png";
+import StrongIcon from "../icons/purple-alert.png";
 
 // Styles
 import {
@@ -43,16 +48,38 @@ const SolarBody = () => {
     <Wrapper>
       <Content>
         <DailyWrapper>
-          <h2>Daily Weather</h2>
+          <h2>The Sun's Daily Weather</h2>
           <DailyItems>
-            <DailyA>Daily Event 1</DailyA>
-            <DailyB>Daily Event 2</DailyB>
-            <DailyC>Daily Event 3</DailyC>
-            <DailyD>Daily Event 4</DailyD>
+            <DailyA>
+              <p>Activeness</p>
+              <img src={SunIcon} alt="sun icon" />
+              <p>Solar wind released today:</p>
+              <p>Status</p>
+              <img src={SpeedIcon} alt="speed icon" />
+              <p>Very Active</p>
+              <p>Solar Flux</p>
+              <h1>86 sfu</h1>
+              <p>Monthly avg: 36 sfu</p>
+            </DailyA>
+            <DailyB>
+              <p>Magnetic Storm Risk</p>
+              <img src={NoneIcon} alt="none icon" />
+              <p>None</p>
+            </DailyB>
+            <DailyC>
+              <p>Radio Blackout Risk</p>
+              <img src={MinorIcon} alt="minor icon" />
+              <p>Minor</p>
+            </DailyC>
+            <DailyD>
+              <p>Solar Radiation Risk</p>
+              <img src={StrongIcon} alt="strong icon" />
+              <p>Minor</p>
+            </DailyD>
           </DailyItems>
         </DailyWrapper>
         <EventsWrapper>
-          <h2>Solar Weather Events</h2>
+          <h2>Recent Events</h2>
           <SolarEvents>
             {solarData?.map((event) => (
               <SolarSummary key={event.messageID} data={event} />
