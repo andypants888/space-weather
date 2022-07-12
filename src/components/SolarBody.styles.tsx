@@ -39,7 +39,7 @@ export const DailyA = styled.div`
   grid-auto-flow: column;
 
   * {
-    /* border: 1px solid white; */
+    border: 1px solid white;
     margin: 0px;
   }
 `;
@@ -48,18 +48,33 @@ export const DailyB = styled.div`
   border: 1px solid white;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  * {
+    border: 1px solid white;
+    margin: 0px;
+  }
 `;
 export const DailyC = styled.div`
   grid-area: DailyC;
   border: 1px solid white;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  * {
+    border: 1px solid white;
+    margin: 0px;
+  }
 `;
 export const DailyD = styled.div`
   grid-area: DailyD;
   border: 1px solid white;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  * {
+    border: 1px solid white;
+    margin: 0px;
+  }
 `;
 
 export const EventsWrapper = styled.div`
