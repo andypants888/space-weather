@@ -34,7 +34,7 @@ export const SolarEvent = styled.div`
     margin: 10px 0px;
     padding: 6px;
     border-radius: 6px;
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: "Rubik", sans-serif, Helvetica, sans-serif;
     font-weight: normal;
     text-decoration: none;
     font-style: normal;

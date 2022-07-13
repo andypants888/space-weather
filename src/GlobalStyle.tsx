@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
      --iconHeight: 50px;
      --bgColor1: #43413C;
      --main: #FF3C00;
-     font-family: Tahoma, Helvetica, sans-serif;
+     font-family: 'Rubik', sans-serif, Helvetica, sans-serif;
  }
 
  * {

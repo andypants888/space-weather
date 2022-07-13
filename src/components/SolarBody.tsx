@@ -17,6 +17,7 @@ import {
   DailyB,
   DailyC,
   DailyD,
+  ItemTitle,
   ItemWrapperA,
   ItemWrapperBCD,
   SolarEvents,
@@ -50,50 +51,62 @@ const SolarBody = () => {
     <Wrapper>
       <Content>
         <DailyWrapper>
-          <h2>The Sun's Daily Weather</h2>
+          <h4>Sun's Daily Weather</h4>
           <DailyItems>
             <DailyA>
               <ItemWrapperA>
-                <p>Activeness</p>
+                <ItemTitle>Data from:</ItemTitle>
                 <img src={SunIcon} alt="sun icon" />
-                <p>Solar wind released today:</p>
+                <h3>2 hours ago</h3>
               </ItemWrapperA>
               <ItemWrapperA>
-                <p>Status</p>
+                <ItemTitle>
+                  Solar Wind <br />
+                  Speed:
+                </ItemTitle>
                 <img src={SpeedIcon} alt="speed icon" />
-                <p>Very Active</p>
+                <h3>
+                  Moderate: <br />
+                  423 km/sec
+                </h3>
               </ItemWrapperA>
               <ItemWrapperA>
-                <p>Solar Flux</p>
-                <h1>86 sfu</h1>
-                <p>Monthly avg: 36 sfu</p>
+                <ItemTitle>
+                  Solar <br />
+                  Instability:
+                </ItemTitle>
+                <h1>86</h1>
+                <h3>
+                  solar flux <br />
+                  units
+                </h3>
               </ItemWrapperA>
             </DailyA>
             <DailyB>
               <ItemWrapperBCD>
-                <p>Magnetic Storm Risk</p>
+                <ItemTitle>Magnetic Storm Risk:</ItemTitle>
                 <img src={NoneIcon} alt="none icon" />
-                <p>None</p>
+                <h3>None</h3>
               </ItemWrapperBCD>
             </DailyB>
             <DailyC>
               <ItemWrapperBCD>
-                <p>Radio Blackout Risk</p>
+                <ItemTitle>Radio Blackout Risk:</ItemTitle>
                 <img src={MinorIcon} alt="minor icon" />
-                <p>Minor</p>
+                <h3>Minor</h3>
               </ItemWrapperBCD>
             </DailyC>
             <DailyD>
               <ItemWrapperBCD>
-                <p>Solar Radiation Risk</p>
+                <ItemTitle>Solar Radiation Risk:</ItemTitle>
                 <img src={StrongIcon} alt="strong icon" />
-                <p>Minor</p>
+                <h3>Minor</h3>
               </ItemWrapperBCD>
             </DailyD>
           </DailyItems>
         </DailyWrapper>
         <EventsWrapper>
-          <h2>Recent Events</h2>
+          <h4>Recent Events</h4>
           <SolarEvents>
             {solarData?.map((event) => (
               <SolarSummary key={event.messageID} data={event} />
