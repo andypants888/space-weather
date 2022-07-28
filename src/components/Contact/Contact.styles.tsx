@@ -1,12 +1,9 @@
 import styled from "styled-components";
+import { device } from "../../breakpoints";
 
 export const Wrapper = styled.div``;
 
 export const Content = styled.div`
-  /* position: absolute;
-  left: 10%; */
-  /* display: flex;
-  flex-direction: column; */
   padding: 0 10%;
 
   a,
@@ -15,29 +12,77 @@ export const Content = styled.div`
     color: red;
   }
 
-  img {
-    @media (pointer: coarse) {
-      width: 90%;
-      height: 90%;
+  @media ${device.desktop} {
+    img {
+      width: 300px;
+      height: 300px;
     }
+  }
 
-    @media (pointer: fine) {
-      width: 30%;
-      height: 30%;
+  @media ${device.laptop} {
+    img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  @media ${device.tablet} {
+    img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  @media ${device.mobile} {
+    img {
+      width: 250px;
+      height: 250px;
     }
   }
 `;
 
-export const BioBox = styled.div`
-
-  * {
-    padding: 10px;
-  }
-  
-  @media (pointer: fine) {
+export const Bio = styled.div`
+  @media ${device.desktop} {
+    width: 50%;
     display: flex;
-    border 1px solid #ffffff18;
+    border: 1px solid #ffffff18;
+    padding: 20px 0px 20px 20px;
+
+    div {
+      padding: 20px;
+    }
+  }
+
+  @media ${device.laptop} {
     width: 100%;
-    height: 100% 
+    display: flex;
+    border: 1px solid #ffffff18;
+    padding: 20px 0px 20px 20px;
+
+    div {
+      padding: 20px;
+    }
+  }
+
+  @media ${device.tablet} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ffffff18;
+    padding: 30px 0px 0px 0px;
+    div {
+      padding: 10px;
+    }
+  }
+
+  @media ${device.mobile} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ffffff18;
+    padding: 20px 0px 0px 0px;
+    div {
+      padding: 10px;
+    }
   }
 `;

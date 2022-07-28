@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Wrapper, Content, BioBox } from "./Contact.styles";
+import { Wrapper, Content, Bio } from "./Contact.styles";
 
 import bioGif from "../../images/teacher-2018.gif";
 
@@ -21,35 +21,38 @@ const Contact = () => {
           <a href="mailto:andy@expspaceweather.com">andy@expspaceweather.com</a>
           <br />
         </p>
-        <p></p>
         <h1>About Me</h1>
-        <BioBox>
+        <Bio>
           <img src={bioGif} alt="developer" />
-          <p>
-            <div>
+          <div>
+            <p>
               Hi, I'm Andrew, a full-stack software-engineer / web-developer
               originally from San Diego, California.
-            </div>
-            <div>
+            </p>
+
+            <p>
+              Most recently, I have been working with a small start-up,
+              AnyoneCanCode to develop a platform for learning Javascript. We
+              use React/Typescript on the frontend, Node.js/Strapi.js/PostgresQL
+              on the backend.
+            </p>
+
+            <p>
               Before coding, I was a High School Science Teacher in both
               California and the country of Colombia.
-            </div>
-            <div>
-              I completed my undergraduate education at the University of
-              California, Davis in Biology, and received my teaching certificate
-              from San Diego State University.
-            </div>
-            <div>
+            </p>
+
+            <p>
               In my spare time I am an avid traveler, history-lover, and
               language-learner. (English, Chinese, Spanish, Javascript)
-            </div>
-          </p>
-        </BioBox>
+            </p>
+          </div>
+        </Bio>
 
         <h2>Thanks & Credits</h2>
         <h3>Icons</h3>
-        <p>
-          <div>
+        <div>
+          <p>
             Northern Lights, Lightning Bolt, Earth, Clipboard, Education Icons
             made by{" "}
             <a href="https://www.freepik.com" title="Freepik">
@@ -59,8 +62,10 @@ const Contact = () => {
             <a href="https://www.flaticon.com/" title="Flaticon">
               www.flaticon.com
             </a>
-          </div>
-          <div>
+          </p>
+        </div>
+        <div>
+          <p>
             Monitoring Icon made by{" "}
             <a
               href="https://www.flaticon.com/authors/ultimatearm"
@@ -72,8 +77,10 @@ const Contact = () => {
             <a href="https://www.flaticon.com/" title="Flaticon">
               www.flaticon.com
             </a>
-          </div>
-          <div>
+          </p>
+        </div>
+        <div>
+          <p>
             Flare Icon made by{" "}
             <a href="https://smashicons.com/" title="Smashicons">
               Smashicons
@@ -82,8 +89,10 @@ const Contact = () => {
             <a href="https://www.flaticon.com/" title="Flaticon">
               www.flaticon.com
             </a>
-          </div>
-          <div>
+          </p>
+        </div>
+        <div>
+          <p>
             Gap Icon made by{" "}
             <a
               href="https://www.flaticon.com/authors/geotatah"
@@ -95,8 +104,10 @@ const Contact = () => {
             <a href="https://www.flaticon.com/" title="Flaticon">
               www.flaticon.com
             </a>
-          </div>
-          <div>
+          </p>
+        </div>
+        <div>
+          <p>
             Solar system Icon made by{" "}
             <a
               href="https://www.flaticon.com/authors/smalllikeart"
@@ -108,9 +119,11 @@ const Contact = () => {
             <a href="https://www.flaticon.com/" title="Flaticon">
               www.flaticon.com
             </a>
-          </div>
+          </p>
+        </div>
 
-          <div>
+        <div>
+          <p>
             News Icon made by{" "}
             <a
               href="https://www.flaticon.com/authors/BZZRINCANTATION"
@@ -122,9 +135,11 @@ const Contact = () => {
             <a href="https://www.flaticon.com/" title="Flaticon">
               www.flaticon.com
             </a>
-          </div>
+          </p>
+        </div>
 
-          <div>
+        <div>
+          <p>
             Quiz Icon made by{" "}
             <a
               href="https://www.flaticon.com/authors/rsetiawan"
@@ -136,8 +151,8 @@ const Contact = () => {
             <a href="https://www.flaticon.com/" title="Flaticon">
               www.flaticon.com
             </a>
-          </div>
-        </p>
+          </p>
+        </div>
         <h3>Data</h3>
         <p>
           Space Weather Notifications by DONKI, CCMC, NASA, and partners @{" "}
