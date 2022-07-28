@@ -23,7 +23,7 @@ declare global {
   }
 }
 
-let survey = window.survey; 
+// let survey = window.survey; 
 // https://stackoverflow.com/questions/56457935/typescript-error-property-x-does-not-exist-on-type-window
 
 const Tutorial = () => {

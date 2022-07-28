@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
-  background-color: black;
-`;
+export const Wrapper = styled.div``;
 
 export const Content = styled.div`
   display: grid;
@@ -13,7 +11,6 @@ export const Content = styled.div`
   }
 
   @media (pointer: coarse) {
-
     grid-template-columns: 32% 32% 32%;
     grid-column-gap: 5px;
     grid-template-rows: auto auto;
@@ -21,13 +18,12 @@ export const Content = styled.div`
     padding: 5px;
   }
   @media (pointer: fine) {
-
     grid-template-columns: 18% 18% 18%;
     grid-column-gap: 20px;
     grid-template-rows: auto auto;
     grid-row-gap: 5px;
     padding: 30px;
-    
+
     position: relative;
     margin-left: 25%;
   }

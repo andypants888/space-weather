@@ -1,23 +1,35 @@
 import styled from "styled-components";
+import { device } from "../../breakpoints";
 
 export const Wrapper = styled.div``;
 
 export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 700px;
   padding: 0 0;
-  margin: 0 auto;
   color: white;
-  border: 1px solid white;
+  border-radius: 20px;
+  background-image: linear-gradient(-40deg, #3e3836, #070606);
+
+  @media ${device.desktop} {
+    margin: 0px 0px 20px 0px;
+  }
+
+  @media ${device.laptop} {
+    margin: 0px 0px 20px 0px;
+  }
+
+  @media ${device.tablet} {
+    margin: 0px 10px 17px 10px;
+  }
+
+  @media ${device.mobile} {
+    margin: 0px 5px 10px 5px;
+  }
 `;
 
 export const SolarEvent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: green; */
   padding: 5px;
   margin: 0px 5px;
   text-align: center;
@@ -39,7 +51,7 @@ export const SolarEvent = styled.div`
     margin: 10px 0px;
     padding: 6px;
     border-radius: 6px;
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: "Rubik", sans-serif, Helvetica, sans-serif;
     font-weight: normal;
     text-decoration: none;
     font-style: normal;
@@ -50,7 +62,7 @@ export const SolarEvent = styled.div`
       rgb(255, 240, 0) 0%,
       rgb(30, 255, 0) 100%
     );
-    /* box-shadow: #42ff0c 3px 2px 15px 0px; */
+
     border: 2px solid rgba(0, 0, 0);
   }
   button:hover {
@@ -64,4 +76,3 @@ export const SolarEvent = styled.div`
 `;
 
 export const Icon = styled.div``;
-

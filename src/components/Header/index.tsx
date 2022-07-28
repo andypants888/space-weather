@@ -3,7 +3,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import Logo from "../../icons/solar-system.png";
-import SunIcon from "../../icons/sun.png";
+import MeteorIcon from "../../icons/meteor.png";
 import EducationIcon from "../../icons/education.png";
 import QuizIcon from "../../icons/quiz.png";
 import HackerIcon from "../../icons/hacker.png";
@@ -21,12 +21,12 @@ const Header = () => (
         <ul>
           <NavLink to="/weather">
             <li>
-              <img src={SunIcon} alt="sun-icon" /> Weather
+              <img src={MeteorIcon} alt="weather icon" /> Weather
             </li>
           </NavLink>
           <NavLink to="/tutorial">
             <li>
-              <img src={EducationIcon} alt="education-icon" /> Tutorial
+              <img src={EducationIcon} alt="education icon" /> Tutorial
             </li>
           </NavLink>
           <NavLink to="/educators">
@@ -36,7 +36,7 @@ const Header = () => (
           </NavLink>
           <NavLink to="/contact">
             <li>
-              <img src={HackerIcon} alt="programmer-icon" /> Contact
+              <img src={HackerIcon} alt="contact icon" /> Contact
             </li>
           </NavLink>
         </ul>
