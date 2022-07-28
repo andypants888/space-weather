@@ -85,7 +85,10 @@ const Contact = () => {
           </div>
           <div>
             Gap Icon made by{" "}
-            <a href="https://www.flaticon.com/authors/geotatah" title="geotatah">
+            <a
+              href="https://www.flaticon.com/authors/geotatah"
+              title="geotatah"
+            >
               geotatah
             </a>{" "}
             from{" "}
@@ -109,7 +112,10 @@ const Contact = () => {
 
           <div>
             News Icon made by{" "}
-            <a href="https://www.flaticon.com/authors/BZZRINCANTATION" title="BZZRINCANTATION">
+            <a
+              href="https://www.flaticon.com/authors/BZZRINCANTATION"
+              title="BZZRINCANTATION"
+            >
               BZZRINCANTATION
             </a>{" "}
             from{" "}
@@ -120,7 +126,10 @@ const Contact = () => {
 
           <div>
             Quiz Icon made by{" "}
-            <a href="https://www.flaticon.com/authors/rsetiawan" title="rsetiawan">
+            <a
+              href="https://www.flaticon.com/authors/rsetiawan"
+              title="rsetiawan"
+            >
               rsetiawan
             </a>{" "}
             from{" "}

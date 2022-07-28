@@ -29,18 +29,15 @@ export const Content = styled.div`
 `;
 
 export const BioBox = styled.div`
-  @media (pointer: coarse) {
-  }
 
+  * {
+    padding: 10px;
+  }
+  
   @media (pointer: fine) {
     display: flex;
-    /* background-color: green; */
+    border 1px solid #ffffff18;
     width: 100%;
-    height: 100% div {
-      padding: 10px;
-    }
-    p {
-      padding: 10px;
-    }
+    height: 100% 
   }
 `;
