@@ -51,7 +51,7 @@ const SolarBody = () => {
     <Wrapper>
       <Content>
         <DailyWrapper>
-          <h4>Sun's Daily Weather</h4>
+          <h4>Today's Sun</h4>
           <DailyItems>
             <DailyA>
               <ItemWrapperA>

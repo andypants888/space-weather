@@ -1,12 +1,30 @@
 import styled from "styled-components";
+import { device } from "../../breakpoints";
 
 export const Wrapper = styled.div``;
 
 export const Content = styled.div`
   padding: 0 0;
-  margin: 0 auto;
   color: white;
-  border: 1px solid white;
+  border-radius: 20px;
+  /* border: 1px solid white; */
+  background-image: linear-gradient(-40deg, #3e3836, #070606);
+
+  @media ${device.desktop} {
+    margin: 0px 0px 20px 0px;
+  }
+
+  @media ${device.laptop} {
+    margin: 0px 0px 20px 0px;
+  }
+
+  @media ${device.tablet} {
+    margin: 0px 10px 17px 10px;
+  }
+
+  @media ${device.mobile} {
+    margin: 0px 5px 10px 5px;
+  }
 `;
 
 export const SolarEvent = styled.div`

@@ -1,36 +1,40 @@
 import styled from "styled-components";
 import { device } from "../breakpoints";
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+  height: 100%;
+  /* background-image: linear-gradient(-40deg, #3e3836, #070606); */
+`;
 
 export const Content = styled.div`
-  /* background-color: blue; */
   width: 98%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 3fr 1fr;
 
-  /* background-color: #ffffff; */
   @media ${device.desktop} {
-    background-color: #000000;
+    /* background-color: #000000; */
+    /* background-image: linear-gradient(-40deg, #3e3836, #070606); */
+
     display: grid;
   }
   @media ${device.laptop} {
-    background-color: #8a0000;
+    /* background-color: #8a0000; */
+
     display: grid;
   }
   @media ${device.tablet} {
-    background-color: #6668ff;
+    /* background-color: #6668ff; */
     display: block;
   }
   @media ${device.mobile} {
-    background-color: #1900ff;
+    /* background-color: #1900ff; */
     display: block;
   }
 `;
 
 export const DailyWrapper = styled.div`
-  background-color: #00640086;
+  /* background-color: #00640086; */
 `;
 
 export const DailyItems = styled.div`
@@ -39,7 +43,7 @@ export const DailyItems = styled.div`
       max-height: 120px;
       max-width: 120px;
     }
-    background-color: #00c400;
+    /* background-color: #00c400; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -53,7 +57,7 @@ export const DailyItems = styled.div`
       max-height: 120px;
       max-width: 120px;
     }
-    background-color: #00c6e1;
+    /* background-color: #00c6e1; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -64,24 +68,43 @@ export const DailyItems = styled.div`
 
   @media ${device.tablet} {
     display: block;
-    background-color: #5200f7;
+    /* background-color: #5200f7; */
   }
 
   @media ${device.mobile} {
     display: block;
-    background-color: #c400ba;
+    /* background-color: #c400ba; */
     /* grid-template-rows: 250px 250px; */
   }
 `;
 
 export const DailyA = styled.div`
   grid-area: DailyA;
-  border: 1px solid white;
+  /* border: 1px solid white; */
+  border-radius: 20px;
+  margin: 0px 5px 0px 5px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: #222222;
+  background-image: linear-gradient(-40deg, #3e3836, #070606);
+
   /* width: 98%; */
   /* height: 500px; */
+
+  @media ${device.desktop} {
+    margin: 0px 15px 0px 15px;
+  }
+
+  @media ${device.laptop} {
+    margin: 0px 12px 0px 12px;
+  }
+
+  @media ${device.tablet} {
+    margin: 0px 10px 0px 10px;
+  }
+
+  @media ${device.mobile} {
+    margin: 0px 5px 0px 5px;
+  }
 `;
 
 export const DailyB = styled.div`
@@ -108,9 +131,6 @@ export const ItemWrapperA = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  /* min-width: 100px; */
-  /* background-color: #ff0000; */
-  /* height: 500px; */
   * {
     /* border: 1px solid white; */
     margin: 0px;
@@ -118,18 +138,21 @@ export const ItemWrapperA = styled.div`
   @media ${device.desktop} {
     h1 {
       font-size: 120px;
+      text-shadow: 7px 7px 2px #ffffff57;
     }
   }
 
   @media ${device.laptop} {
     h1 {
       font-size: 80px;
+      text-shadow: 5px 5px 2px #ffffff57;
     }
   }
 
   @media ${device.tablet} {
     h1 {
       font-size: 70px;
+      text-shadow: 4px 4px 2px #ffffff57;
     }
     img {
       max-height: 100px;
@@ -140,6 +163,7 @@ export const ItemWrapperA = styled.div`
   @media ${device.mobile} {
     h1 {
       font-size: 50px;
+      text-shadow: 3px 3px 2px #ffffff57;
     }
     img {
       max-height: 90px;
@@ -158,7 +182,6 @@ export const ItemWrapperBCD = styled.div`
     justify-content: space-evenly;
     height: 310px;
     flex-direction: column;
-    /* background-color: #37ff00; */
     margin: 45px 15px 15px 15px;
 
     * {
@@ -172,8 +195,7 @@ export const ItemWrapperBCD = styled.div`
     justify-content: space-evenly;
     height: 290px;
     flex-direction: column;
-    /* background-color: #ffc400; */
-    margin: 25px 12px 12px 15px;
+    margin: 25px 12px 12px 12px;
 
     * {
       margin: 15px;
@@ -183,7 +205,6 @@ export const ItemWrapperBCD = styled.div`
   @media ${device.tablet} {
     display: flex;
     flex-direction: row;
-    /* background-color: #ff5100; */
     height: 90px;
     margin: 15px 10px 10px 10px;
 
@@ -203,9 +224,8 @@ export const ItemWrapperBCD = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    /* background-color: #b20000; */
     height: 75px;
-    margin: 12px 10px 12px 10px;
+    margin: 12px 5px 12px 5px;
 
     * {
       width: 15%;
@@ -221,11 +241,11 @@ export const ItemWrapperBCD = styled.div`
 export const ItemWrapperB = styled.div``;
 
 export const EventsWrapper = styled.div`
-  background-color: brown;
+  /* background-color: brown; */
 `;
 
 export const SolarEvents = styled.div`
-  background-color: purple;
+  /* background-color: purple; */
   /* width: auto; */
   display: grid;
   grid-template-columns: 1fr;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
-// vars from GlobalStyle.js
+import { device } from "../../breakpoints";
+
 export const Wrapper = styled.div`
   background-image: linear-gradient(to right, #0e0e0e, #3c3109);
   padding: 0 5x;
@@ -9,21 +10,32 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
   padding: 0 0;
   margin: 0 auto;
-  color: white;
 `;
 // Logo + Site Name
 export const TitleWrapper = styled.div`
-  font-family: 'Carter One', cursive;  
-  font-size: 20px;
+  font-family: "Carter One", cursive;
+  color: #ffffffc5;
   display: flex;
   flex-direction: row;
   align-items: center;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: center;
 
-  @media (pointer: fine) {
-    justify-content: center;
+  @media ${device.desktop} {
+    font-size: 60px;
+  }
+
+  @media ${device.laptop} {
     font-size: 30px;
+  }
+
+  @media ${device.tablet} {
+    font-size: 20px;
+  }
+
+  @media ${device.mobile} {
+    justify-content: space-evenly;
+    font-size: 20px;
   }
 
   img {
@@ -37,13 +49,12 @@ export const TitleWrapper = styled.div`
 
 export const Navbar = styled.div`
   a {
-    font-family: 'Carter One', cursive;
+    font-family: "Carter One", cursive;
     text-decoration: none;
-    color: white;
-
-  },
+    color: #ffffffc5;
+  }
+  ,
   a:visited {
-    color: inherit;
     text-decoration: none;
   }
 
@@ -51,27 +62,22 @@ export const Navbar = styled.div`
   a:hover {
     li {
       font-style: italic;
-      background-color: black;
-      /* padding: 0px 30px; */
-      /* width: 130px; */
-      height: var(--iconHeight);
+      padding: 0px 5px 0px 5px;
 
-      @media (pointer: fine) {
-        padding: 15px;
-        background-color: transparent;
-        height: calc(var(--iconHeight) - 10px);
+      @media ${device.desktop} {
+        text-shadow: 0px 0px 2px #ffffff;
       }
 
-      @media (pointer: coarse) and (orientation: landscape) {
-        background-color: black;
-        padding: 10px;
-        height: calc(var(--iconHeight) - 10px);
+      @media ${device.laptop} {
+        text-shadow: 0px 0px 2px #ffffff;
       }
-      @media (pointer: coarse) and (min-width: 400px) {
-        background-color: black;
-        padding: 0px 30px;
-        height: calc(var(--iconHeight));
-        width: 25vw;
+
+      @media ${device.tablet} {
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+
+      @media ${device.mobile} {
+        text-shadow: 0px 0px 2px #ffffff;
       }
     }
   }
@@ -81,7 +87,6 @@ export const Navbar = styled.div`
     z-index: 10;
     padding: 0;
     margin: 0;
-    height: calc(var(--iconHeight));
     width: 100vw;
     display: flex;
     justify-content: space-around;
@@ -89,80 +94,49 @@ export const Navbar = styled.div`
     bottom: 0px;
     background-image: linear-gradient(to right, #0e0e0e, #3c3109);
 
-    @media (pointer: fine) {
-      height: calc(var(--iconHeight) - 10px);
-      justify-content: space-around;
-    }
-
-    @media (pointer: coarse) and (orientation: landscape) {
-      /* background-color: green; */
-      height: calc(var(--iconHeight) - 10px);
-      justify-content: space-around;
-    }
-
-    @media (pointer: coarse) and (min-width: 400px) {
-      /* background-color: green; */
+    @media ${device.desktop} {
       height: calc(var(--iconHeight));
-      justify-content: space-around;
+    }
+
+    @media ${device.laptop} {
+      height: calc(var(--iconHeight) - 10px);
+    }
+
+    @media ${device.tablet} {
+      height: calc(var(--iconHeight) - 10px);
+    }
+
+    @media ${device.mobile} {
+      height: calc(var(--iconHeight) + 10px);
     }
   }
   // Each Icon + Title
   li {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    flex-grow: 1;
     list-style: none;
-    @media (pointer: fine) {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      flex-grow: 0;
-      justify-content: space-between;
-      width: 7.5vw;
-      height: calc(var(--iconHeight) - 10px);
-    }
+    flex-direction: row;
 
-    @media (pointer: coarse) and (orientation: landscape) {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      flex-grow: 0;
-      justify-content: space-between;
-      width: 7.5vw;
-      height: calc(var(--iconHeight) - 10px);
-    }
-
-    @media (pointer: coarse) and (min-width: 400px) {
-      /* background-color: green; */
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      flex-grow: 0;
-      justify-content: space-between;
-      width: 17vw;
-      height: calc(var(--iconHeight));
+    @media ${device.mobile} {
+      flex-direction: column;
     }
   }
   // Icon Only
   img {
-    width: 7vw;
-    padding-right: 2px;
-    margin-right: 5px;
-    @media (pointer: fine) {
-      width: calc(var(--iconHeight) - 10px);
+    @media ${device.desktop} {
+      width: 60px;
     }
 
-    @media (pointer: coarse) and (orientation: landscape) {
-      /* background-color: black; */
-      width: calc(var(--iconHeight) - 10px);
+    @media ${device.laptop} {
+      width: 40px;
     }
 
-    @media (pointer: coarse) and (min-width: 400px) {
-      /* background-color: black; */
-      width: 7vw;
-      padding-right: 2px;
-      margin-right: 5px;
+    @media ${device.tablet} {
+      width: 40px;
+    }
+
+    @media ${device.mobile} {
+      width: 27px;
     }
   }
 `;
