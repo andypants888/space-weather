@@ -148,12 +148,9 @@ export const ItemWrapperA = styled.div`
   }
 `;
 export const ItemWrapperBCD = styled.div`
-  border: 1px solid white;
-
-  * {
-    /* border: 1px solid white; */
-    margin: 5px;
-  }
+  /* border: 1px solid white; */
+  border-radius: 20px;
+  background-image: linear-gradient(-40deg, #3e3836, #070606);
 
   @media ${device.desktop} {
     display: flex;
@@ -161,6 +158,12 @@ export const ItemWrapperBCD = styled.div`
     justify-content: space-evenly;
     height: 310px;
     flex-direction: column;
+    /* background-color: #37ff00; */
+    margin: 45px 15px 15px 15px;
+
+    * {
+      margin: 15px;
+    }
   }
 
   @media ${device.laptop} {
@@ -169,15 +172,23 @@ export const ItemWrapperBCD = styled.div`
     justify-content: space-evenly;
     height: 290px;
     flex-direction: column;
+    /* background-color: #ffc400; */
+    margin: 25px 12px 12px 15px;
+
+    * {
+      margin: 15px;
+    }
   }
 
   @media ${device.tablet} {
     display: flex;
     flex-direction: row;
-    background-color: #ff5100;
+    /* background-color: #ff5100; */
     height: 90px;
+    margin: 15px 10px 10px 10px;
 
     * {
+      margin: 5px;
       width: 10%;
       /* border: white dashed 1px; */
     }
@@ -192,8 +203,9 @@ export const ItemWrapperBCD = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #b20000;
-    height: 70px;
+    /* background-color: #b20000; */
+    height: 75px;
+    margin: 12px 10px 12px 10px;
 
     * {
       width: 15%;
