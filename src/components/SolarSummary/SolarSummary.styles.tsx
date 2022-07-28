@@ -7,7 +7,6 @@ export const Content = styled.div`
   padding: 0 0;
   color: white;
   border-radius: 20px;
-  /* border: 1px solid white; */
   background-image: linear-gradient(-40deg, #3e3836, #070606);
 
   @media ${device.desktop} {
@@ -31,10 +30,10 @@ export const SolarEvent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: red; */
   padding: 5px;
   margin: 0px 5px;
   text-align: center;
+
   img {
     width: var(--iconHeight);
   }
@@ -63,7 +62,7 @@ export const SolarEvent = styled.div`
       rgb(255, 240, 0) 0%,
       rgb(30, 255, 0) 100%
     );
-    /* box-shadow: #42ff0c 3px 2px 15px 0px; */
+
     border: 2px solid rgba(0, 0, 0);
   }
   button:hover {
