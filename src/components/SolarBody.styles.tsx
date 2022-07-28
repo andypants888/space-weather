@@ -13,12 +13,15 @@ export const Content = styled.div`
   /* background-color: #ffffff; */
   @media ${device.desktop} {
     background-color: #000000;
+    display: grid;
   }
   @media ${device.laptop} {
     background-color: #8a0000;
+    display: grid;
   }
   @media ${device.tablet} {
     background-color: #6668ff;
+    display: block;
   }
   @media ${device.mobile} {
     background-color: #1900ff;
@@ -31,47 +34,43 @@ export const DailyWrapper = styled.div`
 `;
 
 export const DailyItems = styled.div`
-  background-color: #00c400;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-    "DailyA DailyA DailyA"
-    "DailyB DailyC DailyD";
-  /* font-family: Tahoma, Geneva, sans-serif; */
-  /* font-size: 12px; */
-  /* border: 1px solid white; */
-  img {
-    @media ${device.desktop} {
-      max-height: 120px;
-      max-width: 120px;
-    }
-
-    @media ${device.laptop} {
-      max-height: 120px;
-      max-width: 120px;
-    }
-
-    @media ${device.tablet} {
-      max-height: 100px;
-      max-width: 100px;
-    }
-
-    @media ${device.mobile} {
-      max-height: 70px;
-      max-width: 70px;
-    }
-  }
-
   @media ${device.desktop} {
+    img {
+      max-height: 120px;
+      max-width: 120px;
+    }
+    background-color: #00c400;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "DailyA DailyA DailyA"
+      "DailyB DailyC DailyD";
     grid-template-rows: 300px 200px;
   }
+
   @media ${device.laptop} {
+    img {
+      max-height: 120px;
+      max-width: 120px;
+    }
+    background-color: #00c6e1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "DailyA DailyA DailyA"
+      "DailyB DailyC DailyD";
     grid-template-rows: 250px 200px;
   }
+
   @media ${device.tablet} {
+    display: block;
+    background-color: #5200f7;
   }
+
   @media ${device.mobile} {
-    grid-template-rows: 250px 250px;
+    display: block;
+    background-color: #c400ba;
+    /* grid-template-rows: 250px 250px; */
   }
 `;
 
@@ -80,7 +79,7 @@ export const DailyA = styled.div`
   border: 1px solid white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* background-color: gold; */
+  background-color: #222222;
   /* width: 98%; */
   /* height: 500px; */
 `;
@@ -130,19 +129,26 @@ export const ItemWrapperA = styled.div`
 
   @media ${device.tablet} {
     h1 {
-      font-size: 50px;
+      font-size: 70px;
+    }
+    img {
+      max-height: 100px;
+      max-width: 100px;
     }
   }
 
   @media ${device.mobile} {
+    h1 {
+      font-size: 50px;
+    }
+    img {
+      max-height: 90px;
+      max-width: 90px;
+    }
   }
 `;
 export const ItemWrapperBCD = styled.div`
   border: 1px solid white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
 
   * {
     /* border: 1px solid white; */
@@ -150,21 +156,57 @@ export const ItemWrapperBCD = styled.div`
   }
 
   @media ${device.desktop} {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     height: 310px;
+    flex-direction: column;
   }
 
   @media ${device.laptop} {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     height: 290px;
+    flex-direction: column;
   }
 
   @media ${device.tablet} {
-    height: 270px;
+    display: flex;
+    flex-direction: row;
+    background-color: #ff5100;
+    height: 90px;
+
+    * {
+      width: 10%;
+      /* border: white dashed 1px; */
+    }
+
+    img {
+      max-height: 60px;
+      max-width: 60px;
+    }
   }
 
   @media ${device.mobile} {
-    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #b20000;
+    height: 70px;
+
+    * {
+      width: 15%;
+    }
+
+    img {
+      max-height: 40px;
+      max-width: 40px;
+    }
   }
 `;
+
+export const ItemWrapperB = styled.div``;
 
 export const EventsWrapper = styled.div`
   background-color: brown;
