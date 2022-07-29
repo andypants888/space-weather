@@ -8,6 +8,7 @@ export const Content = styled.div`
   color: white;
   border-radius: 20px;
   background-image: linear-gradient(-40deg, #3e3836, #070606);
+  box-shadow: -2px -2px 3px #3b3a39;
 
   @media ${device.desktop} {
     margin: 0px 0px 20px 0px;

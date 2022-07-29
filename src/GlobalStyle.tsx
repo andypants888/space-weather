@@ -31,45 +31,37 @@ export const GlobalStyle = createGlobalStyle`
      margin: 0;
      padding: 0;
      color: white;
-     width: 100%;
-     height: 100%;
+     /* width: 100%;
+     height: 100%; */
 
      @media ${device.desktop} {
       background-image: linear-gradient(
-        -40deg,
-        #3e3836,
-        #070606,
-        #302c2b,
+        120deg,
+        #181615,
         #070606
       );
     }
 
     @media ${device.laptop} {
       background-image: linear-gradient(
-        -40deg,
-        #3e3836,
-        #070606,
-        #35302f,
+        120deg,
+        #181615,
         #070606
       );
     }
 
     @media ${device.tablet} {
       background-image: linear-gradient(
-        35deg,
-        #252220,
-        #070606,
-        #4e4542,
+        120deg,
+        #181615,
         #070606
       );
     }
 
     @media ${device.mobile} {
       background-image: linear-gradient(
-        70deg,
-        #333130,
-        #070606,
-        #6d605b,
+        120deg,
+        #181615,
         #070606
       );
     }

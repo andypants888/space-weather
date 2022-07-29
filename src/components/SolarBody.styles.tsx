@@ -2,7 +2,18 @@ import styled from "styled-components";
 import { device } from "../breakpoints";
 
 export const Wrapper = styled.div`
-  height: 100%;
+  @media ${device.desktop} {
+    height: 85vh;
+  }
+  @media ${device.laptop} {
+    height: 100%;
+  }
+  @media ${device.tablet} {
+    height: 100%;
+  }
+  @media ${device.mobile} {
+    height: 100%;
+  }
 `;
 
 export const Content = styled.div`
@@ -72,6 +83,7 @@ export const DailyA = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   background-image: linear-gradient(-40deg, #3e3836, #070606);
+  box-shadow: -2px -2px 3px #3b3a39;
 
   @media ${device.desktop} {
     margin: 0px 15px 0px 15px;
@@ -152,6 +164,7 @@ export const ItemWrapperA = styled.div`
 export const ItemWrapperBCD = styled.div`
   border-radius: 20px;
   background-image: linear-gradient(-40deg, #3e3836, #070606);
+  box-shadow: -2px -2px 3px #3b3a39;
 
   @media ${device.desktop} {
     display: flex;
@@ -219,6 +232,9 @@ export const ItemWrapperB = styled.div``;
 export const EventsWrapper = styled.div``;
 
 export const SolarEvents = styled.div`
+  height: 75vh;
+  padding: 3px;
+  overflow-y: scroll;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fill, 1fr);

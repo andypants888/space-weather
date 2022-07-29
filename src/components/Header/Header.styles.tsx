@@ -3,6 +3,8 @@ import { device } from "../../breakpoints";
 
 export const Wrapper = styled.div`
   background-image: linear-gradient(to right, #0e0e0e, #3c3109);
+  border-bottom: solid 3px #c0c0c015;
+
   padding: 0 5x;
 `;
 
@@ -93,21 +95,22 @@ export const Navbar = styled.div`
     position: fixed;
     bottom: 0px;
     background-image: linear-gradient(to right, #0e0e0e, #3c3109);
+    border-top: solid 3px #c0c0c015;
 
     @media ${device.desktop} {
-      height: calc(var(--iconHeight));
+      height: calc(var(--iconHeight) + 3px);
     }
 
     @media ${device.laptop} {
-      height: calc(var(--iconHeight) - 10px);
+      height: calc(var(--iconHeight) - 7px);
     }
 
     @media ${device.tablet} {
-      height: calc(var(--iconHeight) - 10px);
+      height: calc(var(--iconHeight) - 7px);
     }
 
     @media ${device.mobile} {
-      height: calc(var(--iconHeight) + 10px);
+      height: calc(var(--iconHeight) + 13px);
     }
   }
   // Each Icon + Title
