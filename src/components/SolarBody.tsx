@@ -1,11 +1,9 @@
 import React from "react";
 import SolarSummary from "./SolarSummary";
 import { useState, useEffect } from "react";
-import SunIcon from "../icons/sun.png";
-import SpeedIcon from "../icons/speedometer.png";
-import NoneIcon from "../icons/accept.png";
-import MinorIcon from "../icons/blue-warning.png";
-import StrongIcon from "../icons/purple-alert.png";
+import SatelliteIcon from "../icons/orbit.png";
+import DynamicRiskIcon from "./DynamicRiskIcon";
+import DynamicSpeedIcon from "./DynamicSpeedIcon";
 
 // Styles
 import {
@@ -61,27 +59,18 @@ const SolarBody = () => {
     fetchDailyData();
   }, []);
 
-  let hoursAgoScrape;
+  let minAgoScrape;
+  let displayTime;
   // Date of Event
   if (typeof dailyData?.scrape_time === "string") {
     const today = new Date();
     const eventTime = new Date(dailyData?.scrape_time);
-    // const summaryTime = eventTime.toLocaleString("en-US", {
-    //   weekday: "long",
-    //   month: "numeric",
-    //   day: "numeric",
-    // });
-    hoursAgoScrape = Math.round(
-      (today.getTime() - eventTime.getTime()) / (1000 * 3600)
-    );
-
-    console.log(
-      "\nhoursAgoScrape: ",
-      hoursAgoScrape,
-      "\neventTime: ",
-      eventTime,
-      "\ntoday: ",
-      today
+    displayTime = eventTime.toLocaleString("en-US", {
+      dateStyle: "medium",
+      timeStyle: "short",
+    });
+    minAgoScrape = Math.round(
+      (today.getTime() - eventTime.getTime()) / (1000 * 60)
     );
   }
 
@@ -124,17 +113,19 @@ const SolarBody = () => {
             <DailyA>
               <ItemWrapperA>
                 <ItemTitle>Data from:</ItemTitle>
-                <img src={SunIcon} alt="sun icon" />
-                <h3>{hoursAgoScrape} hours ago</h3>
+                <img src={SatelliteIcon} alt="sun icon" />
+                <h3>{minAgoScrape} min ago</h3>
+                <h3>{displayTime}</h3>
               </ItemWrapperA>
               <ItemWrapperA>
                 <ItemTitle>
                   Solar Wind <br />
                   Speed:
                 </ItemTitle>
-                <img src={SpeedIcon} alt="speed icon" />
+                {/* <img src={Speed2Icon} alt="speed icon" /> */}
+                <DynamicSpeedIcon windSpeed={dailyData.solar_wind_speed} />
                 <h3>
-                  Moderate: <br />
+                  {/* Moderate: <br /> */}
                   {dailyData.solar_wind_speed} km/sec
                 </h3>
               </ItemWrapperA>
@@ -153,21 +144,24 @@ const SolarBody = () => {
             <DailyB>
               <ItemWrapperBCD>
                 <ItemTitle>Magnetic Storm Risk:</ItemTitle>
-                <img src={NoneIcon} alt="none icon" />
+                <DynamicRiskIcon riskLevel={dailyData.current_geomag_storm} />
                 <h3>{dailyData.current_geomag_storm.toUpperCase()}</h3>
               </ItemWrapperBCD>
             </DailyB>
             <DailyC>
               <ItemWrapperBCD>
                 <ItemTitle>Radio Blackout Risk:</ItemTitle>
-                <img src={MinorIcon} alt="minor icon" />
+                <DynamicRiskIcon riskLevel={dailyData.current_radio_blackout} />
+                {/* <img src={MinorIcon} alt="minor icon" /> */}
                 <h3>{dailyData.current_radio_blackout.toUpperCase()}</h3>
               </ItemWrapperBCD>
             </DailyC>
             <DailyD>
               <ItemWrapperBCD>
                 <ItemTitle>Solar Radiation Risk:</ItemTitle>
-                <img src={StrongIcon} alt="strong icon" />
+                <DynamicRiskIcon
+                  riskLevel={dailyData.current_solar_radiation}
+                />
                 <h3>{dailyData.current_solar_radiation.toUpperCase()}</h3>
               </ItemWrapperBCD>
             </DailyD>
