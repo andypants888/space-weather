@@ -99,6 +99,7 @@ export const DailyA = styled.div`
 
   @media ${device.mobile} {
     margin: 0px 5px 0px 5px;
+    font-size: 13px;
   }
 `;
 

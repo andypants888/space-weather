@@ -53,8 +53,8 @@ const Contact = () => {
         <h3>Icons</h3>
         <div>
           <p>
-            Northern Lights, Lightning Bolt, Earth, Clipboard, Education Icons
-            made by{" "}
+            Northern Lights, Lightning Bolt, Earth, Clipboard, Education,
+            Connection Icons made by{" "}
             <a href="https://www.freepik.com" title="Freepik">
               Freepik
             </a>{" "}
@@ -153,6 +153,16 @@ const Contact = () => {
             </a>
           </p>
         </div>
+
+        <div>
+          <p>
+            Satellite icons made by surang from{" "}
+            <a href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com
+            </a>
+          </p>
+        </div>
+
         <h3>Data</h3>
         <p>
           Space Weather Notifications by DONKI, CCMC, NASA, and partners @{" "}
