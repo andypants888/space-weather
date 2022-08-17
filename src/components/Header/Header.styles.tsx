@@ -64,7 +64,6 @@ export const Navbar = styled.div`
   a:hover {
     li {
       font-style: italic;
-      padding: 0px 5px 0px 5px;
 
       @media ${device.desktop} {
         text-shadow: 0px 0px 2px #ffffff;
