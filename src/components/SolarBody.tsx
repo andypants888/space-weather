@@ -75,7 +75,8 @@ const SolarBody = () => {
   }
 
   const fetchEventsData = () => {
-    const endpoint = `https://space-weather-heroku.herokuapp.com/weather`;
+    // const endpoint = `https://space-weather-heroku.herokuapp.com/weather`;
+    const endpoint = `https://space-weather-router.onrender.com/weather`;
 
     fetch(endpoint)
       .then((response) => response.json())
