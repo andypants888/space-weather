@@ -88,7 +88,9 @@ const SolarBody = () => {
   };
 
   const fetchDailyData = () => {
-    const endpoint = `https://space-weather-heroku.herokuapp.com/flux`;
+    // const endpoint = `https://space-weather-heroku.herokuapp.com/flux`;
+    const endpoint = `https://space-weather-router.onrender.com/flux`;
+
 
     fetch(endpoint)
       .then((response) => response.json())
